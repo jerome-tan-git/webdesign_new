@@ -208,9 +208,9 @@ font-weight:600;
 
 .logo {
 	float:left;
-	padding-top:37px;
+	padding-top:30px;
 	padding-left:30px;
-	padding-bottom:30px;
+	/*padding-bottom:30px;*/
 	overflow:hidden;
 }
 
