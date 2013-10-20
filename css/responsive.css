@@ -9,6 +9,17 @@
 #page_wrap, .image-grid, .image-grid_3col, .image-grid_2col {
  width:768px;
 }
+
+ .teaser_content {
+ float: none;
+ width: 100%;
+ text-align:center;
+}
+.teaser_content h3 {
+ font-size:18px;
+ line-height:27px;
+}
+
 .logo {
  text-align:center;
  margin:0 auto;
@@ -152,7 +163,7 @@ padding:10px 40px;
  text-align:center;
 }
 .teaser_content h3 {
- font-size:18px;
+ font-size:14px;
  line-height:27px;
 }
 .teaser_button {
@@ -199,6 +210,8 @@ margin: 0 0 30px;
 #page_wrap {
  width:420px;
 }
+
+
 
 /* Testimonial section ( Testimonial )
 ----------------------------------------*/
