@@ -28,15 +28,15 @@
 	text-decoration: none;
 	font-size:1.05em;
 	font-weight:500px;
-	line-height:122px;
+	line-height:95px;
 }
 .jqueryslidemenu ul li a.active {
 	background-image:url(../images/menu_opacity.png);
 	background-color:#f7dc4a;
 	background-position: center top;
 	color: #FFFFFF;
-	line-height:122px;
-	height:122px;
+	line-height:95px;
+	height:95px;
 	border-top:3px solid #ffea00;
 	margin-top:-3px;
 }

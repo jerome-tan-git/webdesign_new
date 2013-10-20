@@ -117,7 +117,7 @@ filter:progid:DXImageTransform.Microsoft.gradient(GradientType=0, startColorstr=
 	margin-bottom:31px;
 	list-style:none;
 	overflow:hidden;
-	background-image: url(http://templatesden.com/TF/html/innovate/images/ajax-loader.png);
+	background-image: url("../images/loading.gif");
 	background-repeat: no-repeat;
 	background-position: center center;
 }

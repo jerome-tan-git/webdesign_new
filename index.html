@@ -1,362 +1,433 @@
-
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-
+transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
-<head>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+		<title>jQa</title>
+		<link rel="stylesheet" type="text/css" href="./css/reset.css" />
+		<link rel="stylesheet" type="text/css" href="./css/layout.css" />
+		<link rel="stylesheet" type="text/css" href="./css/flexslider.css" />
+		<link rel="stylesheet" type="text/css" href="./css/sudo.css" />
+		<link rel="stylesheet" type="text/css" href="./css/jqueryslidemenu.css" />
+		<link rel="stylesheet" type="text/css" href="./style.css" />
+		<link rel="stylesheet" type="text/css" href="./css/blog.css" />
 
-<title>Innovate Responsive HTML Website Template</title>
-<link rel="stylesheet" type="text/css" href="./css/reset.css" />
-<link rel="stylesheet" type="text/css" href="./css/layout.css" />
-<link rel="stylesheet" type="text/css" href="./css/flexslider.css" />
-<link rel="stylesheet" type="text/css" href="./css/sudo.css" />
-<link rel="stylesheet" type="text/css" href="./css/jqueryslidemenu.css" />
-<link rel="stylesheet" type="text/css" href="./style.css" />
-<link rel="stylesheet" type="text/css" href="./css/blog.css" />
-<link href='http://fonts.googleapis.com/css?family=Open+Sans:300,400,500,600,700' rel='stylesheet' type='text/css' />
-<link rel="stylesheet" type="text/css" href="./js/fancybox/jquery.fancybox-1.3.4.css" media="screen" />
-<link rel="stylesheet" type="text/css" href="./css/portfolio.css" />
-<link rel="stylesheet" type="text/css" href="./css/quicksand.css" />
-<link rel="stylesheet" type="text/css" href="./css/skin.css" />
-<link rel="stylesheet" type="text/css" href="./css/responsive.css" />
-<script type="text/javascript" src="./js/jquery.min.js"></script>
-<script type="text/javascript" src="./js/jqueryslidemenu.js"></script>
-<script type="text/javascript" src="./js/jquery.flexslider.js"></script>
-<script type="text/javascript" src="./js/jquery.sudoSlider.js"></script>
-<script type="text/javascript" src="./js/custom.js"></script>
-<script type="text/javascript" src="./js/fancybox/jquery.fancybox-1.3.4.js"></script>
-<script type="text/javascript">
-// FancyBox Document
-jQuery(document).ready(function() {
-	jQuery("a#example6").fancybox({
-		'titlePosition'		: 'outside',
-		'overlayColor'		: '#000',
-		'overlayOpacity'	: 0.9
-	});
-	
-// sudo slider Document
-jQuery(document).ready(function($){	
-        var sudoSlider = jQuery("#testimonail").sudoSlider({
-           continuous:true,
-           numeric:false
-        });
-    });
-	
+		<link rel="stylesheet" type="text/css" href="./js/fancybox/jquery.fancybox-1.3.4.css" media="screen" />
+		<link rel="stylesheet" type="text/css" href="./css/portfolio.css" />
+		<link rel="stylesheet" type="text/css" href="./css/quicksand.css" />
+		<link rel="stylesheet" type="text/css" href="./css/skin.css" />
+		<link rel="stylesheet" type="text/css" href="./css/responsive.css" />
 
-});
+		<script type="text/javascript" src="./js/jquery.min.js"></script>
+		<script type="text/javascript" src="./js/jquery-migrate.js"></script>
+		<script type="text/javascript" src="./js/jqueryslidemenu.js"></script>
+		<script type="text/javascript" src="./js/jquery.flexslider.js"></script>
+		<script type="text/javascript" src="./js/jquery.sudoSlider.js"></script>
+		<script type="text/javascript" src="./js/custom.js"></script>
+		<script type="text/javascript" src="./js/fancybox/jquery.fancybox-1.3.4.js"></script>
 
-</script>
+		<script type="text/javascript" src="js/jquery-ui-1.10.3.custom.min.js"></script>
 
-<!--[if lt IE 9]>
-<script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
-<![endif]-->
-<!--[if lt IE 9]>
-	<script src="http://css3-mediaqueries-js.googlecode.com/svn/trunk/css3-mediaqueries.js"></script>
-<![endif]-->
+		<script type="text/javascript" src="js/jquery.easing.1.3.js"></script>
+		<style type="text/css">
+			html, body, p {
+				margin: 0;
+				padding: 0;
+			}
 
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8" /></head>
-<body>
-<div id="page_wrap">
+			body {
+				/*overflow: hidden;*/
+			}
+			.warp {
+				filter: alpha(opacity=20);
+			}
+
+			.img24 {
+				background: none;
+				filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='./images/test.png"');
+				width: 100px;
+				height: 100px;
+			}
+		</style>
+		<script type="text/javascript">
+			function enterSite() {
+				$("#page_wrap").show();
+				var dis = $("#cover").outerHeight(true);
+				$("#cover").animate({
+					top : "-2000px"
+				}, 2000, 'easeInQuart', function() {
+					$("#cover").remove();
+					$(document.body).css("overflow", "auto");
+					$("html").css("overflow", "auto");
+				});
+				var curl =window.location.href;
+				if (curl.indexOf("#enter")== -1)
+				{
+					window.location.href +="#enter";
+				} 
+				
+			}
+
+
+			$(document).ready(function() {
+				
+				
+				
+				// bancy bo=x
+				jQuery("a#example6").fancybox({
+					'titlePosition'		: 'outside',
+					'overlayColor'		: '#000',
+					'overlayOpacity'	: 0.9
+				});
+				//slider
+				var sudoSlider = jQuery("#testimonail").sudoSlider({
+		           continuous:true,
+		           numeric:false
+		        });
+				
+				
+				//menu_item 
+				$(".menu_item").hover(function(){
+					$(this).addClass("selected");
+					$(this).find(".menu_list").show();
+					$(this).find(".menu_list").css("opacity","0");
+					$(this).find(".menu_list").animate({
+								opacity : 1
+							}, 500);
+				},function(){
+					$(this).removeClass("selected");
+					
+					$(this).find(".menu_list").animate({
+								opacity : 0
+							}, 500,function()
+							{
+								$(this).find(".menu_list").hide();
+							});
+					
+				});
+			});
+
+		</script>
+	</head>
+	<body>
+
+		<div id="page_wrap">
 <!-- Header Start -->
-<header>
-    <div class="logo">
-    	<a href="./index.html"><img src="./images/logo.png" alt="img" /></a>
-    </div>
-
-    <nav>
-    <div id="myslidemenu" class="jqueryslidemenu">
-        <ul>
-            <li><a class="active" href="./index.html">Home</a></li>
-            <li><a href="./about.html">About Us</a></li>
-            <li><a href="./portfolio.html">Portfolio</a>
-                <ul>
-                    <li><a href="./portfolio_3col.html">Portfolio 3</a></li>
-                    <li><a href="./portfolio_2col.html">Portfolio 2</a></li>
-                    <li><a href="./portfolio_1col.html">Portfolio 1</a></li>
-                </ul>
-            </li>
-            <li><a href="./blog.html">Blog</a></li>
-            <li><a href="./contact.html">Contact Us</a></li>
-      </ul>
-    </div>
-    </nav>
-</header>
-<!-- Header End -->
-
-<div class="clear"></div>
-
-<!-- Flex Slider Start -->
-<div class="flexslider">
-    <ul class="slides">
-        <li>
-            <div class="slider_content">
-                <div class="thumb_img"> <img src="./images/slider_img_1.png" alt="img" /> </div>
-                <div class="description">
-                    <h1>MAKE IDEA'S</h1>
-                    <div class="slide_caption">Etiam <span>porttitor</span> dapibus turpis a <span>congue</span>.</div>
-                    <p>Duis dignissim blandit varius curabitur adipiscing ornare luctus.</p>
-            	</div>
-            </div>
-        </li>
-        <li> 
-            <div class="slider_content">
-                <div class="thumb_img"> <img src="./images/slider_img_2.png" alt="img" /> </div>
-                <div class="description">
-                    <h1>24/7 SUPPORT</h1>
-                    <div class="slide_caption">Accumsan non <span>laoreet in molestie</span> vitae sapien.</div>
-                    <p>Vestibulum enenatis sagittis turpis eu varius enim vulputate pretium.</p>
-                </div>
-            </div>
-        </li>
-        <li>
-            <div class="slider_content">
-                <div class="thumb_img"> <img src="./images/slider_img_3.png" alt="img" /> </div>
-                <div class="description">
-                    <h1>BEST ADVICE</h1>
-                    <div class="slide_caption">Fusce lobortis <span>egestas</span> risus tincidunt</div>
-                    <p>Nulla feugiat feugiat massa a lobortis metus imperdiet semper.</p>
-                </div>
-            </div>
-        </li>
-    </ul>
-</div>
-<!-- Flex Slider End -->
-
-<!-- Teaser Start -->
-<div class="teaser">
-
-<div class="teaser_content">
-	<h3>Hello! We are <strong>Innovate</strong>. This is the showcase of company portfolio, specializing in application <strong>development</strong> and <strong>visual</strong> design of application.</h3>
-</div>
-<div class="teaser_button">
-	<a href="#" class="button">Get it on themeforest</a>
-</div>
-
-</div>
-<!-- Teaser End -->
-
-<!-- Content Start -->
-<section id="content">
-
-<div class="teaser_container clearfix">
-<div class="one_third">
-    <div class="teaser_box">
-        <div class="teaser_ser_icon">
-        	<img src="./images/services_icon_1.png" alt="img" />
-        </div>
-        <h3>Analytics</h3>
-        <p>In hac habitasse platea dictumst. Aliquam in est leo. Aliquam ut 
-        urna pulvinar ipsum ultricies fringilla et sed magna. Duis faucibus 
-        lorem at eros cursus fermentum.</p><br />
-        <a href="#" class="button">Read More</a>
-    </div>
-</div>
-    
-<div class="one_third">
-    <div class="teaser_box">
-        <div class="teaser_ser_icon">
-        	<img src="./images/services_icon_2.png" alt="img" />
-        </div>
-        <h3>Our Services</h3>
-        <p>In hac habitasse platea dictumst. Aliquam in est leo. Aliquam ut 
-        urna pulvinar ipsum ultricies fringilla et sed magna. Duis faucibus 
-        lorem at eros cursus fermentum.</p><br />
-        <a href="#" class="button">Read More</a>
-    </div>
-</div>
-
-<div class="one_third_last">
-    <div class="teaser_box">
-        <div class="teaser_ser_icon">
-        	<img src="./images/services_icon_3.png" alt="img" />
-        </div>
-        <h3>The Team</h3>
-        <p>In hac habitasse platea dictumst. Aliquam in est leo. Aliquam ut 
-        urna pulvinar ipsum ultricies fringilla et sed magna. Duis faucibus 
-        lorem at eros cursus fermentum.</p><br />
-        <a href="#" class="button">Read More</a>
-    </div>
-</div>
-</div>
-
-<div class="v_space clear"></div>
-
-<div class="title_holder">
-    <h3><span>Client Testmonial</span></h3>
-</div>
-
-<div id="testimonail_wrapper">
-<div id="testimonail">
-<ul>
-    <li>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis eleifend 
-        libero eu ligula consectetur lacinia. Aliquam non pellentesque turpis. Duis 
-        placerat felis sit amet dui gravida vulputate tristique nibh rhoncus. Morbi 
-        hendrerit cursus nisl quis auctor.</p>
-        <span>-- John Deo</span>
-    </li>
-    <li>
-        <p>Eleifend ipsum dolor sit amet, consectetur adipiscing elit. Duis eleifend 
-        libero eu ligula consectetur lacinia. Aliquam non pellentesque turpis. Duis 
-        placerat felis sit amet dui gravida vulputate tristique nibh rhoncus. Morbi 
-        hendrerit cursus nisl quis ligula.</p>
-        <span>-- John Deo</span>
-    </li>
-    <li>
-        <p>Gravida ipsum dolor sit amet, consectetur adipiscing elit. Duis eleifend 
-        libero eu ligula consectetur lacinia. Aliquam non pellentesque turpis. Duis 
-        placerat felis sit amet dui gravida vulputate tristique nibh rhoncus. Morbi 
-        hendrerit cursus nisl quis rhoncus.</p>
-        <span>-- John Deo</span>
-    </li>
-</ul>
-</div>
-</div>
-
-<div class="v_space"></div>
-
-<div class="title_holder">
-    <h3><span>Latest Projects</span></h3>
-</div>
-
-<div class="demo">
-<ul id="list" class="image-grid_3col">
-    <li>
-        <div class="portfolio_content">
-            <img src="./images/portfolio_3col_img_1.png" alt="img" />
-            <h4>Graphic Card</h4>
-            <p><a href="./portfolio_single_page.html">gravida vulputate</a></p>
-            <div class="link_btn">
-                <a id="example6" href="./images/portfolio_2col_img_1.png" class="zoom"></a>
-                <a href="./portfolio_single_page.html" class="link_post"></a>
-                <div class="overlay"></div>
-            </div>
-        </div>
-    </li>
-    <li>
-        <div class="portfolio_content">
-            <img src="./images/portfolio_3col_img_2.png" alt="img" />
-            <h4>Flickr Visualisation</h4>
-            <p><a href="./portfolio_single_page.html">hendrerit cursus</a></p>
-            <div class="link_btn">
-                <a id="example6" href="./images/portfolio_2col_img_2.png" class="zoom"></a>
-                <a href="./portfolio_single_page.html" class="link_post"></a>
-                <div class="overlay"></div>
-            </div>
-        </div>
-    </li>
-    <li>
-        <div class="portfolio_content">
-            <img src="./images/portfolio_3col_img_3.png" alt="img" />
-            <h4>Media Identity</h4>
-            <p><a href="./portfolio_single_page.html">Tristique</a></p>
-            <div class="link_btn">
-                <a id="example6" href="./images/portfolio_2col_img_3.png" class="zoom"></a>
-                <a href="./portfolio_single_page.html" class="link_post"></a>
-                <div class="overlay"></div>
-            </div>
-        </div>
-    </li>
-
-</ul>
-</div>
-
-</section>
-
-<!-- Content End -->
-
-<!-- Bottom Section Start -->
-<footer>
-<div class="one_fourth">
-    <div class="widget_container">
-        <h3>A Little <span>about us</span></h3>
-        <img src="./images/about_me_img.png" alt="img" class="alignleft" />
-        <p>In hac habitasse platea dictumst. Aliquam in est leo. Aliquam ut 
-        urna pulvinar ipsum ultricies fringilla et sed magna. Duis faucibus 
-        lorem at eros cursus fermentum. Vivamus a nisl vel magna tincidunt sodales 
-        ac imperdiet arcu. Proin blandit cursus blandit.</p>
-        <a href="#">-- John Deo</a>
-    </div>
-</div>
-
-<div class="one_fourth">
-    <div class="widget_container">
-        <h3>Get <span>in touch</span></h3>
-        <p>In hac habitasse platea dictumst. Aliquam in est leo.</p>
-        <ul class="contact">
-            <li>
-                <strong>Mail Us</strong>
-                <br />
-                <a href="#">lens@yourcompany.com</a>
-            </li>
-            <li>
-                <strong>Phone</strong>
-                <br />
-                <p>+123 456 7890</p>
-            </li>
-            <li>
-                <strong>Location</strong>
-                <br />
-                <p>2411 Any Street - Any Town - United Kingdom.</p>
-            </li>
-        </ul>
-    </div>
-</div>
-
-<div class="one_fourth">
-    <div class="widget_container">
-        <h3>Theme <span>features</span></h3>
-        <p>Learn more about the Theme template features</p>
-        <ul class="userlinks">
-            <li><a href="#">Responsive Layout</a></li>
-            <li><a href="#">Porfolio Section</a></li>
-            <li><a href="#">Rich Typography</a></li>
-            <li><a href="#">Blog Content</a></li>
-            <li><a href="#">And much more...</a></li>
-        </ul>
-    </div>
-</div>
-
-<div class="one_fourth_last">
-    <div class="widget_container">
-        <h3>Flickr <span>Widgets</span></h3>
-        <div class="flickr_widget">
-            <img src="./images/flickr_img_1.png" alt="img" />
-            <img src="./images/flickr_img_2.png" alt="img" />
-            <img src="./images/flickr_img_3.png" alt="img" />
-            <img src="./images/flickr_img_4.png" alt="img" />
-            <img src="./images/flickr_img_5.png" alt="img" />
-            <img src="./images/flickr_img_6.png" alt="img" />
-            <img src="./images/flickr_img_7.png" alt="img" />
-            <img src="./images/flickr_img_8.png" alt="img" />
-            <img src="./images/flickr_img_9.png" alt="img" />
-        </div>
-	</div>
-</div>
-
-<div class="clear"></div>
-
-<div class="footer">
-
-<div class="title_holder">
-    <h5><span>Not Enough. Want to stay informed? Follow me now... </span></h5>
-</div>
-
-<div class="social">
-    <ul>
-        <li><a href="#"><img src="./images/social_icon_1.png" alt="img" /></a></li>
-        <li><a href="#"><img src="./images/social_icon_2.png" alt="img" /></a></li>
-        <li><a href="#"><img src="./images/social_icon_3.png" alt="img" /></a></li>
-        <li><a href="#"><img src="./images/social_icon_4.png" alt="img" /></a></li>
-        <li><a href="#"><img src="./images/social_icon_5.png" alt="img" /></a></li>
-    </ul>
-</div>
-
-<p>&copy; Copyright &copy; 2013.Company name All rights reserved.<a target="_blank" href="http://sc.chinaz.com/moban/">&#x7F51;&#x9875;&#x6A21;&#x677F;</a></p>
-</div>
-
-</footer>
-<!-- Bottom Section End -->
-
-
-</div>
-</body>
+		<div class="header">
+		    <div class="logo">
+		    	<a href="./index.html"><img src="./images/logo_new.png" alt="img" /></a>
+		    </div>
+			<div class="menubar" style="float: right">
+			 
+				<div class="menu_item">
+					<div class="menu_text">首页</div>
+				</div>
+				<div class="menu_item">
+					<div class="menu_text">关于我们</div>
+				</div>
+				<div class="menu_item">
+					<div class="menu_text">舆情动态</div>
+				</div>
+				<div class="menu_item">	
+					<div class="menu_text ">公开办事</div>
+					<div class="menu_list">
+						<div class="menu_list_header"></div>
+						<div class="list_item">肉制品报告</div>
+						<div class="list_item">标准备案</div>
+						<div class="list_item">添加剂报告</div>
+						<div class="list_item">委托加工备案</div>
+					</div>
+				</div>
+				<div class="menu_item">
+					<div class="menu_text">政策法规</div>
+				</div>
+				<div class="menu_item">
+					<div class="menu_text">咨询服务</div>
+				</div>
+			</div> 
+		    <!-- <nav>
+		    <div id="myslidemenu" class="jqueryslidemenu">
+		        <ul>
+		            <li><a class="active" href="./index.html">首页</a></li>
+		            <li><a href="./about.html">关于我们</a></li>
+		            <li><a href="./index.html">舆情动态</a></li>
+		            
+		            <li><a href="./portfolio.html">公开办事</a>
+		                <ul>
+		                    <li><a href="./portfolio_3col.html">肉制品报告</a></li>
+		                    <li><a href="./portfolio_3col.html">标准备案</a></li>
+		                    <li><a href="./portfolio_2col.html">添加剂报告</a></li>
+		                    <li><a href="./portfolio_1col.html">委托加工备案</a></li>
+		                </ul>
+		            </li>
+		            <li><a href="./blog.html">政策法规</a></li>
+		            <li><a href="./contact.html">咨询服务</a></li>
+		      </ul>
+		    </div>
+		    </nav> -->
+		</div>
+		<!-- Header End -->
+		
+		<div class="clear"></div>
+		
+		<!-- Flex Slider Start -->
+		<div class="flexslider">
+		    <ul class="slides">
+		        <li>
+		            <div class="slider_content" style="background-image:url('./images/slider_img_1.png')">
+		                <div class="thumb_img"> <!-- <img src="./images/slider_img_1.png" alt="img" /> --> </div>
+		                <div class="description">
+		                    <h1>公开办事</h1>
+		                    <div class="slide_caption"><span>品质</span>和<span>服务</span>是我们最好的包装</div>
+		                    <p>品质和服务是我们最好的包装 | 品质和服务是我们最好的包装 | 品质和服务是我们最好的包装</p>
+		            	</div>
+		            </div>
+		        </li>
+		        <li> 
+		            <div class="slider_content" style="background-image: url('./images/slider_img_2.png')">
+		                <div class="thumb_img"> <!-- <img src="./images/slider_img_2.png" alt="img" /> --> </div>
+		                <div class="description">
+		                    <h1>实时动态</h1>
+		                    <div class="slide_caption">致力于为您不断提供<span>更好更新的</span>服务</div>
+		                    <p>致力于为您不断提供更好更新的服务 | 致力于为您不断提供更好更新的服务 </p>
+		                </div>
+		            </div>
+		        </li>
+		        <li>
+		            <div class="slider_content" style="background-image: url('./images/slider_img_3.png')">
+		                <div class="thumb_img"> <!-- <img src="./images/slider_img_3.png" alt="img" /> --> </div>
+		                <div class="description">
+		                    <h1>最新政策</h1>
+		                    <div class="slide_caption">我们提供<span>准确</span>和<span>最新</span>的信息</div>
+		                    <p>我们提供准确和最新的信息 | 我们提供准确和最新的信息 | 我们提供准确和最新的信息</p>
+		                </div>
+		            </div>
+		        </li>
+		    </ul>
+		</div>
+		<!-- Flex Slider End -->
+		
+		<!-- Teaser Start -->
+		<div class="teaser">
+		
+		<div class="teaser_content">
+			<h3>10月18日，自治区政府召开全区食品药品安全和监管体制改革工作电视电话会议，正式启动广西的食品药品监管体制改革，今后食品从生产、流通到 ...</h3>
+		</div>
+		<div class="teaser_button">
+			<a href="#" class="button">&nbsp;&nbsp;&nbsp;打&nbsp;开&nbsp;&nbsp;&nbsp;</a>
+		</div>
+		
+		</div>
+		<!-- Teaser End -->
+		
+		<!-- Content Start -->
+		<div id="content">
+		
+		<div class="teaser_container clearfix">
+		<div class="one_third">
+		    <div class="teaser_box">
+		        <div style="margin-bottom: 20px">
+		        	<img src="./images/services_icon_1.png" alt="img" />
+		        </div>
+		        <h3>资料下载</h3>
+		        <p>In hac habitasse platea dictumst. Aliquam in est leo. Aliquam ut 
+		        urna pulvinar ipsum ultricies fringilla et sed magna. Duis faucibus 
+		        lorem at eros cursus fermentum.</p><br />
+		        <a href="#" class="button">更多</a>
+		    </div>
+		</div>
+		    
+		<div class="one_third">
+		    <div class="teaser_box">
+		        <div style="margin-bottom: 20px">
+		        	<img src="./images/services_icon_2.png" alt="img" />
+		        </div>
+		        <h3>我们的服务</h3>
+		        <p>In hac habitasse platea dictumst. Aliquam in est leo. Aliquam ut 
+		        urna pulvinar ipsum ultricies fringilla et sed magna. Duis faucibus 
+		        lorem at eros cursus fermentum.</p><br />
+		        <a href="#" class="button">更多</a>
+		    </div>
+		</div>
+		
+		<div class="one_third_last">
+		    <div class="teaser_box">
+		        <div style="margin-bottom: 20px">
+		        	<img src="./images/services_icon_3.png" alt="img" />
+		        </div>
+		        <h3>我们的团队</h3>
+		        <p>In hac habitasse platea dictumst. Aliquam in est leo. Aliquam ut 
+		        urna pulvinar ipsum ultricies fringilla et sed magna. Duis faucibus 
+		        lorem at eros cursus fermentum.</p><br />
+		        <a href="#" class="button">更多</a>
+		    </div>
+		</div>
+		</div>
+		
+		<div class="v_space clear"></div>
+		
+		<div class="title_holder">
+		    <h3><span>今日头条</span></h3>
+		</div>
+		
+		<div id="testimonail_wrapper">
+		<div id="testimonail">
+		<ul>
+		    <li>
+		        <p>【食源性疾病成我国头号食品安全问题】卫生部食品安全风险评估重点实验室抽样调查表明，
+		        	食源性疾病是目前我国头号食品安全问题。调查人群的食源性疾病发病次数为0.157次每人
+		        	每年，即每6人中有1人在过去一年中曾发生食源性疾病。食源性疾病高峰在夏季，主要临床
+		        	症状是急性胃肠炎</p>
+		        <span>-- 新华网</span>
+		    </li>
+		    <li>
+		        <p>不久前有经济学者在电视访谈节目中称，转基因玉米让老鼠长肿瘤、美国连牲畜都被禁止喂食
+		        	转基因饲料。转基因食品(行情 专区)的安全性问题再度成为社会焦点。转基因食品致癌或让
+		        	人“绝育无后”？老外不吃转基因食品？对此，记者采访了部分国内外生物技术专家及业内人士，
+		        	求证有关热点问题。</p>
+		        <span>-- 东方财富网</span>
+		    </li>
+		    <li>
+		        <p>【深圳商报讯】（记者 黄青山 实习生 邹鹏）福田皇冠配餐中心的经营模式，为解决都市人用餐
+		        	的“老大难”问题提供了有力参考，其食品安全管理也是一大亮点。18日，皇冠配餐中心举行“金
+		        	百味食品安全内部培训月”活动，对100多名金百味员工进行专业的食品安全培训，周明明、唐雪
+		        	梅两位深圳市人大代表和深圳市市场监督管理局福田分局相关工作人员，也利用此次机会进行实
+		        	地参观和考察</p>
+		        <span>-- 网易</span>
+		    </li>
+		</ul>
+		</div>
+		</div>
+		
+		<div class="v_space"></div>
+		
+		<div class="title_holder">
+		    <h3><span>最新资料</span></h3>
+		</div>
+		
+		<div class="demo">
+		<ul id="list" class="image-grid_3col">
+		    <li>
+		        <div class="portfolio_content">
+		            <img src="./images/portfolio_3col_img_1.png" alt="img" />
+		            <h4>Graphic Card</h4>
+		            <p><a href="./portfolio_single_page.html">gravida vulputate</a></p>
+		            <div class="link_btn">
+		                <a id="example6" href="./images/portfolio_2col_img_1.png" class="zoom"></a>
+		                <a href="./portfolio_single_page.html" class="link_post"></a>
+		                <div class="overlay"></div>
+		            </div>
+		        </div>
+		    </li>
+		    <li>
+		        <div class="portfolio_content">
+		            <img src="./images/portfolio_3col_img_2.png" alt="img" />
+		            <h4>Flickr Visualisation</h4>
+		            <p><a href="./portfolio_single_page.html">hendrerit cursus</a></p>
+		            <div class="link_btn">
+		                <a id="example6" href="./images/portfolio_2col_img_2.png" class="zoom"></a>
+		                <a href="./portfolio_single_page.html" class="link_post"></a>
+		                <div class="overlay"></div>
+		            </div>
+		        </div>
+		    </li>
+		    <li>
+		        <div class="portfolio_content">
+		            <img src="./images/portfolio_3col_img_3.png" alt="img" />
+		            <h4>Media Identity</h4>
+		            <p><a href="./portfolio_single_page.html">Tristique</a></p>
+		            <div class="link_btn">
+		                <a id="example6" href="./images/portfolio_2col_img_3.png" class="zoom"></a>
+		                <a href="./portfolio_single_page.html" class="link_post"></a>
+		                <div class="overlay"></div>
+		            </div>
+		        </div>
+		    </li>
+		
+		</ul>
+		</div>
+		
+		</div>
+		
+		<!-- Content End -->
+		
+		<!-- Bottom Section Start -->
+		<div class="footer">
+		<div class="one_fourth">
+		    <div class="widget_container">
+		        <h3>A Little <span>about us</span></h3>
+		        <img src="./images/about_me_img.png" alt="img" class="alignleft" />
+		        <p>In hac habitasse platea dictumst. Aliquam in est leo. Aliquam ut 
+		        urna pulvinar ipsum ultricies fringilla et sed magna. Duis faucibus 
+		        lorem at eros cursus fermentum. Vivamus a nisl vel magna tincidunt sodales 
+		        ac imperdiet arcu. Proin blandit cursus blandit.</p>
+		        <a href="#">-- John Deo</a>
+		    </div>
+		</div>
+		
+		<div class="one_fourth">
+		    <div class="widget_container">
+		        <h3>Get <span>in touch</span></h3>
+		        <p>In hac habitasse platea dictumst. Aliquam in est leo.</p>
+		        <ul class="contact">
+		            <li>
+		                <strong>Mail Us</strong>
+		                <br />
+		                <a href="#">lens@yourcompany.com</a>
+		            </li>
+		            <li>
+		                <strong>Phone</strong>
+		                <br />
+		                <p>+123 456 7890</p>
+		            </li>
+		            <li>
+		                <strong>Location</strong>
+		                <br />
+		                <p>2411 Any Street - Any Town - United Kingdom.</p>
+		            </li>
+		        </ul>
+		    </div>
+		</div>
+		
+		<div class="one_fourth">
+		    <div class="widget_container">
+		        <h3>Theme <span>features</span></h3>
+		        <p>Learn more about the Theme template features</p>
+		        <ul class="userlinks">
+		            <li><a href="#">Responsive Layout</a></li>
+		            <li><a href="#">Porfolio Section</a></li>
+		            <li><a href="#">Rich Typography</a></li>
+		            <li><a href="#">Blog Content</a></li>
+		            <li><a href="#">And much more...</a></li>
+		        </ul>
+		    </div>
+		</div>
+		
+		<div class="one_fourth_last">
+		    <div class="widget_container">
+		        <h3>Flickr <span>Widgets</span></h3>
+		        <div class="flickr_widget">
+		            <img src="./images/flickr_img_1.png" alt="img" />
+		            <img src="./images/flickr_img_2.png" alt="img" />
+		            <img src="./images/flickr_img_3.png" alt="img" />
+		            <img src="./images/flickr_img_4.png" alt="img" />
+		            <img src="./images/flickr_img_5.png" alt="img" />
+		            <img src="./images/flickr_img_6.png" alt="img" />
+		            <img src="./images/flickr_img_7.png" alt="img" />
+		            <img src="./images/flickr_img_8.png" alt="img" />
+		            <img src="./images/flickr_img_9.png" alt="img" />
+		        </div>
+			</div>
+		</div>
+		
+		<div class="clear"></div>
+		
+		
+		
+		</div>
+		<!-- Bottom Section End -->
+		
+		
+		</div>
+	</body>
 </html>

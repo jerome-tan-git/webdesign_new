@@ -162,7 +162,8 @@ html[xmlns] .slides {
 }
 .slider_content h1 {
 	font-weight:bold;
-	font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+	/*font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;*/
+	font-family: "微软雅黑",Arial,"宋体";
 	font-size:6.5em;
 	font-weight: bold;
 	line-height: 1.0em;
@@ -176,7 +177,7 @@ html[xmlns] .slides {
 }
 .slide_caption {
 	display: block;
-	font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+	font-family: "宋体",Arial,"微软雅黑";
 	font-size: 1.5em;
 	font-weight: bold;
 	margin-bottom: 13px;
