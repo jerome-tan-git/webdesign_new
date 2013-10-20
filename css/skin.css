@@ -1,0 +1,29 @@
+/*background color*/
+header, 
+nav ul li ul li a:hover, 
+nav ul li.main-links:hover > a, 
+nav ul li a.active, 
+.teaser_ser_icon, 
+span#controls .prevBtn, 
+span#controls .nextBtn, 
+.flexslider {
+	background-color:#f5d52e!important;
+}
+
+/*Border color*/
+nav ul li.main-links:hover > a, 
+nav ul li a.active {
+	border-top:3px solid #f5d52e!important;
+}
+
+
+/*text color*/
+footer .widget_container span, 
+footer a, 
+footer a:link, 
+footer a:visited,
+.sub_header_description a:hover,
+.widget_container span 
+{
+	color:#f5d52e;
+}

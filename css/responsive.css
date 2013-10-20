@@ -1,0 +1,231 @@
+@media only screen (min-width: 1100px) {
+}
+
+
+/* Tablet (Portrait) */
+/* Width of 768px */
+
+@media only screen and (min-width: 768px) and (max-width: 1100px) {
+#page_wrap, .image-grid, .image-grid_3col, .image-grid_2col {
+ width:768px;
+}
+.logo {
+ text-align:center;
+ margin:0 auto;
+ float:none;
+}
+ .jqueryslidemenu {
+ margin:0 auto;
+ display:table;
+}
+ nav {
+ background-image:url(../images/top_header_opacity.png);
+ background-repeat:repeat;
+ border-top:3px solid #2A313C;
+ width:100%;
+}
+ .slider_content {
+ font-size:80%;
+}
+#testimonail li {
+ width:550px;
+}
+.slider_content h1 {
+ font-size:4.5em;
+}
+
+/* Portfolio section
+----------------------------------------*/
+.image-grid li {
+ width: 154px;
+}
+ .image-grid li a.zoom, .image-grid_3col li a.zoom {
+ left:12%!important;
+}
+.image-grid li a.link_post, .image-grid_3col li a.link_post {
+ right:12%!important;
+}
+ .image-grid_3col li {
+ width:215px;
+}
+ .image-grid_2col li {
+ width:338px;
+}
+ .image-grid_1col li {
+ width:708px;
+}
+/* Columns */
+
+}
+
+/* Mobile landscape width 480 */
+@media only screen and (max-width: 767px) {
+#page_wrap {
+ width:280px;
+}
+.logo {
+ text-align:center;
+ margin:0 auto;
+ float:none;
+}
+
+/* Menu section
+----------------------------------------*/
+
+.jqueryslidemenu {
+ margin:0 auto;
+ display:table;
+}
+ nav {
+ background-image:url(../images/top_header_opacity.png);
+ background-repeat:repeat;
+ border-top:3px solid #2A313C;
+ width:100%;
+}
+.jqueryslidemenu ul {
+ display:none;
+}
+.jqueryslidemenu {
+ width:96%;
+ padding:2%;
+}
+.jqueryslidemenu select {
+ display: block;
+ width:100%;
+ background-color: #f9f9f9;
+ border:none;
+ border:1px solid #fff;
+ margin:0 auto;
+ padding:5px 0px;
+}
+ .jqueryslidemenu select option {
+ padding-bottom:3px;
+}
+/* sub header title section
+----------------------------------------*/
+.sub_header_title, .search_box {
+ float:none;
+ text-align:center;
+ margin:0 auto;
+}
+.search_box {
+ margin-top:20px;
+ width:70%;
+}
+
+/* Testimonial section ( Testimonial )
+----------------------------------------*/
+#testimonail li {
+ width:120px;
+}
+#testimonail p {
+font-size:1.0em;
+line-height: 18px;
+}
+
+/* main Slider section ( Testimonial )
+----------------------------------------*/
+.slider_content {
+padding:10px 40px;
+}
+.slider_content {
+ font-size:80%;
+}
+.slider_content .thumb_img {
+ float:none;
+ text-align:center;
+ margin:0 auto;
+ width:60%;
+}
+.slider_content .description {
+ text-align: center;
+}
+ .slider_content h1 {
+ font-size:2.0em;
+}
+ .flex-direction-nav a {
+ top: 40%;
+}
+ .teaser_content {
+ float: none;
+ width: 100%;
+ text-align:center;
+}
+.teaser_content h3 {
+ font-size:18px;
+ line-height:27px;
+}
+.teaser_button {
+ float:none;
+ text-align:center;
+ margin-bottom:20px;
+}
+
+
+/* Portfolio section
+----------------------------------------*/
+.splitter li, .splitter ul, .splitter ul li a {
+ display:block;
+}
+ .image-grid, .image-grid_3col, .image-grid_2col, .image-grid_1col {
+ width:220px;
+ height: auto !important;
+}
+.image-grid img, .image-grid_3col img, .image-grid_2col img, .image-grid_1col img {
+ min-width:100%;
+}
+ #list li {
+ width:220px;
+}
+
+
+/* Blog Section
+----------------------------------------*/
+.sidebar_right {
+ background-image:none;
+}
+.post_content {
+ width: 65%;
+}
+
+/* Columns
+----------------------------------------*/
+.one_half, .one_half_last, .one_third, .one_third_last, .two_third, .two_third_last, .one_fourth, .one_fourth_last, .two_fourth, .two_fourth_last, .three_fourth, .three_fourth_last, .one_fifth, .one_fifth_last, .two_fifth, .two_fifth_last, .three_fifth, .three_fifth_last, .four_fifth, .four_fifth_last {
+ width: 100%;
+margin: 0 0 30px;
+}
+}
+ @media only screen and (min-width: 480px) and (max-width: 767px) {
+#page_wrap {
+ width:420px;
+}
+
+/* Testimonial section ( Testimonial )
+----------------------------------------*/
+#testimonail li {
+ width:250px;
+}
+#testimonail p {
+font-size:1.0em;
+line-height: 18px;
+}
+
+/* Portfolio section
+----------------------------------------*/
+.image-grid, .image-grid_3col, .image-grid_2col, .image-grid_1col, .portfolio_content {
+ width:360px;
+ height: auto !important;
+}
+.image-grid img, .image-grid_3col img, .image-grid_2col img, .image-grid_1col img, .portfolio_content img {
+ min-width:100%;
+}
+ #list li {
+ width:360px;
+}
+
+/* Blog Section
+----------------------------------------*/
+.post_content {
+ width: 75%;
+}
+}

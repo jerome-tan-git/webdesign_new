@@ -1,0 +1,143 @@
+/* 2.1 =Splitter
+---------------------------------------------------------------------- */
+
+#filter, #filter ul {
+	margin:0px auto;
+	text-align:center;
+	margin-bottom:20px;
+}
+.splitter {
+	clear:both;
+}
+.splitter:after {
+	content: "";
+	display: block;
+	height: 0;
+	overflow: hidden;
+	clear: both;
+}
+.splitter ul {
+	margin-right: 0;
+	margin-top: 0;
+}
+.splitter ul li a {
+	margin-right:10px;
+	margin-bottom:10px;
+}
+.splitter li, .splitter ul, .splitter ul li a {
+	display: inline;
+	display: inline-block;
+	line-height: 1;
+}
+.splitter ul, .splitter ul li, .splitter ul li a {
+	background-image: url("http://templatesden.com/TF/html/innovate/css/i/buttons.png");
+	background-repeat: no-repeat;
+}
+.splitter ul li {
+}
+.splitter ul li:first-child {
+	margin-left: 0;
+}
+.splitter ul li a {
+	padding:8px;
+	border:1px solid #111;
+	-webkit-border-radius: 3px;
+	-moz-border-radius: 3px;
+	border-radius: 3px;
+	font-family:arial, helvetica, sans-serif;
+	padding: 10px 10px 10px 10px;
+	text-shadow: -1px -1px 0 rgba(0, 0, 0, 0.3);
+	font-weight:bold;
+	text-align: center;
+	color: #FFFFFF;
+	background-color: #383838;
+	background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #434343), color-stop(100%, #7089b3));
+	background-image: -webkit-linear-gradient(top, #434343, #383838);
+	background-image: -moz-linear-gradient(top, #434343, #383838);
+	background-image: -ms-linear-gradient(top, #434343, #383838);
+	background-image: -o-linear-gradient(top, #434343, #383838);
+	background-image: linear-gradient(top, #434343, #383838);
+filter:progid:DXImageTransform.Microsoft.gradient(GradientType=0, startColorstr=#434343, endColorstr=#383838);
+}
+.splitter ul li a:hover {
+	border:1px solid #111;
+	background-color: #434343;
+	background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #383838), color-stop(100%, #434343));
+	background-image: -webkit-linear-gradient(top, #383838, #434343);
+	background-image: -moz-linear-gradient(top, #383838, #434343);
+	background-image: -ms-linear-gradient(top, #383838, #434343);
+	background-image: -o-linear-gradient(top, #383838, #434343);
+	background-image: linear-gradient(top, #383838, #434343);
+filter:progid:DXImageTransform.Microsoft.gradient(GradientType=0, startColorstr=#383838, endColorstr=#434343);
+	color:#e0e0e0;
+}
+.splitter ul li.selected-0 a, .splitter ul li.selected-1 a, .splitter ul li.selected-2 a, .splitter ul li.selected-3 a, .splitter ul li.selected-4 a, .splitter ul li.selected-5 a, .splitter ul li.selected-6 a, .splitter ul li.selected-7 a, .splitter ul li.selected-8 a, .splitter ul li.selected-9 a {
+	color: #fff;
+	background-color:#d11818;
+}
+/* 3.2 =Image Grid 4 col
+---------------------------------------------------------------------- */
+.clearfix:after {
+	background-color: #333333;
+	clear: both;
+	content: ".";
+	display: block;
+	height: 0;
+	visibility: hidden;
+}
+.image-grid, .image-grid_3col, .image-grid_2col {
+	width:1072px;
+	margin-top:20px;
+	margin:0px;
+	padding:0px;
+}
+.image-grid:after, .image-grid_3col:after, .image-grid_2col:after {
+	content: "";
+	display: block;
+	height: 0;
+	clear: both;
+}
+.image-grid li img, .image-grid li strong, .image-grid_3col li img, .image-grid_3col li strong, .image-grid_2col li img, .image-grid_2col li strong {
+	display: block;
+}
+.image-grid li strong, .image-grid_3col li strong, .image-grid_2col li strong {
+	color: #fff;
+}
+.demo {
+	float:left;
+	overflow:hidden;
+}
+.image-grid li, .image-grid_3col li, .image-grid_2col li, .image-grid_1col li {
+	float: left;
+	text-align: center;
+	font-family: "Helvetica Neue", sans-serif;
+	line-height: 17px;
+	color: #686f74;
+	margin-right:31px;
+	margin-bottom:31px;
+	list-style:none;
+	overflow:hidden;
+	background-image: url(http://templatesden.com/TF/html/innovate/images/ajax-loader.png);
+	background-repeat: no-repeat;
+	background-position: center center;
+}
+/* 3.2 =Image Grid 4 col
+---------------------------------------------------------------------- */
+.image-grid li {
+	width:237px;
+}
+/* 3.2 =Image Grid 3 col
+---------------------------------------------------------------------- */
+.image-grid_3col li {
+	width:326px;
+}
+/* 3.2 =Image Grid 2 col
+---------------------------------------------------------------------- */
+.image-grid_2col li {
+	width:505px;
+}
+/* 3.2 =Image Grid 1 col
+---------------------------------------------------------------------- */
+.image-grid_1col li {
+	width:1040px;
+}
