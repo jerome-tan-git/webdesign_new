@@ -9,6 +9,30 @@
 #page_wrap, .image-grid, .image-grid_3col, .image-grid_2col {
  width:768px;
 }
+.logo {
+	text-align: center;
+	margin: 0 auto;
+	float: none;
+	border-bottom: 3px solid #000;
+	padding-bottom: 20px;
+	
+}
+
+.header
+{
+	background-image: url('../images/top_header_opacity.png');
+	background-repeat: repeat;
+	background-color: #f5d52e;
+	float: left;
+	width: 100%;
+	border-top: none;
+}
+
+.menubar {
+	margin: 0 auto;
+	display: table;
+	float:none;
+}
 
  .teaser_content {
  float: none;
@@ -75,11 +99,31 @@
  width:280px;
 }
 .logo {
- text-align:center;
- margin:0 auto;
- float:none;
+	text-align: center;
+	margin: 0 auto;
+	float: none;
+	border-bottom: 3px solid #000;
+	padding-bottom: 20px;
+	
 }
 
+.header
+{
+	background-image: url('../images/top_header_opacity.png');
+	background-repeat: repeat;
+	background-color: #f5d52e;
+	float: left;
+	width: 100%;
+	border-top: none;
+}
+.menubar {
+	display: none;
+
+}
+.small_menu
+{
+	display:inline;
+}
 /* Menu section
 ----------------------------------------*/
 
@@ -212,6 +256,24 @@ margin: 0 0 30px;
 }
 
 
+.logo {
+	text-align: center;
+	margin: 0 auto;
+	float: none;
+	border-bottom: 3px solid #000;
+	padding-bottom: 20px;
+	
+}
+
+.header
+{
+	background-image: url('../images/top_header_opacity.png');
+	background-repeat: repeat;
+	background-color: #f5d52e;
+	float: left;
+	width: 100%;
+	border-top: none;
+}
 
 /* Testimonial section ( Testimonial )
 ----------------------------------------*/
