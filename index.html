@@ -3,6 +3,7 @@ transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 	<head>
 		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+		<meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1">
 		<title>jQa</title>
 		<link rel="stylesheet" type="text/css" href="./css/reset.css" />
 		<link rel="stylesheet" type="text/css" href="./css/layout.css" />
@@ -20,10 +21,12 @@ transitional.dtd">
 
 		<script type="text/javascript" src="./js/jquery.min.js"></script>
 		<script type="text/javascript" src="./js/jquery-migrate.js"></script>
+		
 		<script type="text/javascript" src="./js/jqueryslidemenu.js"></script>
 		<script type="text/javascript" src="./js/jquery.flexslider.js"></script>
 		<script type="text/javascript" src="./js/jquery.sudoSlider.js"></script>
 		<script type="text/javascript" src="./js/custom.js"></script>
+		<script type="text/javascript" src="./js/unslider.js"></script>
 		<script type="text/javascript" src="./js/fancybox/jquery.fancybox-1.3.4.js"></script>
 
 		<script type="text/javascript" src="js/jquery-ui-1.10.3.custom.min.js"></script>
@@ -78,11 +81,11 @@ transitional.dtd">
 					'overlayOpacity'	: 0.9
 				});
 				//slider
-				var sudoSlider = jQuery("#testimonail").sudoSlider({
-		           continuous:true,
-		           numeric:false
-		        });
-				
+				// var sudoSlider = jQuery("#testimonail").sudoSlider({
+		           // continuous:true,
+		           // numeric:false
+		        // });
+				  $('.banner').unslider();
 				
 				//menu_item 
 				$(".menu_item").hover(function(){
@@ -350,8 +353,41 @@ transitional.dtd">
 		<div class="title_holder">
 		    <h3><span>今日头条</span></h3>
 		</div>
-		
-		<div id="testimonail_wrapper">
+		<div class="banner">
+			
+		    <ul>
+		        <li>
+		        	<div class="row_news">
+			        	<p>【食源性疾病成我国头号食品安全问题】卫生部食品安全风险评估重点实验室抽样调查表明，
+			        	食源性疾病是目前我国头号食品安全问题。调查人群的食源性疾病发病次数为0.157次每人
+			        	每年，即每6人中有1人在过去一年中曾发生食源性疾病。食源性疾病高峰在夏季，主要临床
+			        	症状是急性胃肠炎</p>
+			        	<span>-- 新华网</span>
+		        	</div>
+		        </li>
+		        <li>
+		        	<div class="row_news">
+			        	 <p>不久前有经济学者在电视访谈节目中称，转基因玉米让老鼠长肿瘤、美国连牲畜都被禁止喂食
+			        	转基因饲料。转基因食品(行情 专区)的安全性问题再度成为社会焦点。转基因食品致癌或让
+			        	人“绝育无后”？老外不吃转基因食品？对此，记者采访了部分国内外生物技术专家及业内人士，
+			        	求证有关热点问题。</p>
+			        	<span>-- 东方财富网</span>
+		        	</div>
+				</li>
+		        <li>
+		        	<div class="row_news">
+			        	【深圳商报讯】（记者 黄青山 实习生 邹鹏）福田皇冠配餐中心的经营模式，为解决都市人用餐
+			        	的“老大难”问题提供了有力参考，其食品安全管理也是一大亮点。18日，皇冠配餐中心举行“金
+			        	百味食品安全内部培训月”活动，对100多名金百味员工进行专业的食品安全培训，周明明、唐雪
+			        	梅两位深圳市人大代表和深圳市市场监督管理局福田分局相关工作人员，也利用此次机会进行实
+			        	地参观和考察</p>
+			        	<span>-- 网易</span>
+		        	</div>
+				</li>
+		    </ul>
+
+		</div>
+		<!-- <div id="testimonail_wrapper">
 		<div id="testimonail">
 		<ul>
 		    <li>
@@ -378,7 +414,7 @@ transitional.dtd">
 		    </li>
 		</ul>
 		</div>
-		</div>
+		</div> -->
 		
 		<div class="v_space"></div>
 		
