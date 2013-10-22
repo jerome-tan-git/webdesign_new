@@ -1,0 +1,160 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-
+transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+		<meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1">
+		<title>www.pdspxh.com</title>
+		<link rel="stylesheet" type="text/css" href="./css/reset.css" />
+		<link rel="stylesheet" type="text/css" href="./css/layout.css" />
+		<link rel="stylesheet" type="text/css" href="./css/flexslider.css" />
+		<link rel="stylesheet" type="text/css" href="./css/sudo.css" />
+		<link rel="stylesheet" type="text/css" href="./css/jqueryslidemenu.css" />
+		<link rel="stylesheet" type="text/css" href="./style.css" />
+		<link rel="stylesheet" type="text/css" href="./css/blog.css" />
+
+		<link rel="stylesheet" type="text/css" href="./js/fancybox/jquery.fancybox-1.3.4.css" media="screen" />
+		<link rel="stylesheet" type="text/css" href="./css/portfolio.css" />
+		<link rel="stylesheet" type="text/css" href="./css/quicksand.css" />
+		<link rel="stylesheet" type="text/css" href="./css/skin.css" />
+		<link rel="stylesheet" type="text/css" href="./css/responsive.css" />
+
+		<script type="text/javascript" src="./js/jquery.min.js"></script>
+		<script type="text/javascript" src="./js/jquery-migrate.js"></script>
+		
+		<script type="text/javascript" src="./js/jqueryslidemenu.js"></script>
+		<script type="text/javascript" src="./js/jquery.flexslider.js"></script>
+		<script type="text/javascript" src="./js/custom.js"></script>
+		<script type="text/javascript" src="./js/unslider.js"></script>
+		<script type="text/javascript" src="./js/fancybox/jquery.fancybox-1.3.4.js"></script>
+
+		<script type="text/javascript" src="js/jquery-ui-1.10.3.custom.min.js"></script>
+
+		<script type="text/javascript" src="js/jquery.easing.1.3.js"></script>
+		<style type="text/css">
+			html, body, p {
+				margin: 0;
+				padding: 0;
+			}
+
+			body {
+				/*overflow: hidden;*/
+			}
+			.warp {
+				filter: alpha(opacity=20);
+			}
+
+			.img24 {
+				background: none;
+				filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='./images/test.png"');
+				width: 100px;
+				height: 100px;
+			}
+		</style>
+		<script type="text/javascript">
+			function enterSite() {
+				$("#page_wrap").show();
+				var dis = $("#cover").outerHeight(true);
+				$("#cover").animate({
+					top : "-2000px"
+				}, 2000, 'easeInQuart', function() {
+					$("#cover").remove();
+					$(document.body).css("overflow", "auto");
+					$("html").css("overflow", "auto");
+				});
+				var curl =window.location.href;
+				if (curl.indexOf("#enter")== -1)
+				{
+					window.location.href +="#enter";
+				} 
+				
+			}
+
+
+			$(document).ready(function() {
+				
+				// bancy bo=x
+				jQuery("a#example6").fancybox({
+					'titlePosition'		: 'outside',
+					'overlayColor'		: '#000',
+					'overlayOpacity'	: 0.9
+				});
+				//slider
+				// var sudoSlider = jQuery("#testimonail").sudoSlider({
+		           // continuous:true,
+		           // numeric:false
+		        // });
+				  $('.banner').unslider();
+				
+				//menu_item 
+				$(".menu_item").hover(function(){
+					$(this).addClass("selected");
+					$(this).find(".menu_list").show();
+					$(this).find(".menu_list").css("opacity","0");
+					$(this).find(".menu_list").animate({
+								opacity : 1
+							}, 500);
+				},function(){
+					$(this).removeClass("selected");
+					
+					$(this).find(".menu_list").animate({
+								opacity : 0
+							}, 500,function()
+							{
+								$(this).find(".menu_list").hide();
+							});
+					
+				});
+				
+				$(".small_menu_title").bind("click",function()
+				{
+					var newHeight= $(".small_menu_list").find(".clearfix").outerHeight();
+					if ($(".small_menu_list").outerHeight()==0)
+					{
+						$(".small_menu_list").animate({
+							height:newHeight+"px"
+						},1000,"easeOutExpo"
+						);
+					}
+					else
+					{
+						$(".small_menu_list").animate({
+							height:0+"px"
+						},1000,"easeOutExpo"
+						);
+					}
+				});
+				
+				$(".small_menu_item").hover(function()
+				{
+					$(this).addClass("small_menu_hover");
+				},
+				function()
+				{
+					$(this).removeClass("small_menu_hover");
+				});
+			});
+
+		</script>
+	</head>
+	<body>
+		<div id="page_wrap">
+<!-- Header Start -->
+			<div style="height:1000px;">
+				<div style="border-top: 3px solid #f5d52e">&nbsp;</div>
+				<div styke="100px">&nbsp;</div>
+				<div style="text-align: center;height:328px">
+					<h1>www.pdspxh.com</h1>
+				</div>
+				<div style="padding-left:283px">
+					<div style="float: left;width:250px">
+						<img src="./images/under.jpg"/>
+					</div>
+					<div style="padding-top:51px">
+						<span style="font-size:49px;color: #000">网站建设中</span>
+					</div>
+				</div>
+			</div>
+		</div>
+	</body>
+</html>
