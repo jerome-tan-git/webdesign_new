@@ -114,6 +114,9 @@
 #page_wrap {
  width:280px;
 }
+.search_box{
+	display:none;
+}
 #dituContent
 {
 	width:218px;
@@ -301,7 +304,9 @@ margin: 0 0 30px;
 	height:388px;
 	border:#ccc solid 1px;
 }
-
+.search_box{
+	display:none;
+}
 .row_news{
 	padding-left:20px;
 	padding-right:20px;
