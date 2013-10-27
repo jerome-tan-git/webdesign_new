@@ -31,6 +31,7 @@ transitional.dtd">
 		<script type="text/javascript" src="js/jquery-ui-1.10.3.custom.min.js"></script>
 
 		<script type="text/javascript" src="js/jquery.easing.1.3.js"></script>
+		<script type="text/javascript" src="http://api.map.baidu.com/api?key=&v=1.1&services=true"></script>
 		<style type="text/css">
 			html, body, p {
 				margin: 0;
@@ -50,6 +51,9 @@ transitional.dtd">
 				width: 100px;
 				height: 100px;
 			}
+			   
+    		.iw_poi_title {color:#CC5522;font-size:14px;font-weight:bold;overflow:hidden;padding-right:13px;white-space:nowrap}
+    		.iw_poi_content {font:12px arial,sans-serif;overflow:visible;padding-top:4px;white-space:-moz-pre-wrap;word-wrap:break-word}
 		</style>
 		<script type="text/javascript">
 			function enterSite() {
@@ -79,12 +83,8 @@ transitional.dtd">
 					'overlayColor'		: '#000',
 					'overlayOpacity'	: 0.9
 				});
-				//slider
-				// var sudoSlider = jQuery("#testimonail").sudoSlider({
-		           // continuous:true,
-		           // numeric:false
-		        // });
-				  $('.banner').unslider();
+				
+				$('.banner').unslider();
 				
 				//menu_item 
 				$(".menu_item").hover(function(){
@@ -260,188 +260,85 @@ transitional.dtd">
 		<div class="clear"></div>
 		
 		<!-- Flex Slider Start -->
-		<div class="flexslider">
-		    <ul class="slides">
-		        <li>
-		            <div class="slider_content">
-		                <div class="thumb_img"> <img src="./images/slider_img_1.png" alt="img" /> </div>
-		                <div class="description">
-		                    <h1>公开办事</h1>
-		                    <div class="slide_caption"><span>品质</span>和<span>服务</span>是我们最好的包装</div>
-		                    <p>品质和服务是我们最好的包装 | 品质和服务是我们最好的包装 | 品质和服务是我们最好的包装</p>
-		            	</div>
-		            </div>
-		        </li>
-		        <li> 
-		            <div class="slider_content">
-		                <div class="thumb_img"> <img src="./images/slider_img_2.png" alt="img" /> </div>
-		                <div class="description">
-		                    <h1>实时动态</h1>
-		                    <div class="slide_caption">致力于为您不断提供<span>更好更新的</span>服务</div>
-		                    <p>致力于为您不断提供更好更新的服务 | 致力于为您不断提供更好更新的服务 </p>
-		                </div>
-		            </div>
-		        </li>
-		        <li>
-		            <div class="slider_content">
-		                <div class="thumb_img"> <img src="./images/slider_img_3.png" alt="img" /> </div>
-		                <div class="description">
-		                    <h1>最新政策</h1>
-		                    <div class="slide_caption">我们提供<span>准确</span>和<span>最新</span>的信息</div>
-		                    <p>我们提供准确和最新的信息 | 我们提供准确和最新的信息 | 我们提供准确和最新的信息</p>
-		                </div>
-		            </div>
-		        </li>
-		    </ul>
+	<div class="sub_header">
+	
+	<div class="sub_header_title">
+	    <h2>关于我们</h2>
+	    <div class="sub_header_description">
+	        <span><a href="./index.html">首页 &raquo;</a></span>
+	        <span class="page">关于我们</span>
 		</div>
+	</div>
+	
+	<div class="search_box">
+	    <form action="#" method="get">
+	    <div style="width:210px" class="clearfix">
+	    <div style="width:150px; float: left">	
+	    	<input id="error_search" type="text" placeholder="Search..." name="s" />
+	    </div>
+    	<input type="submit" value="" style="float: right"/>
+	    </div>
+	    </form>
+	</div>
+	
+	</div>
 		<!-- Flex Slider End -->
 		
 		<!-- Teaser Start -->
-		<div class="teaser">
-		
-		<div class="teaser_content">
-			<h3>10月18日，自治区政府召开全区食品药品安全和监管体制改革工作电视电话会议，正式启动广西的食品药品监管体制改革，今后食品从生产、流通到 ...</h3>
-		</div>
-		<div class="teaser_button">
-			<a href="#" class="button">&nbsp;&nbsp;&nbsp;打&nbsp;开&nbsp;&nbsp;&nbsp;</a>
-		</div>
-		
-		</div>
+		<div class="section" id="content" class="tag_line">
+
+			<div class="two_third">
+			    <h3>上海市浦东新区食品生产安全管理协会（简 介）</h3>
+			    <img src="./images/about_img_1.png" alt="img"  style="float:left;margin-right:12px;"/>
+			    <p class="about_us">&nbsp;&nbsp;&nbsp;&nbsp;上海市浦东新区食品生产安全管理协会（以下简称协会）是为适应国家不断加大食品安全监管力度、强化食品生产企业主体责任的形势而建立的行业中介组织，
+			    	会员单位包含浦东新区范围内的食品生产企业、食品相关产品和化妆品生产企业。协会倡导行业管理、行业自律和企业自律，旨在整合行业力量、借助社会
+			    	资源、搭建服务平台，促进浦东食品生产加工行业整体质量安全管理水平与生产能力的提高，为稳定和提升浦东食品生产行业的质量安全水平和市场秩序发
+			    	挥重要作用。<br /><br />&nbsp;&nbsp;&nbsp;&nbsp;协会拥有一支精通食品及食品相关产品的质量安全、标准、计量、法律法规的资深专家队伍，
+			    	对内为会员单位提供优质诚信服务，以期提升食
+			    	品生产企业与浦东食品行业整体的市场竞争力；对外作为浦东食品生产行业的代言人，成为政府和企业沟通的桥梁。<br /><br />&nbsp;&nbsp;&nbsp;&nbsp;在国家大部制改革的大环境下，充分发
+			    	挥在加强行业信息通报、信用体系建设、企业标准拟定等方面的作用，并配合建立对行业内违规失信食品生产经营者的批评通报制度。</p>
+			</div>
+			<div class="one_third_last">
+			    <h3>我们的位置</h3>
+			    <div id="dituContent"></div>
+			    
+			</div>
+			
+			<div class="v_space clear">&nbsp;</div>
+			
+			<div class="two_third">
+			    <h3>我们的任务</h3>
+			    
+			    <div class="description">
+			        <p class="about_us with_arrow">引导食品及相关产品生产企业树立质量安全主体责任意识、增强食品安全法律意识，积极主动配合政府监管部门的各项工作；</p>	
+			        <p class="about_us with_arrow">帮助、指导食品及相关产品生产企业推行现代企业质量安全管理制度、提高质量管理水平；</p>
+			        <p class="about_us with_arrow">协调食品及相关产品生产企业与食品安全相关部门、行业之间的关系，推动食品及相关产品生产企业的整体发展；</p>
+			        <p class="about_us with_arrow">参与食品及相关产品质量安全相关标准的制定，帮助企业完善标准、计量等基础管理工作；</p>
+			        <p class="about_us with_arrow">办好食品及相关产品质量安全简报，普及食品及相关产品安全知识、相关法律法规，发布食品及相关产品安全信息和预警信息，加强风险信息管理；</p>
+			        <p class="about_us with_arrow">开展各地区间食品及相关产品质量安全活动的交流，发展会员单位与国内外相关团体的联系与合作，促进企业参与国际市场竞争；</p>
+			        <p class="about_us with_arrow">举办食品及相关产品质量安全相关的讲座、培训和咨询服务活动。</p><br />
+
+			        
+				</div>
+			    <br />
+			     <h3>我们的服务</h3>
+			    
+			    <div class="description">
+			        <p class="about_us">&nbsp;&nbsp;&nbsp;&nbsp;为满足会员单位及一部分新开办的食品企业、食品相关产品生产企业日益增长的咨询需求，协会由常设办公室牵头组织相关资深专家，提供一系列咨询服务，面向会员单位和新开办的食品生产企业，优先为会员单位服务。协会提供的咨询服务范围为：</p><br />
+			        <p class="about_us with_arrow">食品生产许可证的新办、变更、年度报告、延续；</p>
+			        <p class="about_us with_arrow">企业食品标准的编制、修订；</p>
+			        <p class="about_us with_arrow">HACCP体系及ISO质量管理体系的相关咨询；</p>
+			        <p class="about_us with_arrow">接受企业及管理部门委托开展的相关管理创新、技术服务、咨询培训等活动；</p>
+			        <p class="about_us with_arrow">详见上海市浦东新区食品生产安全管理协会咨询服务项目。</p>
+			        
+				</div>
+			    
+			</div>
+			</div>
 		<!-- Teaser End -->
 		
 		<!-- Content Start -->
-		<div id="content">
 		
-		<div class="teaser_container clearfix">
-		<div class="one_third">
-		    <div class="teaser_box">
-		        <div style="margin-bottom: 20px">
-		        	<img src="./images/services_icon_1.png" alt="img" />
-		        </div>
-		        <h3>资料下载</h3>
-		        <p>In hac habitasse platea dictumst. Aliquam in est leo. Aliquam ut 
-		        urna pulvinar ipsum ultricies fringilla et sed magna. Duis faucibus 
-		        lorem at eros cursus fermentum.</p><br />
-		        <a href="#" class="button">更多</a>
-		    </div>
-		</div>
-		    
-		<div class="one_third">
-		    <div class="teaser_box">
-		        <div style="margin-bottom: 20px">
-		        	<img src="./images/services_icon_2.png" alt="img" />
-		        </div>
-		        <h3>我们的服务</h3>
-		        <p>In hac habitasse platea dictumst. Aliquam in est leo. Aliquam ut 
-		        urna pulvinar ipsum ultricies fringilla et sed magna. Duis faucibus 
-		        lorem at eros cursus fermentum.</p><br />
-		        <a href="#" class="button">更多</a>
-		    </div>
-		</div>
-		
-		<div class="one_third_last">
-		    <div class="teaser_box">
-		        <div style="margin-bottom: 20px">
-		        	<img src="./images/services_icon_3.png" alt="img" />
-		        </div>
-		        <h3>我们的团队</h3>
-		        <p>In hac habitasse platea dictumst. Aliquam in est leo. Aliquam ut 
-		        urna pulvinar ipsum ultricies fringilla et sed magna. Duis faucibus 
-		        lorem at eros cursus fermentum.</p><br />
-		        <a href="#" class="button">更多</a>
-		    </div>
-		</div>
-		</div>
-		
-		<div class="v_space clear"></div>
-		
-		<div class="title_holder">
-		    <h3><span>今日头条</span></h3>
-		</div>
-		<div class="banner">
-			
-		    <ul>
-		        <li>
-		        	<div class="row_news">
-			        	<p>【食源性疾病成我国头号食品安全问题】卫生部食品安全风险评估重点实验室抽样调查表明，
-			        	食源性疾病是目前我国头号食品安全问题。调查人群的食源性疾病发病次数为0.157次每人
-			        	每年，即每6人中有1人在过去一年中曾发生食源性疾病。食源性疾病高峰在夏季，主要临床
-			        	症状是急性胃肠炎</p>
-			        	<span>-- 新华网</span>
-		        	</div>
-		        </li>
-		        <li>
-		        	<div class="row_news">
-			        	 <p>不久前有经济学者在电视访谈节目中称，转基因玉米让老鼠长肿瘤、美国连牲畜都被禁止喂食
-			        	转基因饲料。转基因食品(行情 专区)的安全性问题再度成为社会焦点。转基因食品致癌或让
-			        	人“绝育无后”？老外不吃转基因食品？对此，记者采访了部分国内外生物技术专家及业内人士，
-			        	求证有关热点问题。</p>
-			        	<span>-- 东方财富网</span>
-		        	</div>
-				</li>
-		        <li>
-		        	<div class="row_news">
-			        	【深圳商报讯】（记者 黄青山 实习生 邹鹏）福田皇冠配餐中心的经营模式，为解决都市人用餐
-			        	的“老大难”问题提供了有力参考，其食品安全管理也是一大亮点。18日，皇冠配餐中心举行“金
-			        	百味食品安全内部培训月”活动，对100多名金百味员工进行专业的食品安全培训，周明明、唐雪
-			        	梅两位深圳市人大代表和深圳市市场监督管理局福田分局相关工作人员，也利用此次机会进行实
-			        	地参观和考察</p>
-			        	<span>-- 网易</span>
-		        	</div>
-				</li>
-		    </ul>
-
-		</div>
-		
-		<div class="v_space"></div>
-		
-		<div class="title_holder">
-		    <h3><span>最新资料</span></h3>
-		</div>
-		
-		<div class="demo">
-		<ul id="list" class="image-grid_3col">
-		    <li>
-		        <div class="portfolio_content">
-		            <img src="./images/portfolio_3col_img_1.png" alt="img" />
-		            <h4>Graphic Card</h4>
-		            <p><a href="./portfolio_single_page.html">gravida vulputate</a></p>
-		            <div class="link_btn">
-		                <a id="example6" href="./images/portfolio_2col_img_1.png" class="zoom"></a>
-		                <a href="./portfolio_single_page.html" class="link_post"></a>
-		                <div class="overlay"></div>
-		            </div>
-		        </div>
-		    </li>
-		    <li>
-		        <div class="portfolio_content">
-		            <img src="./images/portfolio_3col_img_2.png" alt="img" />
-		            <h4>Flickr Visualisation</h4>
-		            <p><a href="./portfolio_single_page.html">hendrerit cursus</a></p>
-		            <div class="link_btn">
-		                <a id="example6" href="./images/portfolio_2col_img_2.png" class="zoom"></a>
-		                <a href="./portfolio_single_page.html" class="link_post"></a>
-		                <div class="overlay"></div>
-		            </div>
-		        </div>
-		    </li>
-		    <li>
-		        <div class="portfolio_content">
-		            <img src="./images/portfolio_3col_img_3.png" alt="img" />
-		            <h4>Media Identity</h4>
-		            <p><a href="./portfolio_single_page.html">Tristique</a></p>
-		            <div class="link_btn">
-		                <a id="example6" href="./images/portfolio_2col_img_3.png" class="zoom"></a>
-		                <a href="./portfolio_single_page.html" class="link_post"></a>
-		                <div class="overlay"></div>
-		            </div>
-		        </div>
-		    </li>
-		
-		</ul>
-		</div>
-		
-		</div>
 		
 		<!-- Content End -->
 		
@@ -525,4 +422,99 @@ transitional.dtd">
 		
 		</div>
 	</body>
+	<script type="text/javascript">
+    //创建和初始化地图函数：
+   function initMap(){
+        createMap();//创建地图
+        setMapEvent();//设置地图事件
+        addMapControl();//向地图添加控件
+        addMarker();//向地图中添加marker
+    }
+    
+    //创建地图函数：
+    function createMap(){
+        var map = new BMap.Map("dituContent");//在百度地图容器中创建一个地图
+        var point = new BMap.Point(121.613226,31.13436);//定义一个中心点坐标
+        map.centerAndZoom(point,18);//设定地图的中心点和坐标并将地图显示在地图容器中
+        window.map = map;//将map变量存储在全局
+    }
+    
+    //地图事件设置函数：
+    function setMapEvent(){
+        map.enableDragging();//启用地图拖拽事件，默认启用(可不写)
+        map.enableScrollWheelZoom();//启用地图滚轮放大缩小
+        map.enableDoubleClickZoom();//启用鼠标双击放大，默认启用(可不写)
+        map.enableKeyboard();//启用键盘上下左右键移动地图
+    }
+    
+    //地图控件添加函数：
+    function addMapControl(){
+        //向地图中添加缩放控件
+	var ctrl_nav = new BMap.NavigationControl({anchor:BMAP_ANCHOR_TOP_RIGHT,type:BMAP_NAVIGATION_CONTROL_SMALL});
+	map.addControl(ctrl_nav);
+                //向地图中添加比例尺控件
+	var ctrl_sca = new BMap.ScaleControl({anchor:BMAP_ANCHOR_BOTTOM_LEFT});
+	map.addControl(ctrl_sca);
+    }
+    
+    //标注点数组
+    var markerArr = [{title:"秀浦路2388弄",content:"秀浦路2388弄",point:"121.612543|31.13453",isOpen:0,icon:{w:21,h:21,l:46,t:0,x:6,lb:5}}
+		 ];
+    //创建marker
+    function addMarker(){
+        for(var i=0;i<markerArr.length;i++){
+            var json = markerArr[i];
+            var p0 = json.point.split("|")[0];
+            var p1 = json.point.split("|")[1];
+            var point = new BMap.Point(p0,p1);
+			var iconImg = createIcon(json.icon);
+            var marker = new BMap.Marker(point,{icon:iconImg});
+			var iw = createInfoWindow(i);
+			var label = new BMap.Label(json.title,{"offset":new BMap.Size(json.icon.lb-json.icon.x+10,-20)});
+			marker.setLabel(label);
+            map.addOverlay(marker);
+            label.setStyle({
+                        borderColor:"#808080",
+                        color:"#333",
+                        cursor:"pointer"
+            });
+			
+			(function(){
+				var index = i;
+				var _iw = createInfoWindow(i);
+				var _marker = marker;
+				_marker.addEventListener("click",function(){
+				    this.openInfoWindow(_iw);
+			    });
+			    _iw.addEventListener("open",function(){
+				    _marker.getLabel().hide();
+			    })
+			    _iw.addEventListener("close",function(){
+				    _marker.getLabel().show();
+			    })
+				label.addEventListener("click",function(){
+				    _marker.openInfoWindow(_iw);
+			    })
+				if(!!json.isOpen){
+					label.hide();
+					_marker.openInfoWindow(_iw);
+				}
+			})()
+        }
+    }
+    //创建InfoWindow
+    function createInfoWindow(i){
+        var json = markerArr[i];
+        var iw = new BMap.InfoWindow("<b class='iw_poi_title' title='" + json.title + "'>" + json.title + "</b><div class='iw_poi_content'>"+json.content+"</div>");
+        return iw;
+    }
+    //创建一个Icon
+    function createIcon(json){
+        var icon = new BMap.Icon("http://app.baidu.com/map/images/us_mk_icon.png", new BMap.Size(json.w,json.h),{imageOffset: new BMap.Size(-json.l,-json.t),infoWindowOffset:new BMap.Size(json.lb+5,1),offset:new BMap.Size(json.x,json.h)})
+        return icon;
+    }
+    
+    initMap();//创建和初始化地图
+</script>
+
 </html>

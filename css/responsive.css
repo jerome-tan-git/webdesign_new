@@ -9,6 +9,13 @@
 #page_wrap, .image-grid, .image-grid_3col, .image-grid_2col {
  width:768px;
 }
+#dituContent
+{
+	width:220px;
+	height:388px;
+	border:#ccc solid 1px;
+}
+
 .logo {
 	text-align: center;
 	margin: 0 auto;
@@ -107,6 +114,13 @@
 #page_wrap {
  width:280px;
 }
+#dituContent
+{
+	width:218px;
+	height:388px;
+	border:#ccc solid 1px;
+}
+
 .logo {
 	text-align: center;
 	margin: 0 auto;
@@ -280,6 +294,12 @@ margin: 0 0 30px;
  @media only screen and (min-width: 480px) and (max-width: 767px) {
 #page_wrap {
  width:420px;
+}
+#dituContent
+{
+	width:358px;
+	height:388px;
+	border:#ccc solid 1px;
 }
 
 .row_news{
