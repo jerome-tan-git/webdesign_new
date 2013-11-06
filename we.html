@@ -1,14 +1,51 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>MQTT over WebSockets</title>
-<link rel="stylesheet" type="text/css" href="style.css"/>
-<script type='text/javascript' src='./js/mosquitto.js'></script>
-<script type='text/javascript' src='./js/jquery.min.js'></script>
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no" />
+<meta http-equiv="content-type" content="text/html; charset=gb2312"/>
+<title>搜狗地图 JavaScript API 示例: 标记可拖拽示例</title>
+<style type="text/css">
+html {height: auto;}
+body {
+	height: auto;
+	margin: 0;
+	padding: 0;
+	overflow-x : hidden; 
+    overflow-y : hidden;
+}
 
+#map_canvas {width:360px;height: 390px;position: absolute;}
 
+</style>
+<script type="text/javascript" src="http://api.go2map.com/maps/js/api_v2.5.1.js"></script>
+<script type="text/javascript">
+  function initialize() {
+    //var myLatlng = new sogou.maps.LatLng(29.981320,116.320247);
+    var myLatlng = new sogou.maps.Point(13536792.96875,3627484.86328125);
+    var myOptions = {
+      zoom: 15,
+      center: myLatlng,
+      mapTypeId: sogou.maps.MapTypeId.ROADMAP
+    }
+    var map = new sogou.maps.Map(document.getElementById("map_canvas"), myOptions);
+     
+    var marker = new sogou.maps.Marker({
+        position: myLatlng,
+        map: map,
+        //设置标记可被拖动S1980、S1890、S1891、S1892、S1893、S1894、S1895、S1896、S1897、S1898、S1899。
+
+        styleId:"S1980"
+    });
+    sogou.maps.event.addListener(marker,"dragend",function(mouseEvent){
+        //参数返回mouseEvent对象
+        //拖动结束位置的坐标为：mouseEvent.point
+        //其他事件请查看文档说明
+        alert("拖动结束位置的坐标为："+mouseEvent.point);
+    });
+  }
+</script>
 </head>
-<body>
-	
+<body onload="initialize()">
+  <div id="map_canvas"></div>
 </body>
 </html>
