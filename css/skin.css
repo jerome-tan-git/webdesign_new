@@ -7,7 +7,7 @@ nav ul li a.active,
 span#controls .prevBtn, 
 span#controls .nextBtn, 
 .flexslider {
-	background-color:#f5d52e!important;
+	background-color:#2ECDF5!important;
 }
 
 /*Border color*/
@@ -25,5 +25,5 @@ footer a:visited,
 .sub_header_description a:hover,
 .widget_container span 
 {
-	color:#f5d52e;
+	color:#2EC5F5;
 }

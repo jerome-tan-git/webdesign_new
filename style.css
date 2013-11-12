@@ -204,7 +204,7 @@ font-weight:600;
 .header {
 	background-image:url(./images/top_header_opacity.png);
 	background-repeat:repeat;	
-	background-color:#f5d52e;
+	background-color:#2EC5F5;
 	border-top:3px solid #2A313C;
 	float:left;
 	width:100%;	
@@ -564,8 +564,8 @@ padding-left:20px;
 	/*background: #f5d52e url(./images/menu_opacity.png) repeat 3px 0px;*/
 	
 	margin-top:	-3px;
-	border-top: 3px solid #f5d52e;
-	background:#fff6ca;
+	border-top: 3px solid #2E9DF5;
+	background:#CAF2FF;
 }
 .menu_list_header
 {
