@@ -703,6 +703,54 @@ padding-left:20px;
 {
 	background: #fff url('./images/icons/iconmonstr-arrow-35-icon-16.png') no-repeat 12px 12px;
 }
+.exam_options
+{
+	padding-left: 50px;
+	line-height: 32px;
+	color:#666666;
+	font-size: 13pt; 
+
+}
+.exam_submit
+{
+	width: 150px;
+	border: 1px solid #efefef;
+	margin: auto;
+	text-align: center;
+	font-size: 20pt;
+	padding-top: 20px;
+	padding-bottom: 20px;
+	color: #ccc;
+	cursor: pointer;
+}
+.exam_type
+{
+	float: right;
+	padding-top: 28px;
+	font-size: 14pt;
+	color: #ccc;
+}
+.exam_title{
+	font-size: 15pt; 
+	margin-bottom: 10px;
+	line-height: 25px;
+}
+.exam_no
+{
+	font-size: 22pt; color:#CCCCCC
+}
+.exam_section{
+	padding-bottom:40px;
+}
+.exam_select
+{
+	color:#122CE9;
+	font-weight:bold;
+}
+.exam_page
+{
+	font-size: 28pt; color:#000000
+}
 .sub_menu{
 	position: absolute;
 	top: 0px;
