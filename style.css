@@ -619,12 +619,96 @@ padding-left:20px;
 }
 .list_item
 {
-	padding-left: 20px;
-	padding-top:10px;
-	padding-bottom: 10px;
+	padding-left: 35px;
+	padding-top:11px;
+	padding-bottom: 9px;
 	text-align: left;
 	border-bottom: 1px solid #eeeeee;
 	background-color: #fff;
+	position: relative;
+	color:#666;
+}
+/* small icons*/
+.keyboard
+{
+	background: #fff url('./images/icons/iconmonstr-keyboard-6-icon-16.png') no-repeat 12px 12px;
+}
+.mouse
+{
+	background: #fff url('./images/icons/iconmonstr-mouse-8-icon-16.png') no-repeat 12px 12px;
+}
+.barcode
+{
+	background: #fff url('./images/icons/iconmonstr-barcode-7-icon-16.png') no-repeat 12px 12px;
+}
+.lable
+{
+	background: #fff url('./images/icons/iconmonstr-barcode-10-icon-16.png') no-repeat 12px 12px;
+}
+
+.menu
+{
+	background: #fff url('./images/icons/iconmonstr-menu-4-icon-16.png') no-repeat 12px 12px;
+}
+
+.exam
+{
+	background: #fff url('./images/icons/iconmonstr-checkbox-icon-16.png') no-repeat 12px 12px;
+}
+.paper
+{
+	background: #fff url('./images/icons/iconmonstr-copy-6-icon-16.png') no-repeat 12px 12px;
+}
+.note
+{
+	background: #fff url('./images/icons/iconmonstr-note-5-icon-16.png') no-repeat 12px 12px;
+}
+.case
+{
+	background: #fff url('./images/icons/iconmonstr-full-folder-icon-16.png') no-repeat 12px 12px;
+}
+.meeting
+{
+	background: #fff url('./images/icons/iconmonstr-user-13-icon-16.png') no-repeat 12px 12px;
+}
+.help
+{
+	background: #fff url('./images/icons/iconmonstr-help-8-icon-16.png') no-repeat 12px 12px;
+}
+.download
+{
+	background: #fff url('./images/icons/iconmonstr-download-2-icon-16.png') no-repeat 12px 12px;
+}
+.target
+{
+	background: #fff url('./images/icons/iconmonstr-target-6-icon-16.png') no-repeat 12px 12px;
+}
+.news
+{
+	background: #fff url('./images/icons/iconmonstr-document-file-2-icon-16.png') no-repeat 12px 12px;
+}
+.intro
+{
+	background: #fff url('./images/icons/iconmonstr-book-11-icon-16.png') no-repeat 12px 12px;
+}
+.pen
+{
+	background: #fff url('./images/icons/iconmonstr-pen-4-icon-16.png') no-repeat 12px 12px;
+}
+.shield
+{
+	background: #fff url('./images/icons/iconmonstr-shield-4-icon-16.png') no-repeat 12px 12px;
+}
+.arrow
+{
+	background: #fff url('./images/icons/iconmonstr-arrow-35-icon-16.png') no-repeat 12px 12px;
+}
+.sub_menu{
+	position: absolute;
+	top: 0px;
+	left: -130px;
+	display: none;
+	width: 130px;
 }
 .small_menu{
 	display:none;

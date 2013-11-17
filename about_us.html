@@ -83,26 +83,26 @@ transitional.dtd">
 					'overlayColor'		: '#000',
 					'overlayOpacity'	: 0.9
 				});
-				
-				$('.banner').unslider();
+				//slider
+				// var sudoSlider = jQuery("#testimonail").sudoSlider({
+		           // continuous:true,
+		           // numeric:false
+		        // });
+				  $('.banner').unslider();
 				
 				//menu_item 
 				$(".menu_item").hover(function(){
 					$(this).addClass("selected");
-					$(this).find(".menu_list").show();
-					$(this).find(".menu_list").css("opacity","0");
-					$(this).find(".menu_list").animate({
-								opacity : 1
-							}, 500);
-				},function(){
-					$(this).removeClass("selected");
+					var myList =$(this).find(".menu_list"); 
+					myList.show();
 					
-					$(this).find(".menu_list").animate({
-								opacity : 0
-							}, 500,function()
-							{
-								$(this).find(".menu_list").hide();
-							});
+						
+				},function(){
+					
+					$(this).removeClass("selected");
+					//alert(".menu_list .sub_"+$(this).attr("id"));
+					var myList =$(this).find(".menu_list"); 
+					myList.hide();
 					
 				});
 				
@@ -133,6 +133,22 @@ transitional.dtd">
 				{
 					$(this).removeClass("small_menu_hover");
 				});
+				
+				$(".list_item").hover(function()
+				{
+					
+					$(this).find(".sub_menu").css("display","block");
+					$( this ).animate({
+          				backgroundColor: "#FDFFD0"}, 500 );
+				},
+				function()
+				{
+						$( this ).animate({
+          				backgroundColor: "#fff"}, 500 );
+					$(this).find(".sub_menu").hide();
+				});
+				
+
 			});
 
 		</script>
@@ -149,31 +165,61 @@ transitional.dtd">
 				<a href="./index.html"><div class="menu_item">
 					<div class="menu_text">首页</div>
 				</div></a>
-				<a href="./about_us.html">
+				
 				<div class="menu_item">
 					<div class="menu_text">关于我们</div>
-				</div>
-				</a>
-				<div class="menu_item">
-					<div class="menu_text">舆情动态</div>
-				</div>
-				<div class="menu_item">	
-					<div class="menu_text ">公开办事</div>
 					<div class="menu_list">
 						<div class="menu_list_header"></div>
-						<div class="list_item">肉制品报告</div>
-						<div class="list_item">标准备案</div>
-						<div class="list_item">添加剂报告</div>
-						<div class="list_item">委托加工备案</div>
+						<a href="./about_us.html"><div class="list_item intro">协会简介</div></a>
+						<div class="list_item pen">大事记</div>
+					</div>
+				</div>
+				
+				<div class="menu_item">
+					<div class="menu_text">舆情动态</div>
+					<div class="menu_list">
+						<div class="menu_list_header"></div>
+						<div class="list_item target">社会热点</div>
+						<div class="list_item news">实时新闻</div>
+					</div>
+				</div>
+				<div class="menu_item">	
+					<div class="menu_text">公开办事</div>
+					<div class="menu_list">
+						<div class="menu_list_header"></div>
+						<div class="list_item menu">肉制品报告</div>
+						<div class="list_item paper">标准备案</div>
+						<div class="list_item note">添加剂报告</div>
+						<div class="list_item case">委托加工备案</div>
+					</div>
+				</div>
+				<div class="menu_item">
+					<div class="menu_text">会议培训</div>
+					<div class="menu_list">
+						<div class="menu_list_header" ></div>
+						<div class="list_item meeting">会议</div> 
+						
+						<div class="list_item help">培训
+						<div class="sub_menu">
+							<div class="list_item exam">在线考试</div>
+							<div class="list_item download">资料下载</div>
+						</div></div>
 					</div>
 				</div>
 				<div class="menu_item">
 					<div class="menu_text">政策法规</div>
+					<div class="menu_list">
+						<div class="menu_list_header"></div>
+						<div class="list_item shield">行业法规</div>
+						<div class="list_item arrow">政策导向</div>
+					</div>
 				</div>
 				<div class="menu_item">
-					<div class="menu_text">会议培训</div>
+					<div class="menu_text">供需平台</div>
 				</div>
-
+				<div class="menu_item">
+					<div class="menu_text">BBS论坛</div>
+				</div>
 			</div> 
 			<div class="small_menu">
 				<div class="small_menu_title clearfix">
