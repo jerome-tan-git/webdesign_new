@@ -15,7 +15,14 @@
 	height:388px;
 	border:#ccc solid 1px;
 }
-
+.menu_item {
+	width: 90px;
+	height: 105px;
+	float: left;
+	text-align: center;
+	cursor: pointer;
+	color: #333;
+	}
 .logo {
 	text-align: center;
 	margin: 0 auto;
