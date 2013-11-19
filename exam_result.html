@@ -130,30 +130,7 @@ transitional.dtd">
 					}, 500);
 				});
 				
-				$(".click_down").click(function(){
-					var toHeight = $(".exam_no_container").outerHeight();
-					var beginHeight = $(".exam_no_outer").outerHeight();
-					if(beginHeight == 0)
-					{
-						   $(".exam_no_outer").animate({
-								height : toHeight + "px"
-							}, 1000, "easeOutExpo",
-							function()
-							{
-								$(".click_down").attr("src","images/up.png");
-							});
-					}
-					else
-					{
-							$(".exam_no_outer").animate({
-								height : 0 + "px"
-							}, 1000, "easeOutExpo",
-							function()
-							{
-								$(".click_down").attr("src","images/down.png");
-							});
-					}
-				});
+				
 			});
 			function checkOptions() {
 				var op = $(this).find("input");
@@ -375,7 +352,7 @@ transitional.dtd">
 			<div class="clear"></div>
 
 			<!-- Flex Slider Start -->
-			<div class="sub_header  exam_bg">
+			<div class="sub_header  exam_bg_result">
 
 				<div class="sub_header_title">
 					<h2>在线考试</h2>
@@ -387,74 +364,83 @@ transitional.dtd">
 
 				</div>
 				<div class="exam_type">
-					<span style="color:#000000;font-size: 20pt; font-family: '宋体';";>张三</span>&nbsp;&nbsp;&nbsp;&nbsp;<span><img class="click_down" src="./images/down.png" /></span>
+					<span style="color:#000000;font-size: 20pt; font-family: '宋体';";>张三</span>&nbsp;&nbsp;&nbsp;&nbsp;<span></span>
 				</div>
-				<div style="margin-top: 80px;" class="clearfix">
-					<div class="exam_no_outer">
-						<div class="exam_no_container clearfix">
+				
+			</div>
+
+			<!-- Flex Slider End -->
+
+			<!-- Teaser Start -->
+			<div class="section" id="content" class="tag_line" style="padding-top: 30px">
+
+				<div style="margin-top: 20px;" class="clearfix">
+					<div>
+						<div style="float: right;font-size: 33pt;padding-right: 50px;"><span>89</span><span style="font-size: 15pt">分</span></div>
+						<div class="clearfix" style="padding-top: 19px;">
 							<div class="exams">
 								<div class="exams_title">
 									单选题：
 								</div>
 								<div class="clearfix exam_no_body">
-									<div class="exam_done exams_no">
+									<div class="exam_right exams_no exam_right">
 										1
 									</div>
-									<div class="exam_done exams_no">
+									<div class="exam_right exams_no exam_wrong">
 										2
 									</div>
-									<div class="exam_done exams_no">
+									<div class="exam_right exams_no exam_right">
 										3
 									</div>
-									<div class="exam_done exams_no">
+									<div class="exam_right exams_no exam_right">
 										4
 									</div>
-									<div class="exam_done exams_no">
+									<div class="exam_right exams_no exam_right">
 										5
 									</div>
-									<div class="exam_done exams_no">
+									<div class="exam_right exams_no exam_right">
 										6
 									</div>
-									<div class="exam_done exams_no">
+									<div class="exam_right exams_no exam_right">
 										7
 									</div>
-									<div class="exam_done exams_no">
+									<div class="exam_right exams_no exam_wrong">
 										8
 									</div>
-									<div class="exam_done exams_no">
+									<div class="exam_right exams_no exam_right">
 										9
 									</div>
-									<div class="exam_done exams_no">
+									<div class="exam_right exams_no exam_wrong">
 										10
 									</div>
-									<div class="exam_done exams_no">
+									<div class="exam_right exams_no exam_right">
 										11
 									</div>
-									<div class="exam_done exams_no">
+									<div class="exam_right exams_no exam_right">
 										12
 									</div>
-									<div class="exam_done exams_no">
+									<div class="exam_right exams_no exam_right">
 										13
 									</div>
-									<div class="exam_done exams_no">
+									<div class="exam_right exams_no exam_wrong">
 										14
 									</div>
-									<div class="exam_done exams_no">
+									<div class="exam_right exams_no exam_wrong">
 										15
 									</div>
-									<div class="exam_done exams_no">
+									<div class="exam_right exams_no exam_right">
 										16
 									</div>
-									<div class="exam_done exams_no">
+									<div class="exam_right exams_no exam_right">
 										17
 									</div>
-									<div class="exam_done exams_no">
+									<div class="exam_right exams_no exam_right">
 										18
 									</div>
-									<div class="exam_done exams_no">
+									<div class="exam_right exams_no exam_right">
 										19
 									</div>
-									<div class="exam_done exams_no">
+									<div class="exam_right exams_no exam_right">
 										20
 									</div>
 								</div>
@@ -464,186 +450,186 @@ transitional.dtd">
 									复选题：
 								</div>
 								<div class="clearfix exam_no_body">
-																		<div class="exams_no exam_done">
+																		<div class="exams_no exam_right exam_right">
 										21
 									</div>
-									<div class="exams_no exam_done">
+									<div class="exams_no exam_right exam_right">
 										22
 									</div>
-									<div class="exams_no exam_done">
+									<div class="exams_no exam_right exam_right">
 										23
 									</div>
-									<div class="exams_no exam_done">
+									<div class="exams_no exam_right exam_right">
 										24
 									</div>
-									<div class="exams_no exam_done">
+									<div class="exams_no exam_right exam_right">
 										25
 									</div>
-									<div class="exams_no exam_done">
+									<div class="exams_no exam_right exam_right">
 										26
 									</div>
-									<div class="exams_no exam_done">
+									<div class="exams_no exam_right exam_right">
 										27
 									</div>
-									<div class="exams_no exam_done">
+									<div class="exams_no exam_right exam_right">
 										28
 									</div>
-									<div class="exams_no exam_done">
+									<div class="exams_no exam_right exam_right">
 										29
 									</div>
-									<div class="exams_no exam_done">
+									<div class="exams_no exam_right exam_right">
 										30
 									</div>
-									<div class="exams_no exam_done">
+									<div class="exams_no exam_right exam_right">
 										31
 									</div>
-									<div class="exams_no exam_done">
+									<div class="exams_no exam_right exam_right">
 										32
 									</div>
-									<div class="exams_no exam_done">
+									<div class="exams_no exam_right exam_right">
 										33
 									</div>
-									<div class="exams_no exam_done">
+									<div class="exams_no exam_right exam_right">
 										34
 									</div>
-									<div class="exams_no exam_done">
+									<div class="exams_no exam_right exam_right">
 										35
 									</div>
-									<div class="exams_no exam_done">
+									<div class="exams_no exam_right exam_right">
 										36
 									</div>
-									<div class="exams_no exam_done">
+									<div class="exams_no exam_right exam_right">
 										37
 									</div>
-									<div class="exams_no exam_done">
+									<div class="exams_no exam_right exam_right">
 										38
 									</div>
-									<div class="exams_no exam_done">
+									<div class="exams_no exam_right exam_right">
 										39
 									</div>
-									<div class="exams_no exam_done">
+									<div class="exams_no exam_right exam_right">
 										40
 									</div>
-									<div class="exams_no exam_done">
+									<div class="exams_no exam_right exam_right">
 										41
 									</div>
-									<div class="exams_no exam_done">
+									<div class="exams_no exam_right exam_right">
 										42
 									</div>
-									<div class="exams_no exam_done">
+									<div class="exams_no exam_right exam_right">
 										43
 									</div>
-									<div class="exams_no exam_done">
+									<div class="exams_no exam_right exam_right">
 										44
 									</div>
-									<div class="exams_no exam_done">
+									<div class="exams_no exam_right exam_right">
 										45
 									</div>
-									<div class="exams_no exam_done">
+									<div class="exams_no exam_right exam_right">
 										46
 									</div>
-									<div class="exams_no exam_done">
+									<div class="exams_no exam_right exam_right">
 										47
 									</div>
-									<div class="exams_no exam_done">
+									<div class="exams_no exam_right exam_right">
 										48
 									</div>
-									<div class="exams_no exam_done">
+									<div class="exams_no exam_right exam_right">
 										49
 									</div>
-									<div class="exams_no exam_done">
+									<div class="exams_no exam_right exam_right">
 										50
 									</div>
-									<div class="exams_no exam_done">
+									<div class="exams_no exam_right exam_right">
 										51
 									</div>
-									<div class="exams_no exam_done">
+									<div class="exams_no exam_right exam_right">
 										52
 									</div>
-									<div class="exams_no exam_done">
+									<div class="exams_no exam_right exam_right">
 										53
 									</div>
-									<div class="exams_no exam_done">
+									<div class="exams_no exam_right exam_right">
 										54
 									</div>
-									<div class="exams_no exam_done">
+									<div class="exams_no exam_right exam_right">
 										55
 									</div>
-									<div class="exams_no exam_done">
+									<div class="exams_no exam_right exam_right">
 										56
 									</div>
-									<div class="exams_no exam_done">
+									<div class="exams_no exam_right exam_right">
 										57
 									</div>
-									<div class="exams_no exam_done">
+									<div class="exams_no exam_right exam_right">
 										58
 									</div>
-									<div class="exams_no exam_done">
+									<div class="exams_no exam_right exam_right">
 										59
 									</div>
-									<div class="exams_no exam_done">
+									<div class="exams_no exam_right exam_right">
 										60
 									</div>
 									
-									<div class="exams_no exam_done">
+									<div class="exams_no exam_right exam_right">
 										61
 									</div>
-									<div class="exams_no exam_done">
+									<div class="exams_no exam_right exam_right">
 										62
 									</div>
-									<div class="exams_no exam_done">
+									<div class="exams_no exam_right exam_right">
 										63
 									</div>
-									<div class="exams_no">
+									<div class="exams_no exam_right">
 										64
 									</div>
-									<div class="exams_no">
+									<div class="exams_no exam_right">
 										65
 									</div>
-									<div class="exams_no">
+									<div class="exams_no exam_right">
 										66
 									</div>
-									<div class="exams_no">
+									<div class="exams_no exam_right">
 										67
 									</div>
-									<div class="exams_no">
+									<div class="exams_no exam_right">
 										68
 									</div>
-									<div class="exams_no">
+									<div class="exams_no exam_right">
 										69
 									</div>
-									<div class="exams_no">
+									<div class="exams_no exam_right">
 										70
 									</div>
 									
-									<div class="exams_no">
+									<div class="exams_no exam_right">
 										71
 									</div>
-									<div class="exams_no">
+									<div class="exams_no exam_right">
 										72
 									</div>
-									<div class="exams_no">
+									<div class="exams_no exam_right">
 										73
 									</div>
-									<div class="exams_no">
+									<div class="exams_no exam_right">
 										74
 									</div>
-									<div class="exams_no">
+									<div class="exams_no exam_right">
 										75
 									</div>
-									<div class="exams_no">
+									<div class="exams_no exam_right">
 										76
 									</div>
-									<div class="exams_no">
+									<div class="exams_no exam_right">
 										77
 									</div>
-									<div class="exams_no">
+									<div class="exams_no exam_wrong">
 										78
 									</div>
-									<div class="exams_no">
+									<div class="exams_no exam_wrong">
 										79
 									</div>
-									<div class="exams_no">
+									<div class="exams_no exam_right">
 										80
 									</div>
 								</div>
@@ -653,64 +639,64 @@ transitional.dtd">
 									是非题：
 								</div>
 								<div class="clearfix exam_no_body">
-																		<div class="exams_no ">
+																		<div class="exams_no exam_wrong ">
 										81
 									</div>
-									<div class="exams_no ">
+									<div class="exams_no exam_right ">
 										82
 									</div>
-									<div class="exams_no ">
+									<div class="exams_no exam_right ">
 										83
 									</div>
-									<div class="exams_no ">
+									<div class="exams_no exam_right ">
 										84
 									</div>
-									<div class="exams_no ">
+									<div class="exams_no exam_right ">
 										85
 									</div>
-									<div class="exams_no ">
+									<div class="exams_no exam_right ">
 										86
 									</div>
-									<div class="exams_no ">
+									<div class="exams_no exam_right ">
 										87
 									</div>
-									<div class="exams_no ">
+									<div class="exams_no exam_wrong ">
 										88
 									</div>
-									<div class="exams_no ">
+									<div class="exams_no exam_right ">
 										89
 									</div>
-									<div class="exams_no ">
+									<div class="exams_no exam_wrong ">
 										90
 									</div>
-																		<div class="exams_no ">
+									<div class="exams_no exam_right ">
 										91
 									</div>
-									<div class="exams_no ">
+									<div class="exams_no exam_right ">
 										92
 									</div>
-									<div class="exams_no ">
+									<div class="exams_no exam_right ">
 										93
 									</div>
-									<div class="exams_no ">
+									<div class="exams_no exam_right ">
 										94
 									</div>
-									<div class="exams_no ">
+									<div class="exams_no exam_wrong ">
 										95
 									</div>
-									<div class="exams_no ">
+									<div class="exams_no exam_right ">
 										96
 									</div>
-									<div class="exams_no ">
+									<div class="exams_no exam_right ">
 										97
 									</div>
-									<div class="exams_no ">
+									<div class="exams_no exam_right ">
 										99
 									</div>
-									<div class="exams_no ">
+									<div class="exams_no exam_right ">
 										99
 									</div>
-									<div class="exams_no ">
+									<div class="exams_no exam_right ">
 										100
 									</div>
 									
@@ -718,240 +704,6 @@ transitional.dtd">
 							</div>
 						</div>
 					</div>
-				</div>
-			</div>
-
-			<!-- Flex Slider End -->
-
-			<!-- Teaser Start -->
-			<div class="section" id="content" class="tag_line" style="padding-top: 30px">
-
-				<div class="three_third">
-					<div style="text-align: right">
-						<span class="exam_page">1</span>/9
-					</div>
-					<div class="exam_section">
-						<div class="exam_title">
-							<span class="exam_no">1. </span><span style="color: #000">下列标准不属于技术标准的是</span>
-						</div>
-						<div class="exam_options">
-							<input type="radio" name="sex" id="o_1" checked/>
-							<label for="o_1" class="o_1" >基础标准</label>
-						</div>
-						<div class="exam_options">
-							<input type="radio" name="sex" id="o_2" />
-							<label for="o_2" class="o_2">产品标准</label>
-						</div>
-						<div class="exam_options">
-							<input type="radio" name="sex" id="o_3" />
-							<label for="o_3" class="o_3">方法标准</label>
-						</div>
-						<div class="exam_options">
-							<input type="radio" name="sex" id="o_4" />
-							<label for="o_4" class="o_4">通用工作标准</label>
-						</div>
-					</div>
-
-					<div class="exam_section">
-						<div class="exam_title">
-							<span class="exam_no">2. </span><span style="color: #000">分析测定结果的异常数字通常是由(&nbsp;&nbsp;&nbsp;&nbsp;)造成的</span>
-						</div>
-						<div class="exam_options">
-							<input type="radio" name="sex1" id="o_11" checked/>
-							<label for="o_11" class="o_11" >偶然误差</label>
-						</div>
-						<div class="exam_options">
-							<input type="radio" name="sex1" id="o_12" />
-							<label for="o_12" class="o_12">过失误差</label>
-						</div>
-						<div class="exam_options">
-							<input type="radio" name="sex1" id="o_13" />
-							<label for="o_13" class="o_13">系统误差</label>
-						</div>
-						<div class="exam_options">
-							<input type="radio" name="sex1" id="o_14" />
-							<label for="o_14" class="o_14" >测定方法本身重现性</label>
-						</div>
-					</div>
-
-					<div class="exam_section">
-						<div class="exam_title">
-							<span class="exam_no">3. </span><span style="color: #000">有关精密度与准确度的关系的叙述中，不正确的是(&nbsp;&nbsp;&nbsp;&nbsp;)。</span>
-						</div>
-						<div class="exam_options">
-							<input type="radio" name="sex2" id="o_21" checked/>
-							<label for="o_21" class="o_21">精密度是保证准确度的先决条件</label>
-						</div>
-						<div class="exam_options">
-							<input type="radio" name="sex2" id="o_22" />
-							<label for="o_22" class="o_22">精密度、准确度衡量分析结果的可靠性是一致的</label>
-						</div>
-						<div class="exam_options">
-							<input type="radio" name="sex2" id="o_23" />
-							<label for="o_23" class="o_23">精密度高的测定结果，不一定是准确的</label>
-						</div>
-						<div class="exam_options">
-							<input type="radio" name="sex2" id="o_24" />
-							<label for="o_24" class="o_24">精密度差，分析结果一定不可靠</label>
-						</div>
-					</div>
-
-					<div class="exam_section">
-						<div class="exam_title">
-							<span class="exam_no">4. </span><span style="color: #000">强电解质水溶液可以导电是因为(&nbsp;&nbsp;&nbsp;&nbsp;)。</span>
-						</div>
-						<div class="exam_options">
-							<input type="radio" name="sex3" id="o_31" checked/>
-							<label for="o_31" class="o_31">强电解质是导体</label>
-						</div>
-						<div class="exam_options">
-							<input type="radio" name="sex3" id="o_32" />
-							<label for="o_32" class="o_32">水能导电</label>
-						</div>
-						<div class="exam_options">
-							<input type="radio" name="sex3" id="o_33" />
-							<label for="o_33" class="o_33">强电解质水溶液有正负离子</label>
-						</div>
-						<div class="exam_options">
-							<input type="radio" name="sex3" id="o_34" />
-							<label for="o_34" class="o_34">强电解质水溶液有自由电子</label>
-						</div>
-					</div>
-
-					<div class="exam_section">
-						<div class="exam_title">
-							<span class="exam_no">5. </span><span style="color: #000">根据重量分析分类，食品中粗脂肪测定属于(&nbsp;&nbsp;&nbsp;&nbsp;)。</span>
-						</div>
-						<div class="exam_options">
-							<input type="radio" name="sex4" id="o_41" checked/>
-							<label for="o_41" class="o_41">沉淀重量法</label>
-						</div>
-						<div class="exam_options">
-							<input type="radio" name="sex4" id="o_42" />
-							<label for="o_42" class="o_42">气化重量法</label>
-						</div>
-						<div class="exam_options">
-							<input type="radio" name="sex4" id="o_43" />
-							<label for="o_43" class="o_43">萃取重量法</label>
-						</div>
-						<div class="exam_options">
-							<input type="radio" name="sex4" id="o_44" />
-							<label for="o_44" class="o_44">电解重量法</label>
-						</div>
-					</div>
-
-					<div class="exam_section">
-						<div class="exam_title">
-							<span class="exam_no">6. </span><span style="color: #000">绝对偏差是指单项测定与(&nbsp;&nbsp;&nbsp;&nbsp;)的差值。 </span>
-						</div>
-						<div class="exam_options">
-							<input type="radio" name="sex5" id="o_51" checked/>
-							<label for="o_51" class="o_51">真实值</label>
-						</div>
-						<div class="exam_options">
-							<input type="radio" name="sex5" id="o_52" />
-							<label for="o_52" class="o_52">测定次数</label>
-						</div>
-						<div class="exam_options">
-							<input type="radio" name="sex5" id="o_53" />
-							<label for="o_53" class="o_53">平均值</label>
-						</div>
-						<div class="exam_options">
-							<input type="radio" name="sex5" id="o_54" />
-							<label for="o_54" class="o_54">绝对误差</label>
-						</div>
-					</div>
-
-					<div class="exam_section">
-						<div class="exam_title">
-							<span class="exam_no">7. </span><span style="color: #000">有关精密度与准确度的关系的叙述中，不正确的是(&nbsp;&nbsp;&nbsp;&nbsp;)。</span>
-						</div>
-						<div class="exam_options">
-							<input type="radio" name="sexo_6" id="o_61" checked/>
-							<label for="o_61" class="o_61">精密度是保证准确度的先决条件</label>
-						</div>
-						<div class="exam_options">
-							<input type="radio" name="sexo_6" id="o_62" />
-							<label for="o_62" class="o_62">精密度、准确度衡量分析结果的可靠性是一致的</label>
-						</div>
-						<div class="exam_options">
-							<input type="radio" name="sexo_6" id="o_63" />
-							<label for="o_63" class="o_63">精密度高的测定结果，不一定是准确的</label>
-						</div>
-						<div class="exam_options">
-							<input type="radio" name="sexo_6" id="o_64" />
-							<label for="o_64" class="o_64">精密度差，分析结果一定不可靠</label>
-						</div>
-					</div>
-
-					<div class="exam_section">
-						<div class="exam_title">
-							<span class="exam_no">8. </span><span style="color: #000">用酸度计测定溶液pH值前，应用(&nbsp;&nbsp;&nbsp;&nbsp;)校正仪器</span>
-						</div>
-						<div class="exam_options">
-							<input type="radio" name="sexo_7" id="o_71" checked/>
-							<label for="o_71" class="o_71">标准酸溶液</label>
-						</div>
-						<div class="exam_options">
-							<input type="radio" name="sexo_7" id="o_72" />
-							<label for="o_72" class="o_72">标准缓冲溶液</label>
-						</div>
-						<div class="exam_options">
-							<input type="radio" name="sexo_7" id="o_73" />
-							<label for="o_73" class="o_73">标准碱溶液</label>
-						</div>
-						<div class="exam_options">
-							<input type="radio" name="sexo_7" id="o_74" />
-							<label for="o_74" class="o_74">标准离子溶液</label>
-						</div>
-					</div>
-
-					<div class="exam_section">
-						<div class="exam_title">
-							<span class="exam_no">9. </span><span style="color: #000">不属于湿热灭菌法的是(&nbsp;&nbsp;&nbsp;&nbsp;)</span>
-						</div>
-						<div class="exam_options">
-							<input type="radio" name="sexo_8" id="o_81" checked/>
-							<label for="o_81" class="o_81">巴氏消毒法</label>
-						</div>
-						<div class="exam_options">
-							<input type="radio" name="sexo_8" id="o_82" />
-							<label for="o_82" class="o_82">煮沸消毒法</label>
-						</div>
-						<div class="exam_options">
-							<input type="radio" name="sexo_8" id="o_83" />
-							<label for="o_83" class="o_83">过滤除菌法</label>
-						</div>
-						<div class="exam_options">
-							<input type="radio" name="sexo_8" id="o_84" />
-							<label for="o_84" class="o_84">间歇灭菌法</label>
-						</div>
-					</div>
-
-					<div class="exam_section">
-						<div class="exam_title">
-							<span class="exam_no">10. </span><span style="color: #000">食品中总酸的测定，通常选用的指示剂是(&nbsp;&nbsp;&nbsp;&nbsp;)。</span>
-						</div>
-						<div class="exam_options">
-							<input type="radio" name="sexo_9" id="o_91" checked/>
-							<label for="o_91" class="o_91">酚酞</label>
-						</div>
-						<div class="exam_options">
-							<input type="radio" name="sexo_9" id="o_92" />
-							<label for="o_92" class="o_92">甲基橙</label>
-						</div>
-						<div class="exam_options">
-							<input type="radio" name="sexo_9" id="o_93" />
-							<label for="o_93" class="o_93">甲基红</label>
-						</div>
-						<div class="exam_options">
-							<input type="radio" name="sexo_9" id="o_94" />
-							<label for="o_94" class="o_94">溴甲酚绿</label>
-						</div>
-					</div>
-					<a href="./exam_result.html"><div class="exam_submit">
-						提 交
-					</div></a>
 				</div>
 
 			</div>

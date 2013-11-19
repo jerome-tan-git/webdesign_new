@@ -716,6 +716,11 @@ padding-left:20px;
 	background: #f9f8f6 url('./images/exambg.png') no-repeat 0px 0%;
 	padding-bottom: 10px;
 }
+.exam_bg_result
+{
+	background: #f9f8f6 url('./images/exambg.png') no-repeat 0px 0%;
+}
+
 .click_down{
 	cursor:pointer;
 }
