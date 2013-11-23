@@ -17,7 +17,7 @@ transitional.dtd">
 		<link rel="stylesheet" type="text/css" href="./css/portfolio.css" />
 		<link rel="stylesheet" type="text/css" href="./css/quicksand.css" />
 		<link rel="stylesheet" type="text/css" href="./css/skin.css" />
-		<link rel="stylesheet" type="text/css" href="./css/responsive.css" />
+		<!-- <link rel="stylesheet" type="text/css" href="./css/responsive.css" /> -->
 
 		<script type="text/javascript" src="./js/jquery.min.js"></script>
 		<script type="text/javascript" src="./js/jquery-migrate.js"></script>
@@ -154,12 +154,26 @@ transitional.dtd">
 <!-- Header Start -->
 		<div class="header">
 		    <div class="logo">
-		    	<a href="./index.html"><img src="./images/logo_new.png" alt="img" /></a>
+		    	<div class="logo_container">
+		    		<a href="./index.html"><img src="./images/logo_new.png" alt="img" /></a>
+		    	</div>
+		    	<div class="logo_search">
+		    		<div class="search_box">
+					    <form action="#" method="get">
+					    <div style="width:210px" class="clearfix">
+					    <div style="width:150px; float: left">	
+					    	<input id="error_search" type="text" name="s">
+					    </div>
+				    	<input  type="submit" value="" style="float: right">
+					    </div>
+					    </form>
+					</div>
+				</div>
 		    </div>
-			<div class="menubar">
+			<div class="menubar clearfix">
 			 
 				<a href="./index.html"><div class="menu_item">
-					<div class="menu_text">首页</div>
+					<div class="menu_text ">首页</div>
 				</div></a>
 				
 				<div class="menu_item">
@@ -181,7 +195,7 @@ transitional.dtd">
 				</div>
 				<div class="menu_item">	
 					<div class="menu_text">公开办事</div>
-					<div class="menu_list">
+					<div class="menu_list clearfix">
 						<div class="menu_list_header"></div>
 						<div class="list_item menu">肉制品报告</div>
 						<div class="list_item paper">标准备案</div>
