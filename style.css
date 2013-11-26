@@ -224,6 +224,7 @@ font-weight:600;
 	padding-left:30px;
 	/*padding-bottom:30px;*/
 	overflow:hidden;
+	background: url('./images/header_bg.png') no-repeat 0px 0px;
 }
 
 nav{
