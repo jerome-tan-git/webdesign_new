@@ -218,6 +218,15 @@ font-weight:600;
 	width:100%;	
 	
 }
+.exam_no_outer{
+	position: relative;
+	top: 20px;
+	left: 18px;
+	width: 1000px;	
+	overflow: hidden;
+	height: 0px;
+}
+
 
 .logo {
 	padding-top:30px;
@@ -735,21 +744,18 @@ padding-left:20px;
 .exam_bg
 {
 	background: #f9f8f6 url('./images/exambg.png') no-repeat 0px 0%;
-	padding-bottom: 30px;
+	padding-bottom: 29px;
 }
 .exam_bg_result
 {
 	background: #f9f8f6 url('./images/exambg.png') no-repeat 0px 0%;
+	padding-bottom: 29px;
 }
 
 .click_down{
 	cursor:pointer;
 }
-.exam_no_outer
-{
-	overflow: hidden;
-	height: 0px;
-}
+
 .exam_no_container
 {
 	border-top: 1px solid #ddd;
