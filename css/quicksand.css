@@ -110,7 +110,7 @@ filter:progid:DXImageTransform.Microsoft.gradient(GradientType=0, startColorstr=
 .image-grid li, .image-grid_3col li, .image-grid_2col li, .image-grid_1col li {
 	float: left;
 	text-align: center;
-	font-family: "Helvetica Neue", sans-serif;
+	font-family: "微软雅黑",Arial,"宋体"
 	line-height: 17px;
 	color: #686f74;
 	margin-right:31px;

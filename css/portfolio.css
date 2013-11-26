@@ -12,7 +12,7 @@
 	padding-bottom:14px;
 }
 .portfolio_content h4 {
-	padding-bottom:6px;
+	padding-bottom:15px;
 	font-size:17px;
 }
 .portfolio_content a {
@@ -46,16 +46,17 @@
 	width:100%;
 	display:none;
 }
+
 a.zoom {
 	margin-right:60px;
-	background-image:url(../images/zoom_icon.png);
+	background-image:url(../images/play.png);
 	background-repeat:no-repeat;
 	background-position:center top;
 	width:54px;
 	height:54px;
 	display:block;
-	left:25%;
-	top:40%;
+	right: -40px;
+	bottom: 189px;
 	margin-top:-27px;
 	position:absolute;
 	cursor:pointer;

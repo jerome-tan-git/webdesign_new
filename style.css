@@ -91,11 +91,19 @@ a:link, a {
 a:hover {
 	color:#111;
 }
-
+.exam_desc{
+	position: absolute;
+	left: 44px;
+	top: 39px;
+	color: #fff;
+	line-height: 20pt;
+	font-size: 12pt;
+}
 /*General style*/
 .thumb_img {
 	float: left;
 	margin: 0px 20px 0px 0px;
+	width: 320px;height:320px
 }
 .description {
 	display:block;
@@ -528,8 +536,10 @@ padding-left:20px;
 /*my added*/
 .menubar
 {
-	background-color: #99d2ff;
-	
+	/* background-color: #99d2ff; */
+	background: #99d2ff;
+	height:45px;
+	*margin-top:14px;
 }
 .menu_item
 {
@@ -554,7 +564,7 @@ padding-left:20px;
 .menu_list{
 	position: relative;
 	top: 13px;
-	z-index: 10;
+	z-index: 510;
 	width: 140px;
 	margin-top: -6px;
 	/*border-top: 3px solid #000;*/
@@ -724,7 +734,7 @@ padding-left:20px;
 .exam_bg
 {
 	background: #f9f8f6 url('./images/exambg.png') no-repeat 0px 0%;
-	padding-bottom: 10px;
+	padding-bottom: 30px;
 }
 .exam_bg_result
 {
@@ -807,11 +817,13 @@ padding-left:20px;
 {
 	background: url('./images/round_back_right.png') no-repeat 2px 0px;
 	color:#FFFFFF;
+	
 }
 .exam_wrong
 {
 	background: url('./images/round_back_wrong.png') no-repeat 2px 0px;
 	color:#FFFFFF;
+	cursor:pointer;
 }
 .exam_no
 {
@@ -824,6 +836,21 @@ padding-left:20px;
 {
 	color:#122CE9;
 	font-weight:bold;
+}
+.right_title
+{
+	font-size:15pt;
+}
+.right_option
+{
+	color:#00A800;
+}
+.right_answer
+{
+	padding-left: 34px;
+	margin-top: 41px;
+	border-top: 1px solid #ccc;
+	padding-top: 40px;
 }
 .exam_page
 {

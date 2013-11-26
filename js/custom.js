@@ -4,6 +4,8 @@ function portfoliohover()
 		function() {
 			 jQuery(this).find('.link_btn').stop().css("display","block");
 			 jQuery(this).find('.overlay').stop().animate({opacity:0.7},200);
+			 jQuery(this).find('.exam_desc').stop().animate({opacity:1},200);
+			 
 			  jQuery(this).find('.zoom').stop().animate({opacity:1},200);
 			  jQuery(this).find('.link_post').stop().animate({opacity:1},200);
 			// jQuery(this).find('.linkto').stop().animate({left:"42%"});
@@ -17,6 +19,7 @@ function portfoliohover()
 			jQuery(this).find('.overlay').stop().animate({opacity:0},200);
 			 jQuery(this).find('.zoom').stop().animate({opacity:0},200);
 			 jQuery(this).find('.link_post').stop().animate({opacity:0},200);
+			 jQuery(this).find('.exam_desc').stop().animate({opacity:0},200);
 			//jQuery(this).find('.linkto').stop().animate({left:'100%'});
 			  jQuery(this).find('img').css({opacity:1});
 				 jQuery(this).find('h4').stop().css("color","#565656");
