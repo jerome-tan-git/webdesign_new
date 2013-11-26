@@ -130,7 +130,31 @@ transitional.dtd">
 					}, 500);
 				});
 				
-				
+				$(".exam_wrong").click(function(){
+					var targetText = $.trim($(this).text()); 
+					
+					if($(".right_answer").outerHeight()>41)
+					{
+						$(".right_answer").animate({
+								height : 0 + "px"
+						}, 1000, "easeOutExpo", function()
+						{
+							$(".exam_no").text(targetText+". ");
+							var targetHright = $(".right_outer").outerHeight();
+							$(".right_answer").delay(1000).animate({
+								height : targetHright + "px"
+							}, 1000, "easeOutExpo");
+						});
+					}
+					else
+					{
+						$(".exam_no").text(targetText+". ");
+						var targetHright = $(".right_outer").outerHeight();
+						$(".right_answer").delay(1000).animate({
+							height : targetHright + "px"
+						}, 1000, "easeOutExpo");
+					}
+				});
 			});
 			function checkOptions() {
 				var op = $(this).find("input");
@@ -656,7 +680,7 @@ transitional.dtd">
 									是非题：
 								</div>
 								<div class="clearfix exam_no_body">
-																		<div class="exams_no exam_wrong ">
+									<div class="exams_no exam_wrong ">
 										81
 									</div>
 									<div class="exams_no exam_right ">
@@ -724,6 +748,7 @@ transitional.dtd">
 				</div>
 
 				<div class="right_answer">
+					<div class="right_outer clearfix">
 					<div class="exam_section">
 						<div class="exam_title">
 							<span class="exam_no">3. </span><span style="color: #000">有关精密度与准确度的关系的叙述中，不正确的是(&nbsp;&nbsp;&nbsp;&nbsp;)。</span>
@@ -748,7 +773,7 @@ transitional.dtd">
 					<div class="right_title">
 						正确答案：<span class="right_option">C,D</span>
 					</div>
-					
+					</div>
 				</div>
 			</div>
 			<!-- Teaser End -->
