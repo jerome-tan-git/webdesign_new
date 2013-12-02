@@ -449,9 +449,11 @@ margin-top:5px;
 }
 /*Contact Us*/
 #contact-form{
-margin-top:60px;
+/*margin-top:60px;*/
 }
-
+.gkbs_input{
+	float: left;
+}
 
 #contact-form input {
     background-color: #FCFCFC;
