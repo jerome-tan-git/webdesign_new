@@ -18,7 +18,6 @@ transitional.dtd">
 		<link rel="stylesheet" type="text/css" href="./css/quicksand.css" />
 		<link rel="stylesheet" type="text/css" href="./css/skin.css" />
 
-
 		<script type="text/javascript" src="./js/jquery.min.js"></script>
 		<script type="text/javascript" src="./js/jquery-migrate.js"></script>
 
@@ -57,11 +56,11 @@ transitional.dtd">
 			$(document).ready(function() {
 
 				// bancy bo=x
-				jQuery("a#example6").fancybox({
-					'titlePosition' : 'outside',
-					'overlayColor' : '#000',
-					'overlayOpacity' : 0.9
-				});
+				// jQuery("a#example6").fancybox({
+				// 'titlePosition' : 'outside',
+				// 'overlayColor' : '#000',
+				// 'overlayOpacity' : 0.9
+				// });
 				//slider
 				// var sudoSlider = jQuery("#testimonail").sudoSlider({
 				// continuous:true,
@@ -129,30 +128,22 @@ transitional.dtd">
 						backgroundColor : "#fff"
 					}, 500);
 				});
-				
-				$(".exam_wrong").click(function(){
-					var targetText = $.trim($(this).text()); 
-					
-					if($(".right_answer").outerHeight()>41)
-					{
-						$(".right_answer").animate({
-								height : 0 + "px"
-						}, 1000, "easeOutExpo", function()
-						{
-							$(".exam_no").text(targetText+". ");
-							var targetHright = $(".right_outer").outerHeight();
-							$(".right_answer").delay(500).animate({
-								height : targetHright + "px"
-							}, 1000, "easeOutExpo");
+
+				$(".click_down").click(function() {
+					var toHeight = $(".exam_no_container").outerHeight();
+					var beginHeight = $(".exam_no_outer").outerHeight();
+					if (beginHeight == 0) {
+						$(".exam_no_outer").animate({
+							height : toHeight + "px"
+						}, 1000, "easeOutExpo", function() {
+							$(".click_down").attr("src", "images/up.png");
 						});
-					}
-					else
-					{
-						$(".exam_no").text(targetText+". ");
-						var targetHright = $(".right_outer").outerHeight();
-						$(".right_answer").delay(500).animate({
-							height : targetHright + "px"
-						}, 1000, "easeOutExpo");
+					} else {
+						$(".exam_no_outer").animate({
+							height : 0 + "px"
+						}, 1000, "easeOutExpo", function() {
+							$(".click_down").attr("src", "images/down.png");
+						});
 					}
 				});
 			});
@@ -169,28 +160,41 @@ transitional.dtd">
 				}
 			}
 		</script>
+		<script>
+			$(document).ready(function() {
+				var tmpH = $(".step_left").outerHeight();
+				
+				if($(".step_content").outerHeight()>$(".step_left").outerHeight())
+				{
+					tmpH = $(".step_content").outerHeight();
+				}
+				
+				$(".step_div_bg").css("height",tmpH+"px");
+				}
+			);
+		</script>
 	</head>
 	<body>
 		<div id="page_wrap">
 			<!-- Header Start -->
 			<div class="header">
-		    <div class="logo">
-		    	<div class="logo_container">
-		    		<a href="./index.html"><img src="./images/logo_new.png" alt="img" /></a>
-		    	</div>
-		    	<div class="logo_search">
-		    		<div class="search_box">
-					    <form action="#" method="get">
-					    <div style="width:210px" class="clearfix">
-					    <div style="width:150px; float: left">	
-					    	<input id="error_search" type="text" name="s">
-					    </div>
-				    	<input  type="submit" value="" style="float: right">
-					    </div>
-					    </form>
+				<div class="logo">
+					<div class="logo_container">
+						<a href="./index.html"><img src="./images/logo_new.png" alt="img" /></a>
+					</div>
+					<div class="logo_search">
+						<div class="search_box">
+							<form action="#" method="get">
+								<div style="width:210px" class="clearfix">
+									<div style="width:150px; float: left">
+										<input id="error_search" type="text" name="s">
+									</div>
+									<input  type="submit" value="" style="float: right">
+								</div>
+							</form>
+						</div>
 					</div>
 				</div>
-		    </div>
 				<div class="menubar clearfix">
 
 					<a href="./index.html">
@@ -236,10 +240,18 @@ transitional.dtd">
 						</div>
 						<div class="menu_list">
 							<div class="menu_list_header"></div>
-							<div class="list_item menu">生产许可咨询</div>
-							<div class="list_item paper">企业标准备案</div>
-							<div class="list_item note">食品添加剂备案</div>
-							<div class="list_item case">委托加工备案</div>
+							<div class="list_item menu">
+								生产许可咨询
+							</div>
+							<div class="list_item paper">
+								企业标准备案
+							</div>
+							<div class="list_item note">
+								食品添加剂备案
+							</div>
+							<div class="list_item case">
+								委托加工备案
+							</div>
 						</div>
 					</div>
 					<div class="menu_item">
@@ -385,391 +397,70 @@ transitional.dtd">
 			<div class="clear"></div>
 
 			<!-- Flex Slider Start -->
-			<div class="sub_header  exam_bg_result">
+			<div class="sub_header">
 
 				<div class="sub_header_title">
-					<h2>在线考试</h2>
+					<h2>公开办事</h2>
 					<div class="sub_header_description">
 						<span><a href="./index.html">首页 &raquo;</a></span>
-						<span class="page">培训&nbsp;&raquo;</span>
-						<span class="page">在线考试</span>
+						<span class="page">公开办事&nbsp;&raquo;</span>
+						<span class="page">企业标准备案</span>
 					</div>
 
 				</div>
 				<div class="exam_type">
-					<span style="color:#000000;font-size: 20pt; font-family: '宋体';";>张三</span>&nbsp;&nbsp;&nbsp;&nbsp;<span></span>
+
 				</div>
-				
+
 			</div>
 
 			<!-- Flex Slider End -->
 
 			<!-- Teaser Start -->
-			<div class="section" id="content" class="tag_line" style="padding-top: 30px">
+			<div class="section" id="content" class="tag_line" style="padding-top: 0px;padding-bottom: 0px">
 
-				<div style="margin-top: 20px;" class="clearfix">
-					<div>
-						<div style="float: right;font-size: 33pt;padding-right: 50px;"><span>89</span><span style="font-size: 15pt">分</span></div>
-						<div class="clearfix" style="padding-top: 19px;">
-							<div class="exams">
-								<div class="exams_title">
-									单选题：
-								</div>
-								<div class="clearfix exam_no_body">
-									<div class="exam_right exams_no exam_right">
-										1
-									</div>
-									<div class="exam_right exams_no exam_wrong">
-										2
-									</div>
-									<div class="exam_right exams_no exam_right">
-										3
-									</div>
-									<div class="exam_right exams_no exam_right">
-										4
-									</div>
-									<div class="exam_right exams_no exam_right">
-										5
-									</div>
-									<div class="exam_right exams_no exam_right">
-										6
-									</div>
-									<div class="exam_right exams_no exam_right">
-										7
-									</div>
-									<div class="exam_right exams_no exam_wrong">
-										8
-									</div>
-									<div class="exam_right exams_no exam_right">
-										9
-									</div>
-									<div class="exam_right exams_no exam_wrong">
-										10
-									</div>
-									<div class="exam_right exams_no exam_right">
-										11
-									</div>
-									<div class="exam_right exams_no exam_right">
-										12
-									</div>
-									<div class="exam_right exams_no exam_right">
-										13
-									</div>
-									<div class="exam_right exams_no exam_wrong">
-										14
-									</div>
-									<div class="exam_right exams_no exam_wrong">
-										15
-									</div>
-									<div class="exam_right exams_no exam_right">
-										16
-									</div>
-									<div class="exam_right exams_no exam_right">
-										17
-									</div>
-									<div class="exam_right exams_no exam_right">
-										18
-									</div>
-									<div class="exam_right exams_no exam_right">
-										19
-									</div>
-									<div class="exam_right exams_no exam_right">
-										20
-									</div>
-								</div>
-							</div>
-							<div class="exams">
-								<div class="exams_title">
-									复选题：
-								</div>
-								<div class="clearfix exam_no_body">
-																		<div class="exams_no exam_right exam_right">
-										21
-									</div>
-									<div class="exams_no exam_right exam_right">
-										22
-									</div>
-									<div class="exams_no exam_right exam_right">
-										23
-									</div>
-									<div class="exams_no exam_right exam_right">
-										24
-									</div>
-									<div class="exams_no exam_right exam_right">
-										25
-									</div>
-									<div class="exams_no exam_right exam_right">
-										26
-									</div>
-									<div class="exams_no exam_right exam_right">
-										27
-									</div>
-									<div class="exams_no exam_right exam_right">
-										28
-									</div>
-									<div class="exams_no exam_right exam_right">
-										29
-									</div>
-									<div class="exams_no exam_right exam_right">
-										30
-									</div>
-									<div class="exams_no exam_right exam_right">
-										31
-									</div>
-									<div class="exams_no exam_right exam_right">
-										32
-									</div>
-									<div class="exams_no exam_right exam_right">
-										33
-									</div>
-									<div class="exams_no exam_right exam_right">
-										34
-									</div>
-									<div class="exams_no exam_right exam_right">
-										35
-									</div>
-									<div class="exams_no exam_right exam_right">
-										36
-									</div>
-									<div class="exams_no exam_right exam_right">
-										37
-									</div>
-									<div class="exams_no exam_right exam_right">
-										38
-									</div>
-									<div class="exams_no exam_right exam_right">
-										39
-									</div>
-									<div class="exams_no exam_right exam_right">
-										40
-									</div>
-									<div class="exams_no exam_right exam_right">
-										41
-									</div>
-									<div class="exams_no exam_right exam_right">
-										42
-									</div>
-									<div class="exams_no exam_right exam_right">
-										43
-									</div>
-									<div class="exams_no exam_right exam_right">
-										44
-									</div>
-									<div class="exams_no exam_right exam_right">
-										45
-									</div>
-									<div class="exams_no exam_right exam_right">
-										46
-									</div>
-									<div class="exams_no exam_right exam_right">
-										47
-									</div>
-									<div class="exams_no exam_right exam_right">
-										48
-									</div>
-									<div class="exams_no exam_right exam_right">
-										49
-									</div>
-									<div class="exams_no exam_right exam_right">
-										50
-									</div>
-									<div class="exams_no exam_right exam_right">
-										51
-									</div>
-									<div class="exams_no exam_right exam_right">
-										52
-									</div>
-									<div class="exams_no exam_right exam_right">
-										53
-									</div>
-									<div class="exams_no exam_right exam_right">
-										54
-									</div>
-									<div class="exams_no exam_right exam_right">
-										55
-									</div>
-									<div class="exams_no exam_right exam_right">
-										56
-									</div>
-									<div class="exams_no exam_right exam_right">
-										57
-									</div>
-									<div class="exams_no exam_right exam_right">
-										58
-									</div>
-									<div class="exams_no exam_right exam_right">
-										59
-									</div>
-									<div class="exams_no exam_right exam_right">
-										60
-									</div>
-									
-									<div class="exams_no exam_right exam_right">
-										61
-									</div>
-									<div class="exams_no exam_right exam_right">
-										62
-									</div>
-									<div class="exams_no exam_right exam_right">
-										63
-									</div>
-									<div class="exams_no exam_right">
-										64
-									</div>
-									<div class="exams_no exam_right">
-										65
-									</div>
-									<div class="exams_no exam_right">
-										66
-									</div>
-									<div class="exams_no exam_right">
-										67
-									</div>
-									<div class="exams_no exam_right">
-										68
-									</div>
-									<div class="exams_no exam_right">
-										69
-									</div>
-									<div class="exams_no exam_right">
-										70
-									</div>
-									
-									<div class="exams_no exam_right">
-										71
-									</div>
-									<div class="exams_no exam_right">
-										72
-									</div>
-									<div class="exams_no exam_right">
-										73
-									</div>
-									<div class="exams_no exam_right">
-										74
-									</div>
-									<div class="exams_no exam_right">
-										75
-									</div>
-									<div class="exams_no exam_right">
-										76
-									</div>
-									<div class="exams_no exam_right">
-										77
-									</div>
-									<div class="exams_no exam_wrong">
-										78
-									</div>
-									<div class="exams_no exam_wrong">
-										79
-									</div>
-									<div class="exams_no exam_right">
-										80
-									</div>
-								</div>
-							</div>
-							<div class="exams">
-								<div class="exams_title">
-									是非题：
-								</div>
-								<div class="clearfix exam_no_body">
-									<div class="exams_no exam_wrong ">
-										81
-									</div>
-									<div class="exams_no exam_right ">
-										82
-									</div>
-									<div class="exams_no exam_right ">
-										83
-									</div>
-									<div class="exams_no exam_right ">
-										84
-									</div>
-									<div class="exams_no exam_right ">
-										85
-									</div>
-									<div class="exams_no exam_right ">
-										86
-									</div>
-									<div class="exams_no exam_right ">
-										87
-									</div>
-									<div class="exams_no exam_wrong ">
-										88
-									</div>
-									<div class="exams_no exam_right ">
-										89
-									</div>
-									<div class="exams_no exam_wrong ">
-										90
-									</div>
-									<div class="exams_no exam_right ">
-										91
-									</div>
-									<div class="exams_no exam_right ">
-										92
-									</div>
-									<div class="exams_no exam_right ">
-										93
-									</div>
-									<div class="exams_no exam_right ">
-										94
-									</div>
-									<div class="exams_no exam_wrong ">
-										95
-									</div>
-									<div class="exams_no exam_right ">
-										96
-									</div>
-									<div class="exams_no exam_right ">
-										97
-									</div>
-									<div class="exams_no exam_right ">
-										99
-									</div>
-									<div class="exams_no exam_right ">
-										99
-									</div>
-									<div class="exams_no exam_right ">
-										100
-									</div>
-									
-								</div>
-							</div>
+				<div class="demo">
+					<div class="step_left clearfix">
+						<div class="step_line">&nbsp;</div>
+						<div  class="step_menu_done">
+							<div class="step_text">1.公开办事</div>
+						</div>
+						<div class="step_line">&nbsp;</div>
+						<div  class="step_menu_done">
+							<div class="step_text">2.公办事</div>
+						</div>
+						<div class="step_line">&nbsp;</div>
+						<div  class="step_menu_done">
+							<div class="step_text">3.公开办事</div>
+						</div>
+						<div class="step_line">&nbsp;</div>
+						<div  class="step_menu">
+							<div class="now_step">4.公开办事</div>
+						</div>
+						<div class="step_line">&nbsp;</div>
+						<div  class="step_menu_todo">
+							<div class="step_text">5.公开办事</div>
+						</div>
+						<div class="step_line">&nbsp;</div>
+						<div  class="step_menu_todo">
+							<div class="step_text">6.公开办事</div>
+						</div>
+						<div class="step_line">&nbsp;</div>
+					</div>
+					<div class="step_div_bg">&nbsp;</div>
+					<div class="step_content clearfix">
+						<div class="step_title">
+							一段简单js代码生成随机高强度密码
+						</div>
+						<div>
+							主机服务器管理面板经常有自带生成随机密码的功能，生成后拷贝到密码框会显示安全度“强”。做了一段js代码可生成随机高强度密码，总包括大小字母数字符号组合一起的。只要设置value值相应的密码数量，就是value="12"表示12个密码数量，假如在右下面的value框输入16，点击会生成共16个密码！
 						</div>
 					</div>
 				</div>
 
-				<div class="right_answer">
-					<div class="right_outer clearfix">
-					<div class="exam_section">
-						<div class="exam_title">
-							<span class="exam_no">3. </span><span style="color: #000">有关精密度与准确度的关系的叙述中，不正确的是(&nbsp;&nbsp;&nbsp;&nbsp;)。</span>
-						</div>
-						<div class="exam_options">
-							<input type="radio" name="sex2" id="o_21" checked/>
-							<label for="o_21" class="o_21">精密度是保证准确度的先决条件</label>
-						</div>
-						<div class="exam_options">
-							<input type="radio" name="sex2" id="o_22" />
-							<label for="o_22" class="o_22">精密度、准确度衡量分析结果的可靠性是一致的</label>
-						</div>
-						<div class="exam_options">
-							<input type="radio" name="sex2" id="o_23" />
-							<label for="o_23" class="o_23">精密度高的测定结果，不一定是准确的</label>
-						</div>
-						<div class="exam_options">
-							<input type="radio" name="sex2" id="o_24" />
-							<label for="o_24" class="o_24">精密度差，分析结果一定不可靠</label>
-						</div>
-					</div>
-					<div class="right_title">
-						正确答案：<span class="right_option">C,D</span>
-					</div>
-					</div>
-				</div>
 			</div>
 			<!-- Teaser End -->
-		
+
 			<!-- Content Start -->
 
 			<!-- Content End -->
