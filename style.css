@@ -902,8 +902,8 @@ padding-left:20px;
 
 .step_menu
 {
-	height: 74px;
-	background: url(./images/step.png) no-repeat 119px 3px;
+	height: 40px;
+	background: url(./images/step.png) no-repeat 134px 3px;
 }
 .step_menu_todo
 {
@@ -956,10 +956,10 @@ padding-left:20px;
 }
 .now_step
 {
-	font-size: 18pt;
-	padding-top: 26px;
+	font-size: 13pt;
+	padding-top: 11px;
 	padding-right: 66px;
-	text-align: right;
+	text-align: right;	
 	color: #002cc0;
 }
 .step_left{
