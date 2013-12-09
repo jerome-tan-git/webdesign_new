@@ -566,6 +566,7 @@ padding-left:20px;
 .menu_text
 {
 	margin-top: 15px;
+	color:#333;
 }
 .slider_content{
 	background-position-x: 100px;
@@ -1031,15 +1032,33 @@ padding-left:20px;
 	width: 930px;
 	color: #ECECEC;
 }
-
+.process_button_bar
+{
+	float: right;
+	margin-top: -8px;
+	cursor:pointer;
+	width: 100px;
+}
+.new_process
+{
+	font-size: 11pt;
+	color: #A7A7A7;
+}
+.process_delete
+{
+	margin-left: 73px;
+	color: #4061E6;
+	cursor: pointer;
+}
 .step_caption 
 {
 	padding-top:15px;
 }
 .step_date
 {
-	
+	width: 102px;
 	float: right;
+	margin-top: 10px;
 }
 .one_item
 {

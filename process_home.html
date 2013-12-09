@@ -18,6 +18,7 @@ transitional.dtd">
 		<link rel="stylesheet" type="text/css" href="./css/quicksand.css" />
 		<link rel="stylesheet" type="text/css" href="./css/skin.css" />
 
+
 		<script type="text/javascript" src="./js/jquery.min.js"></script>
 		<script type="text/javascript" src="./js/jquery-migrate.js"></script>
 
@@ -57,9 +58,9 @@ transitional.dtd">
 
 				// bancy bo=x
 				// jQuery("a#example6").fancybox({
-				// 'titlePosition' : 'outside',
-				// 'overlayColor' : '#000',
-				// 'overlayOpacity' : 0.9
+					// 'titlePosition' : 'outside',
+					// 'overlayColor' : '#000',
+					// 'overlayOpacity' : 0.9
 				// });
 				//slider
 				// var sudoSlider = jQuery("#testimonail").sudoSlider({
@@ -128,22 +129,29 @@ transitional.dtd">
 						backgroundColor : "#fff"
 					}, 500);
 				});
-
-				$(".click_down").click(function() {
+				
+				$(".click_down").click(function(){
 					var toHeight = $(".exam_no_container").outerHeight();
 					var beginHeight = $(".exam_no_outer").outerHeight();
-					if (beginHeight == 0) {
-						$(".exam_no_outer").animate({
-							height : toHeight + "px"
-						}, 1000, "easeOutExpo", function() {
-							$(".click_down").attr("src", "images/up.png");
-						});
-					} else {
-						$(".exam_no_outer").animate({
-							height : 0 + "px"
-						}, 1000, "easeOutExpo", function() {
-							$(".click_down").attr("src", "images/down.png");
-						});
+					if(beginHeight == 0)
+					{
+						   $(".exam_no_outer").animate({
+								height : toHeight + "px"
+							}, 1000, "easeOutExpo",
+							function()
+							{
+								$(".click_down").attr("src","images/up.png");
+							});
+					}
+					else
+					{
+							$(".exam_no_outer").animate({
+								height : 0 + "px"
+							}, 1000, "easeOutExpo",
+							function()
+							{
+								$(".click_down").attr("src","images/down.png");
+							});
 					}
 				});
 			});
@@ -160,39 +168,28 @@ transitional.dtd">
 				}
 			}
 		</script>
-		<script>
-			$(document).ready(function() {
-				var tmpH = $(".step_left").outerHeight();
-
-				if ($(".step_content").outerHeight() > $(".step_left").outerHeight()) {
-					tmpH = $(".step_content").outerHeight();
-				}
-
-				$(".step_div_bg").css("height", tmpH + "px");
-			});
-		</script>
 	</head>
 	<body>
 		<div id="page_wrap">
 			<!-- Header Start -->
 			<div class="header">
-				<div class="logo">
-					<div class="logo_container">
-						<a href="./index.html"><img src="./images/logo_new.png" alt="img" /></a>
-					</div>
-					<div class="logo_search">
-						<div class="search_box">
-							<form action="#" method="get">
-								<div style="width:210px" class="clearfix">
-									<div style="width:150px; float: left">
-										<input id="error_search" type="text" name="s">
-									</div>
-									<input  type="submit" value="" style="float: right">
-								</div>
-							</form>
-						</div>
+		    <div class="logo">
+		    	<div class="logo_container">
+		    		<a href="./index.html"><img src="./images/logo_new.png" alt="img" /></a>
+		    	</div>
+		    	<div class="logo_search">
+		    		<div class="search_box">
+					    <form action="#" method="get">
+					    <div style="width:210px" class="clearfix">
+					    <div style="width:150px; float: left">	
+					    	<input id="error_search" type="text" name="s">
+					    </div>
+				    	<input  type="submit" value="" style="float: right">
+					    </div>
+					    </form>
 					</div>
 				</div>
+		    </div>
 				<div class="menubar clearfix">
 
 					<a href="./index.html">
@@ -238,18 +235,10 @@ transitional.dtd">
 						</div>
 						<div class="menu_list">
 							<div class="menu_list_header"></div>
-							<div class="list_item menu">
-								生产许可咨询
-							</div>
-							<div class="list_item paper">
-								企业标准备案
-							</div>
-							<div class="list_item note">
-								食品添加剂备案
-							</div>
-							<div class="list_item case">
-								委托加工备案
-							</div>
+							<div class="list_item menu">生产许可咨询</div>
+							<div class="list_item paper">企业标准备案</div>
+							<div class="list_item note">食品添加剂备案</div>
+							<div class="list_item case">委托加工备案</div>
 						</div>
 					</div>
 					<div class="menu_item">
@@ -395,255 +384,94 @@ transitional.dtd">
 			<div class="clear"></div>
 
 			<!-- Flex Slider Start -->
-			<div class="sub_header">
+			<div class="sub_header  exam_bg">
 
 				<div class="sub_header_title">
 					<h2>公开办事</h2>
 					<div class="sub_header_description">
 						<span><a href="./index.html">首页 &raquo;</a></span>
-						<span class="page">公开办事&nbsp;&raquo;</span>
-						<span class="page">企业标准备案</span>
+						<span class="page">公开办事</span>
 					</div>
 
 				</div>
 				<div class="exam_type">
-
+					
 				</div>
-
+				
 			</div>
 
 			<!-- Flex Slider End -->
 
 			<!-- Teaser Start -->
-			<div class="section" id="content" class="tag_line" style="padding-top: 0px;padding-bottom: 0px">
+			<div class="section" id="content" class="tag_line" style="padding-top: 30px">
 
-				<div style="width:80px;float: left">
-					&nbsp;
-				</div>
-				<div class="pull_left">
-					<div class="my_tasks">
-						<div >进行中</div>
-						<a href="./process_home.html">
-						<div class="process_button_bar"><div class="pull_left"><img src="./images/iconmonstr-magic-9-icon-16.png" /></div>
-						<div class="new_process">&nbsp;新建</div></div>
-						</a>
-					</div>
-					
-					<div class="one_item clearfix">
-						<div class="step_no">
-							1
-						</div>
-						<div class="pull_left">
-							<div class="step_caption clearfix">
-								<div class="step_list_title pull_left">
-									<a href="./progress.html">生产许可咨询</a>
-								</div>
-								<div class="step_date">
-									<div class="pull_left">2013/12/12</div>
-									<div class="process_delete">删除</div>
-								</div>
-							</div>
-							<div class="clearfix">
-								<div class="progress_start">
-									第一步
-								</div>
-								<div class="progress_middle_done">
-									&nbsp;
-								</div>
-								<div class="progress_middle_done_step">
-									第一步
-								</div>
-								<div class="progress_middle_done">
-									&nbsp;
-								</div>
-								<div class="progress_middle_doing_step">
-									第一步
-								</div>
-								<div class="progress_middle_todo">
-									&nbsp;
-								</div>
-								<div class="progress_middle_todo_step">
-									第一步
-								</div>
-								<div class="progress_middle_todo">
-									&nbsp;
-								</div>
-								<div class="progress_middle_todo_step">
-									第一步
-								</div>
-								<div class="progress_middle_todo">
-									&nbsp;
-								</div>
-								<div class="progress_last_todo">
-									第一步
-								</div>
-							</div>
-							<div class="step_bottom">
-								&nbsp;
-							</div>
-						</div>
-					</div>
+				<div class="demo">
+			<ul id="list" class="image-grid_3col">
+						    <li data-id="id-4" class="photo">
+		        <a href="./progress_list.html"><div class="portfolio_content">
+		        <img src="./images/process_5.png" alt="img">
+		        <h4  style="color: rgb(86, 86, 86);">我的任务</h4>
+		        
+		        <div class="link_btn">
+		            <a id="example6" href="./exam_.html" class="zoom" style="opacity: 0;"></a>
+		            <!--div class="exam_desc" style="opacity: 0;">单选题：10题<br />复选题：80题<br/>是非题：10题</div-->
+		            <div class="overlay" style="opacity: 0;"></div>
+		        </div>
+		        </div></a>
+		    </li>
+		    <li data-id="id-1" class="photo">
+		        <a href="./progress.html"><div class="portfolio_content">
+		        <img src="./images/process_1.png" alt="img" style="opacity: 1;">
+		        <h4 style="color: rgb(86, 86, 86);">生产许可咨询</h4>
+		        <div class="link_btn" style="display: block;">
+		            <a id="example6" href=".#" class="zoom" style="opacity: 0;"></a>
+		            <!--div class="exam_desc" style="opacity: 0;">单选题：10题<br />复选题：80题<br/>是非题：10题</div-->
+		            <div class="overlay" style="opacity: 0;"></div>
+		        </div>
+		        
+		        </div>
+		        </a>
+		    </li>
+		    <li data-id="id-2" class="scenery">
+		        <a href="./progress.html"><div class="portfolio_content">
+		        <img src="./images/process_2.png" alt="img" style="opacity: 1;">
+		        <h4 style="color: rgb(86, 86, 86);">企业标准备案</h4>
+		        
+		        <div class="link_btn" style="display: block;">
+		            <a id="example6" href="./exam_.html" class="zoom" style="opacity: 0;"></a>
+		            <!--div class="exam_desc" style="opacity: 0;">单选题：10题<br />复选题：80题<br/>是非题：10题</div-->
+		            <div class="overlay" style="opacity: 0;"></div>
+		        </div>
+		        </div></a>
+		    </li>
+		    <li data-id="id-3" class="photo">
+		        <a href="./progress.html"><div class="portfolio_content">
+		        <img src="./images/process_3.png" alt="img">
+		        <h4 style="color: rgb(86, 86, 86);">食品添加剂备案</h4>
+		        
+		        <div class="link_btn">
+		            <a id="example6" href="./exam_.html" class="zoom" style="opacity: 0;"></a>
+		            <!--div class="exam_desc" style="opacity: 0;">单选题：10题<br />复选题：80题<br/>是非题：10题</div-->
+		            <div class="overlay" style="opacity: 0;"></div>
+		        </div>
+		        </div></a>
+		    </li>
+		    <li data-id="id-4" class="photo">
+		        <a href="./progress.html"><div class="portfolio_content">
+		        <img src="./images/process_4.png" alt="img">
+		        <h4 style="color: rgb(86, 86, 86);">委托加工备案</h4>
+		        
+		        <div class="link_btn">
+		            <a id="example6" href="./exam_.html" class="zoom" style="opacity: 0;"></a>
+		            <!--div class="exam_desc" style="opacity: 0;">单选题：10题<br />复选题：80题<br/>是非题：10题</div-->
+		            <div class="overlay" style="opacity: 0;"></div>
+		        </div>
+		        </div></a>
+		    </li>
 
-					<div class="one_item clearfix">
-						<div class="step_no">
-							2
-						</div>
-						<div class="pull_left">
-						<div class="step_caption clearfix">
-							<div class="step_list_title pull_left">
-								<a href="./progress.html">企业标准备案</a>
-							</div>
+		</ul>
+		</div>
 
-							<div class="step_date">
-								<div class="pull_left">2013/12/12</div>
-								<div class="process_delete">删除</div>
-							</div>
-						</div>
-						<div class="clearfix">
-							<div class="progress_start">
-								第一步
-							</div>
-							<div class="progress_middle_done">
-								&nbsp;
-							</div>
-							<div class="progress_middle_doing_step">
-								第一步
-							</div>
-							<div class="progress_middle_todo">
-								&nbsp;
-							</div>
-							<div class="progress_middle_todo_step">
-								第一步
-							</div>
-							<div class="progress_middle_todo">
-								&nbsp;
-							</div>
-							<div class="progress_last_todo">
-								第一步
-							</div>
-						</div>
-						<div class="step_bottom">
-							&nbsp;
-						</div>
-						</div>
-					</div>
-
-					<div class="my_tasks">
-						已完成
-					</div>
-					<div class="one_item clearfix">
-						<div class="step_no_done">
-							11
-						</div>
-						<div class="pull_left">
-							<div class="step_caption clearfix">
-								<div class="step_list_title pull_left">
-									<a href="./progress.html">食品添加剂备案</a>
-								</div>
-
-								<div class="step_date">
-									<div class="pull_left">2013/12/12</div>
-									<div class="process_delete">删除</div>
-								</div>
-							</div>
-							<div class="progress_start">
-								第一步
-							</div>
-							<div class="progress_middle_done">
-								&nbsp;
-							</div>
-							<div class="progress_middle_done_step">
-								第一步
-							</div>
-							<div class="progress_middle_done">
-								&nbsp;
-							</div>
-							<div class="progress_middle_done_step">
-								第一步
-							</div>
-							<div class="progress_middle_done">
-								&nbsp;
-							</div>
-							<div class="progress_middle_done_step">
-								第一步
-							</div>
-							<div class="progress_middle_done">
-								&nbsp;
-							</div>
-							<div class="progress_last_done">
-								第一步
-							</div>
-							<div class="step_bottom">
-								&nbsp;
-							</div>
-						</div>
-					</div>
-					<div class="one_item clearfix">
-						<div class="step_no_done">
-							11
-						</div>
-						<div class="pull_left">
-							<div class="step_caption clearfix">
-								<div class="step_list_title pull_left">
-									<a href="./progress.html">委托加工备案</a>
-								</div>
-
-								<div class="step_date">
-									<div class="pull_left">2013/12/12</div>
-									<div class="process_delete">删除</div>
-								</div>
-							</div>
-							<div class="progress_start">
-								第一步
-							</div>
-							<div class="progress_middle_done">
-								&nbsp;
-							</div>
-							<div class="progress_middle_done_step">
-								第一步
-							</div>
-							<div class="progress_middle_done">
-								&nbsp;
-							</div>
-							<div class="progress_middle_done_step">
-								第一步
-							</div>
-							<div class="progress_middle_done">
-								&nbsp;
-							</div>
-							<div class="progress_middle_done_step">
-								第一步
-							</div>
-							<div class="progress_middle_done">
-								&nbsp;
-							</div>
-							<div class="progress_middle_done_step">
-								第一步
-							</div>
-							<div class="progress_middle_done">
-								&nbsp;
-							</div>
-							<div class="progress_middle_done_step">
-								第一步
-							</div>
-							<div class="progress_middle_done">
-								&nbsp;
-							</div>							
-							<div class="progress_middle_done_step">
-								第一步
-							</div>
-							<div class="progress_middle_done">
-								&nbsp;
-							</div>
-							<div class="progress_last_done">
-								第一步
-							</div>
-							<div class="step_bottom">
-								&nbsp;
-							</div>
-						</div>
-					</div>
-				</div>
 			</div>
 			<!-- Teaser End -->
 
