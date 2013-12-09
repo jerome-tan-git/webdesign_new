@@ -9,8 +9,7 @@ CKEDITOR.editorConfig = function( config ) {
 	// config.uiColor = '#AADC6E';
 	config.toolbar =
 	[
-	    ['Bold','Italic','Underline','Strike','-','Subscript','Superscript', 'EqnEditor'],
-	    ['Image','Table','HorizontalRule'],
+	    ['Bold','Italic','Underline','Strike','-','EqnEditor'],
 	    ['TextColor','BGColor'],
 	 
 	];
