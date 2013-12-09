@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<!--
+Copyright (c) 2003-2013, CKSource - Frederico Knabben. All rights reserved.
+For licensing, see LICENSE.md or http://ckeditor.com/license
+-->
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>jQuery Adapter &mdash; CKEditor Sample</title>
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+	<script src="./js/ckeditor/ckeditor.js"></script>
+	<script src="./js/ckeditor/adapters/jquery.js"></script>
+	<link href="sample.css" rel="stylesheet">
+	<style>
+
+		#editable
+		{
+			padding: 10px;
+			float: left;
+		}
+
+	</style>
+	<script>
+
+		CKEDITOR.disableAutoInline = true;
+
+		$( document ).ready( function() {
+			$( '#editor1' ).ckeditor(); // Use CKEDITOR.replace() if element is <textarea>.
+			$( '#editable' ).ckeditor(); // Use CKEDITOR.inline().
+		} );
+
+		function setValue() {
+			$( '#editor1' ).val( $( 'input#val' ).val() );
+		}
+	function add_editor()
+	{
+		// alert(1);
+		var ccount = $('.cke').size();
+		$('.a').append("<textarea cols=\"20\" id=\"editor"+ccount+"\" class=\"cke\" rows=\"2\"></textarea>");
+		// alert('#editor1'+rid);
+		$( '#editor'+ccount ).ckeditor();
+	}
+	</script>
+</head>
+<body>
+	<input type="button" onclick="add_editor()" value='111111111111'/>
+	<div class="a">
+		
+	</div>
+</body>
+</html>
