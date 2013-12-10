@@ -227,7 +227,14 @@ font-weight:600;
 	height: 0px;
 }
 
-
+.login_text
+{
+	float: right;
+	margin-top: -27px;
+	margin-right: 44px;
+	color:#6E6E70;
+	font-size: 10pt;
+}
 .logo {
 	padding-top:30px;
 	padding-left:30px;
