@@ -170,7 +170,8 @@ transitional.dtd">
 					},
 					createHtml : function(data) {
 						return '<div onmouseover="overBlock($(this))" class="wf_item_inner clearfix">'+
-						'<div onmouseout="outBlock($(this).parent())" class="block_cover"><div class="content_desc" style="display:none">aaaaaaaaaa</div></div>' 
+						'<div onmouseout="outBlock($(this).parent())" class="block_cover"><div class="content_desc clearfix" style="display:none"><div>文章标题文章标题文章标题文章标题</div>'
+						+'<div class="content_desc_small">描述描述描述描述描述描述描述描述描述描述描述描述描述描述描述描述描述描述描述描述描述描述描述描述描述描述描述描述描述描述</div></div></div>' 
 						+ '<a href="' + data.url + '" class="thumb" target="_blank">' + '<img class="thumb_img"  src="' + data.image + '" />' 
 						+ '</a><div class="wf_caption"><div class="wf_title">文章标题文章标题文章标题文章标题<div></div></div>';
 
@@ -192,31 +193,29 @@ transitional.dtd">
 
 			function overBlock(obj) {
 				var boxHeight = obj.outerHeight();
-				
-				obj.parent().find(".block_cover").animate({
-					height : boxHeight + "px"
-				}, 300, "easeOutExpo", function()
-				{
-					var textObj =obj.parent().find(".content_desc"); 
-						textObj.fadeIn(300);					
-				});
-				obj.find(".wf_caption").animate({
-					opacity : 0
-				}, 300, "easeOutExpo");
+				var textObj =obj.parent().find(".content_desc"); 
+				obj.parent().find(".block_cover").css("height",boxHeight + "px");				
+				obj.find(".wf_caption").hide();
+				textObj.show();
+
 			}
 
 			function outBlock(obj) {
 				var textObj =obj.parent().find(".content_desc"); 
+				obj.find(".block_cover").css("height","0px");
+				obj.find(".wf_caption").show();
+				textObj.hide();
+				// obj.find(".block_cover").stop(true,true).animate({
+					// height : "0px"
+				// }, 300, "easeOutExpo",function()
+				// {
+					// textObj.stop(true,true).hide();
+					// obj.find(".wf_caption").animate({
+						// opacity : 1
+					// }, 300, "easeOutExpo");
+				// }
+				// );
 				
-		
-				obj.find(".block_cover").stop(true,true).animate({
-					height : "0px"
-				}, 300, "easeOutExpo"
-				);
-				textObj.stop(true,true).fadeOut(300);
-				obj.find(".wf_caption").animate({
-					opacity : 1
-				}, 300, "easeOutExpo");
 			}
 		</script>
 

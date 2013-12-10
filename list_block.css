@@ -65,20 +65,24 @@
 {
 	color: #fff;
 	font-size: 15pt;
-	padding-left: 14px;
+	padding-left: 24px;
+	padding-right: 24px;
 	padding-top: 22px;
+	
 }
 .block_cover
 {
 	background: url(./images/half.png) repeat;
 	position: absolute;
 	top: 0px;
-	z-index: 1000000;
+	z-index: 1000;
 	width:100%;
+	overflow:hidden;
+	cursor:pointer;
 }
 .wf_title
 {
-	padding-top: 20px;
+	padding-top: 40px;
 	color: #fff;
 	padding-left: 11px;
 	padding-right: 11px;
@@ -86,6 +90,11 @@
 }
 .wf_loading {
 	background: url(./images/loading.gif) center center no-repeat;
+}
+.content_desc_small
+{
+	font-size:9pt;
+	padding-top: 24px;
 }
 .wf_caption {
 	position: absolute;
