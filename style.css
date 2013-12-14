@@ -1235,7 +1235,7 @@ padding-left:20px;
 	float: left;
 	height: 111px;
 	border: 1px solid #ccc;
-	margin-left: 27px;
+	
 	margin-right: 27px;
 }
 
@@ -1253,11 +1253,13 @@ padding-left:20px;
 }
 .artile_list_block
 {
-	margin-bottom: 30px;
+	padding-bottom: 16px;
+	margin-top: 15px;
+	border-bottom: 1px dotted #ccc;
+	margin-left: 20px;
 }
 .artile_list_block .desc
 {
 	font-size: 10pt;
-	
 	margin-top: 6px;
 }
