@@ -18,10 +18,27 @@ For licensing, see LICENSE.md or http://ckeditor.com/license
 			padding: 10px;
 			float: left;
 		}
-
+		.result_a
+		{
+			border: 1px solid #fff; 
+			margin-bottom:5px;
+			padding: 5px 5px 5px 5px;
+		}
+		.content_number
+		{
+			width: 50px;
+			float: left;
+			font-size: 20pt;
+			padding-left: 10px;
+		}
+		.selected_exam
+		{
+			border: 1px solid #00FF47;
+			background-color: #D7FFDA;
+		}
 	</style>
 	<script>
-
+		var selectIndex = -1;
 		CKEDITOR.disableAutoInline = true;
 		CKEDITOR.editorConfig = function( config ) {
 			// Define changes to default configuration here. For example:
@@ -50,27 +67,46 @@ For licensing, see LICENSE.md or http://ckeditor.com/license
 		{
 			//alert(CKEDITOR.instances.editor.getData());
 			var input_x = CKEDITOR.instances.editor.getData();
-			$('#result').append("<div class='result_a' onclick='put_data($(this))'>"+input_x+"</div>");
+			$('#result').append("<div class='result_a' onclick='put_data($(this))' index='"+$('.result_a').size()+
+						"'><div class='content_number'>"+($('.result_a').size()+1)+"</div><div class='exam_content'>"+
+						input_x+"</div><input name='exam_v' type='hidden' class='real_v' value='"+input_x+"'/></div>");
 		}
 		
 		function put_data(obj)
 		{
-			CKEDITOR.instances.editor.setData(obj.html());
+			var te = obj.find('.exam_content').html();
+			CKEDITOR.instances.editor.setData(te);
+			selectIndex = obj.attr('index');
+			$('.result_a').removeClass('selected_exam');
+			obj.addClass('selected_exam');
 		}
 		function set_editor()
 		{
 			CKEDITOR.instances.editor.setData("<p>afsfadf<img alt=\"\small \oint 1\" src=\"http://latex.codecogs.com/gif.latex?%5Cdpi%7B120%7D%20%5Csmall%20%5Coint%201\" /></p>");
 		}
-
+		function update_value()
+		{
+			if(selectIndex == -1)
+			{
+				add_editor();
+			}
+			else
+			{
+				var input_x = CKEDITOR.instances.editor.getData();
+				$(".result_a[index='"+selectIndex+"']").find('.exam_content').html(input_x);
+			}
+		}
 	</script>
 </head>
 <body>
-	<input type="button" onclick="add_editor()" value='111111111111'/>
-	<input type="button" onclick="read_editor()" value='2222'/>
-	<input type="button" onclick="set_editor()" value='333'/>
+	
+	<input type="button" onclick="update_value()" value='update value'/>
+	<input type="button" onclick="read_editor()" value='add value'/>
+	<input type="button" onclick="set_editor()" value='set value'/>
+	
 	<div class="a">
 		<textarea cols="20" id="editor" class="cke" rows="2" > </textarea>
-		<input id="editor_x" name="xxx" />
+		<br />
 	</div>
 	<div id="result">
 		

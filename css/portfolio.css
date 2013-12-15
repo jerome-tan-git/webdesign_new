@@ -7,6 +7,7 @@
 	z-index:333;
 	display:block;
 	position:relative;
+	cursor:pointer;
 }
 .portfolio_content img {
 	padding-bottom:14px;

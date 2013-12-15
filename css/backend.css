@@ -1,0 +1,24 @@
+body {
+	color: #A29C9A;
+	font-family: "微软雅黑",Arial,"宋体" !important;
+	font-size: 13px;
+	line-height: 18px;
+	margin: 0;
+	padding: 0;
+	background-color: #f3f3f3;
+}
+h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
+font-family: "微软雅黑",Arial,"宋体" !important;
+font-weight: 500;
+line-height: 1.1;
+color: inherit;
+}
+.bt_group
+{
+	margin-right: 17px;
+	margin-top: 12px;
+}
+.exam_option
+{
+	cursor: pointer;
+}

@@ -461,7 +461,8 @@ margin-top:5px;
 .gkbs_input{
 	float: left;
 }
-
+.ui-dialog { z-index: 1000 !important ;}
+.ui-widget-overlay{ z-index: 999 !important ;}
 #contact-form input {
     background-color: #FCFCFC;
     border: 1px solid #DDDDDD;
@@ -474,7 +475,22 @@ margin-top:5px;
    box-shadow:         inset 0 0 10px #eee;
   	border-radius: 3px;
 }
+.exam_username_input
+{
+		font-size: 14pt;
+		font-family: "微软雅黑",Arial,"宋体" !important;
+		color: #A29C9A;
+}
+.exam_user_name
+{
+	height: 34px;
+	padding-top: 18px;
+	padding-left: 19px;
+	font-size: 12pt;
+	font-family: "微软雅黑",Arial,"宋体";
+	color: #A29C9A;
 
+}
 #contact-form p input#submit {
 	background-color:#222;
 	padding:5px 10px;

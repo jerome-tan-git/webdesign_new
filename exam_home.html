@@ -17,6 +17,7 @@ transitional.dtd">
 		<link rel="stylesheet" type="text/css" href="./css/portfolio.css" />
 		<link rel="stylesheet" type="text/css" href="./css/quicksand.css" />
 		<link rel="stylesheet" type="text/css" href="./css/skin.css" />
+			<link href="css/jquery-ui-1.10.3.custom.css" rel="stylesheet">
 
 
 		<script type="text/javascript" src="./js/jquery.min.js"></script>
@@ -28,9 +29,11 @@ transitional.dtd">
 		<script type="text/javascript" src="./js/unslider.js"></script>
 		<script type="text/javascript" src="./js/fancybox/jquery.fancybox-1.3.4.js"></script>
 
-		<script type="text/javascript" src="js/jquery-ui-1.10.3.custom.min.js"></script>
 
-		<script type="text/javascript" src="js/jquery.easing.1.3.js"></script>
+
+	<script src="js/jquery-ui-1.10.3.custom.min.js"></script>
+
+		<script type="text/javascript" src="./js/jquery.easing.1.3.js"></script>
 
 		<style type="text/css">
 			html, body, p {
@@ -130,6 +133,33 @@ transitional.dtd">
 					}, 500);
 				});
 				
+				$( "#dialog" ).dialog({
+					autoOpen: false,
+					width: 400,
+					modal: true, 
+					buttons: [
+						{
+							text: "开始",
+							click: function() {
+								if($('#user_name_input').val()=="")
+								{
+									alert('请填写姓名！');
+								}
+								else
+								{
+									$( this ).dialog( "close" );
+									$('#go_exam').submit();
+								}
+							}
+						},
+						{
+							text: "取消",
+							click: function() {
+								$( this ).dialog( "close" );
+							}
+						}
+					]
+				});
 				$(".click_down").click(function(){
 					var toHeight = $(".exam_no_container").outerHeight();
 					var beginHeight = $(".exam_no_outer").outerHeight();
@@ -155,6 +185,7 @@ transitional.dtd">
 					}
 				});
 			});
+
 			function checkOptions() {
 				var op = $(this).find("input");
 				var label = $(this).find("." + (op.attr("id")));
@@ -167,9 +198,24 @@ transitional.dtd">
 					}
 				}
 			}
+			
+			$(document).ready(function() {
+				$('.portfolio_content').click(function()
+				{
+					//beginexam.action?examid=2
+					$("#dialog" ).dialog( "open" );					
+					$('#go_exam').attr('action','beginexam.action?examid='+$(this).attr('examid'));
+					event.preventDefault();
+				});
+			});
 		</script>
 	</head>
 	<body>
+<div id="dialog" title="请填写姓名">
+	<form name="go_to_exam" id="go_exam" method="post" >
+		<div class='exam_user_name'>姓名 : &nbsp;&nbsp;<input id='user_name_input' type="text" class="exam_username_input" name="user_name" placeholder="姓名" /></div>
+	</form>
+</div>
 		<div id="page_wrap">
 			<!-- Header Start -->
 			<div class="header">
@@ -409,36 +455,36 @@ transitional.dtd">
 				<div class="demo">
 		<ul id="list" class="image-grid_3col">
 		    <li data-id="id-1" class="photo">
-		        <div class="portfolio_content">
+		        <div class="portfolio_content" examid="1">
 		        <img src="./images/portfolio_3col_img_1.png" alt="img" style="opacity: 1;">
 		        <h4 style="color: rgb(86, 86, 86);">考试一</h4>
 		        
 		        <div class="link_btn" style="display: block;">
-		            <a id="example6" href="./exam_.html" class="zoom" style="opacity: 0;"></a>
+		            <a id="example6" href="#" class="zoom" style="opacity: 0;"></a>
 		            <div class="exam_desc" style="opacity: 0;">单选题：10题<br />复选题：80题<br/>是非题：10题</div>
 		            <div class="overlay" style="opacity: 0;"></div>
 		        </div>
 		        </div>
 		    </li>
 		    <li data-id="id-2" class="scenery">
-		        <div class="portfolio_content">
+		        <div class="portfolio_content"  examid="2">
 		        <img src="./images/portfolio_3col_img_2.png" alt="img" style="opacity: 1;">
 		        <h4 style="color: rgb(86, 86, 86);">考试三</h4>
 		        
 		        <div class="link_btn" style="display: block;">
-		            <a id="example6" href="./exam_.html" class="zoom" style="opacity: 0;"></a>
+		            <a id="example6" href="#" class="zoom" style="opacity: 0;"></a>
 		            <div class="exam_desc" style="opacity: 0;">单选题：10题<br />复选题：80题<br/>是非题：10题</div>
 		            <div class="overlay" style="opacity: 0;"></div>
 		        </div>
 		        </div>
 		    </li>
 		    <li data-id="id-3" class="photo">
-		        <div class="portfolio_content">
+		        <div class="portfolio_content"  examid="3">
 		        <img src="./images/portfolio_3col_img_3.png" alt="img">
 		        <h4>考试二</h4>
 		        
 		        <div class="link_btn">
-		            <a id="example6" href="./exam_.html" class="zoom" style="opacity: 0;"></a>
+		            <a id="example6" href="#" class="zoom" style="opacity: 0;"></a>
 		            <div class="exam_desc" style="opacity: 0;">单选题：10题<br />复选题：80题<br/>是非题：10题</div>
 		            <div class="overlay" style="opacity: 0;"></div>
 		        </div>
