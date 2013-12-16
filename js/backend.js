@@ -124,6 +124,13 @@ function put_data(obj)
 	selectIndex = obj.attr('index');
 
 }
+function uploadTitle(obj)
+{
+	var te = obj.find('.option_text').html();
+	CKEDITOR.instances.editor.setData(te);
+	$('.exam_option').removeClass('panel-primary');
+	selectIndex = -1;
+}
 function read_editor()
 {
 		var ind = numRand();
@@ -144,9 +151,8 @@ function read_editor_title()
 
 		var input_x = CKEDITOR.instances.editor.getData();
 		input_x = input_x.replace("<p>","").replace("</p>","").replace(/\"/g,"'");
-		$('.exam_title_input').html("<label  class=\"col-sm-12\">题目</label><div class=\"col-sm-12\"><div class=\"panel panel-default\">"+
+		$('.exam_title_input').html("<label class=\"col-sm-12\">题目</label><div class=\"col-sm-12\" style=\"cursor:pointer\" onclick=\"uploadTitle($(this))\"><div class=\"panel panel-default\">"+
 		"<div class=\"panel-body\"><span class=\"option_text\">"+input_x+"</span><input name=\"real_option_text\" type=\"hidden\"  value=\""+input_x+"\"/>"+
-		
 		"</div></div>");
 		attach_event();
 		CKEDITOR.instances.editor.setData("");
