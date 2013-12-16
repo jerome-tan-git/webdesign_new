@@ -22,3 +22,7 @@ color: inherit;
 {
 	cursor: pointer;
 }
+.option_text
+{
+	color:#000;
+}
