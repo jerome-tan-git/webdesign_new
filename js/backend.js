@@ -2,6 +2,31 @@ var selectIndex = -1;
 var indexseq = 0;
 $( document ).ready( function() {
 	attach_event();
+	
+	
+	$('.exam_type').change(function()
+	{
+		if($(".exam_type:checked").parent().html().indexOf('是非题')!=-1)
+		{
+			var ind = numRand();
+			$('.all_options').html("<label  class=\"col-sm-12\">选项</label>");
+			$('.all_options').append("<div class=\"col-sm-12 col_exam_option\"><div class=\"panel panel-default exam_option \" index='"+ind+"'>"+
+			"<div class=\"panel-body\"><span class='exam_no_'></span><span class=\"option_text\">是</span><input name=\"real_option_text\" type=\"hidden\"  value=\"是\"/>"+
+			"</div></div></div>");
+			ind = numRand();
+			$('.all_options').append("<div class=\"col-sm-12 col_exam_option\"><div class=\"panel panel-default exam_option \" index='"+ind+"'>"+
+			"<div class=\"panel-body\"><span class='exam_no_'></span><span class=\"option_text\">否</span><input name=\"real_option_text\" type=\"hidden\"  value=\"是\"/>"+
+			"</div></div></div>");
+		}
+		else
+		{
+			$('.all_options').html("<label  class=\"col-sm-12\">选项</label>");
+		}
+		rewrite_no();
+		attach_event();
+	});
+	
+	
 });
 
  function numRand() {
