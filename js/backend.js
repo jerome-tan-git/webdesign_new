@@ -2,7 +2,7 @@ var selectIndex = -1;
 var indexseq = 0;
 $( document ).ready( function() {
 	attach_event();
-	
+	rewrite_no();
 	
 	$('.exam_type').change(function()
 	{
