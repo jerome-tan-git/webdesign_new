@@ -31,3 +31,46 @@ label
 	color:#000;
 	font-size: 11pt;
 }
+.hand
+{
+	cursor:pointer;
+}
+.deleteExam
+{
+	color:#333;
+}
+.expandOption
+{
+	color:#333;
+}
+.exam_pager
+{
+	color:#333;
+	margin-right: 10px;
+}
+.options{
+	height: 0px;
+	overflow:hidden;
+}
+.option_list
+{
+	padding:15px 15px 15px 15px;
+}
+
+.exam_title_list
+{
+	font-size:13pt;
+	color:#333;
+	padding:10px 10px 10px 10px;
+	
+}
+.option_list ol
+{
+	color:#333;
+	line-height: 20px;
+	
+}
+.option_list ol li div
+{
+	margin-bottom:10px;
+}
