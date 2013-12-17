@@ -4,6 +4,25 @@ $( document ).ready( function() {
 	attach_event();
 	rewrite_no();
 	
+	$('.expandOption').click(function() {
+		var targetHeight = $(this).parent().parent().find('.option_list').outerHeight();
+		var originalHeight = $(this).parent().parent().find('.options').outerHeight();
+
+		if (originalHeight == 0) {
+			$(this).parent().parent().find('.options').stop(true, true).animate({
+				height : targetHeight + "px"
+			}, 500, "easeOutExpo");
+			$(this).removeClass('glyphicon-chevron-down');
+			$(this).addClass('glyphicon-chevron-up');
+		} else {
+			$(this).parent().parent().find('.options').stop(true, true).animate({
+				height : "0px"
+			}, 500, "easeOutExpo");
+			$(this).addClass('glyphicon-chevron-down');
+			$(this).removeClass('glyphicon-chevron-up');
+		}
+	});
+
 	$('.exam_type').change(function()
 	{
 		if($(".exam_type:checked").parent().html().indexOf('是非题')!=-1)
@@ -27,7 +46,11 @@ $( document ).ready( function() {
 		rewrite_no();
 		attach_event();
 	});
-	
+	$('.exam_container').hover(function(){
+		$(this).addClass('panel-warning');
+	},function(){
+		$(this).removeClass('panel-warning');
+	});
 	
 });
 
