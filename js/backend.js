@@ -26,9 +26,9 @@ $(document).ready(function() {
 		if ($(".exam_type:checked").parent().html().indexOf('是非题') != -1) {
 			var ind = numRand();
 			$('.all_options').html("<label  class=\"col-sm-12\">选项</label>");
-			$('.all_options').append("<div class=\"col-sm-12 col_exam_option\"><div class=\"panel panel-default exam_option \" index='" + ind + "'>" + "<div class=\"panel-body\"><span class='exam_no_'></span><span class=\"option_text\">是</span><input name=\"real_option_text\" type=\"hidden\"  value=\"是\"/>" + "</div></div></div>");
+			$('.all_options').append("<div class=\"col-sm-12 col_exam_option\"><div class=\"panel panel-default exam_option \" index='" + ind + "'>" + "<div class=\"panel-body\"><input type=\"radio\" class=\"exam_no_\" name=\"right_answer\" /><span style=\"font-size:15pt;color:#ccc;\">&nbsp;&nbsp;|&nbsp;&nbsp;</span><span class=\"option_text\">是</span><input name=\"real_option_text\" type=\"hidden\"  value=\"是\"/>" + "</div></div></div>");
 			ind = numRand();
-			$('.all_options').append("<div class=\"col-sm-12 col_exam_option\"><div class=\"panel panel-default exam_option \" index='" + ind + "'>" + "<div class=\"panel-body\"><span class='exam_no_'></span><span class=\"option_text\">否</span><input name=\"real_option_text\" type=\"hidden\"  value=\"否\"/>" + "</div></div></div>");
+			$('.all_options').append("<div class=\"col-sm-12 col_exam_option\"><div class=\"panel panel-default exam_option \" index='" + ind + "'>" + "<div class=\"panel-body\"><input type=\"radio\" class=\"exam_no_\" name=\"right_answer\" /><span style=\"font-size:15pt;color:#ccc;\">&nbsp;&nbsp;|&nbsp;&nbsp;</span><span class=\"option_text\">否</span><input name=\"real_option_text\" type=\"hidden\"  value=\"否\"/>" + "</div></div></div>");
 			$('#addOptionbt').attr('disabled', 'disabled');
 		} else {
 			$('.all_options').html("<label  class=\"col-sm-12\">选项</label>");
@@ -85,8 +85,8 @@ function attach_event() {
 function rewrite_no() {
 	var i = 0;
 	$(".exam_no_").each(function() {
+		$(this).val(i+"");
 		i++;
-		$(this).html(i + "&nbsp;&nbsp;|&nbsp;&nbsp;");
 	});
 
 }
@@ -98,7 +98,10 @@ function update_data() {
 		var this_index = $(this).find('.exam_option').attr("index");
 		if (this_index == selectIndex) {
 			var ind = numRand();
-			$(this).html("<div class=\"panel panel-default exam_option \" index='" + ind + "'>" + "<div class=\"panel-body\"><span class='exam_no_'></span><span class=\"option_text\">" + input_x + "</span><input name=\"real_option_text\" type=\"hidden\"  value=\"" + input_x + "\"/>" + "<button type=\"button\" class=\"close delete_option\" aria-hidden=\"true\" index='" + ind + "'>&times;</button></div>" + "</div>");
+			//$(this).html("<div class=\"panel panel-default exam_option \" index='" + ind + "'>" + "<div class=\"panel-body\"><input type=\""+radioType+"\" class=\"exam_no_\" name=\"right_answer\" /><span class=\"option_text\">" + input_x + "</span><input name=\"real_option_text\" type=\"hidden\"  value=\"" + input_x + "\"/>" + "<button type=\"button\" class=\"close delete_option\" aria-hidden=\"true\" index='" + ind + "'>&times;</button></div>" + "</div>");
+			$(this).find('.option_text').html(input_x);
+			$(this).find('.hiddenText').val(input_x);
+			
 
 		}
 
@@ -124,9 +127,19 @@ function uploadTitle(obj) {
 
 function read_editor() {
 	var ind = numRand();
+	var radioType="radio";
+	if ($(".exam_type:checked").parent().html().indexOf('复选题') != -1)
+	{
+		radioType = "checkbox";
+	}
+	
 	var input_x = CKEDITOR.instances.editor.getData();
 	input_x = input_x.replace("<p>", "").replace("</p>", "").replace(/\"/g, "'");
-	$('.all_options').append("<div class=\"col-sm-12 col_exam_option\"><div class=\"panel panel-default exam_option \" index='" + ind + "'>" + "<div class=\"panel-body\"><span class='exam_no_'></span><span class=\"option_text\">" + input_x + "</span><input name=\"real_option_text\" type=\"hidden\"  value=\"" + input_x + "\"/>" + "<button type=\"button\" class=\"close delete_option\" aria-hidden=\"true\" index='" + ind + "'>&times;</button></div>" + "</div></div>");
+	$('.all_options').append("<div class=\"col-sm-12 col_exam_option\"><div class=\"panel panel-default exam_option \" index='" + ind + "'>" + 
+	"<div class=\"panel-body\"><input type=\""+radioType+"\" class=\"exam_no_\" name=\"right_answer\" /><span style=\"font-size:15pt;color:#ccc;\">&nbsp;&nbsp;|&nbsp;&nbsp;</span><span class=\"option_text\">" + input_x 
+	+ "</span><input class=\"hiddenText\" name=\"real_option_text\" type=\"hidden\"  value=\"" + input_x + "\"/>" 
+	+ "<button type=\"button\" class=\"close delete_option\" aria-hidden=\"true\" index='" + ind + "'>&times;</button></div>" 
+	+ "</div></div>");
 	attach_event();
 	rewrite_no();
 	CKEDITOR.instances.editor.setData("");
