@@ -1279,3 +1279,88 @@ padding-left:20px;
 	font-size: 10pt;
 	margin-top: 6px;
 }
+.mom_left
+{
+	width: 139px;
+	float: left;
+	text-align: right;
+	padding-top: 8px;
+	font-size: 17pt;
+	padding-right: 9px;
+}
+
+.mom_icon
+{
+	width: 42px;
+	float: left;
+}
+
+.mom_content
+{
+float: left;
+background: url('./images/one_p.png') repeat-y 164px 0px;
+margin-left: 77px;
+
+}
+.mom_year
+{
+	font-size:10pt;
+}
+.mom_inner_content
+{
+	float:left;
+	width: 629px;
+	background:url('./images/mon_bg.png') no-repeat -3px 0px;
+	padding-bottom: 20px;
+}
+.mom_logo_div
+{
+	padding-top: 12px;
+}
+.mom_contetn_header
+{
+	height: 63px;
+}
+.mom_header_text
+{
+	padding-top: 10px;
+	padding-left: 42px;
+	font-size: 13pt;
+	padding-right: 50px;
+	margin-bottom: 5px;
+	background: url('./images/iconmonstr-note-27-icon-16.png') no-repeat 20px 11px;
+	color: #333;
+}
+.mom_contetn_body{
+	background: url('./images/mom_body.png') repeat-y -3px 0px;
+	padding: 10px 47px 10px 10px;
+	
+}
+.mom_contetn_bottom{
+	background:url('./images/mom_bottom.png') no-repeat -3px 0px;
+}
+.mom_date
+{
+	padding-left: 43px;
+	background: url('./images/iconmonstr-time-3-icon-16.png') no-repeat 20px 1px;
+}
+.mom_body_text
+{
+	padding-left: 20px;
+	float:left;
+}
+.mom_body_text_withimage
+{
+	padding-left: 20px;
+	float: left;
+	width: 410px;
+}
+.mom_body_image
+{
+	float: left;
+	width: 113px;
+	margin-left: 10px;
+	margin-top: 10px;
+	border: 1px solid #ccc;
+	padding: 7px;
+}
