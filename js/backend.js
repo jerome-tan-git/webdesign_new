@@ -203,10 +203,7 @@ function load_question()
 		attach_event();
 		rewrite_no();
 	}
-	catch(err)
-	{
-		alert(err);	
-	}
+	catch(err){}
 	// if(this.hasOwnProperty('question'))
 	// {
 		// alert(2);
