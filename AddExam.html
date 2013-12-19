@@ -34,6 +34,30 @@
 			//$( '#editor1' ).ckeditor(); // Use CKEDITOR.replace() if element is <textarea>.
 			
 		} );
+		var question = {
+				"type":"multi_selection",
+				"category":"option1",
+				"question":"question_text",
+				"question_value":"question_value",
+				"options": [
+		        {"text": "PRIVMSG", "value":"value_0", "right_answer": true},
+		        {"text": "PRIVMSG_1", "value":"value_1", "right_answer": false},
+		        {"text": "PRIVMSG_2", "value":"value_2", "right_answer": false},
+		        {"text": "PRIVMSG_3", "value":"value_3", "right_answer": false}
+		        
+		    ]
+		};
+		
+		// var question = {
+				// "type":"truefalse",
+				// "category":"option1",
+				// "question":"question_text",
+				// "question_value":"question_value",
+				// "options": [
+		        // {"text": "是", "value":"1", "right_answer": true},
+		        // {"text": "否", "value":"0", "right_answer": false}		        		        
+		    // ]
+		// };
 		</script>
 	</head>
 	<body>

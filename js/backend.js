@@ -51,7 +51,7 @@ $( document ).ready( function() {
 	},function(){
 		$(this).removeClass('panel-warning');
 	});
-	
+	load_question();
 });
 
  function numRand() {
@@ -158,6 +158,59 @@ function uploadTitle(obj)
 	CKEDITOR.instances.editor.setData(te);
 	$('.exam_option').removeClass('panel-primary');
 	selectIndex = -1;
+}
+
+
+function load_question()
+{
+	
+	try
+	{
+		if(question)
+		{
+			//alert(question.type);
+			$('input[name="e_type"][type="radio"][value="'+question.type+'"]').attr("checked", "checked");
+			$('input[name="e_c"][type="radio"][value="'+question.category+'"]').attr("checked", "checked");
+			var count = question.options.length;
+			var boxType = "checkbox";
+			 
+			if(question.type=="truefalse" || question.type=="single_selection")
+			{
+				boxType="radio";
+			}
+			$('.exam_title_input').html("<label class=\"col-sm-12\">题目</label><div class=\"col-sm-12\" style=\"cursor:pointer\" onclick=\"uploadTitle($(this))\"><div class=\"panel panel-default\">"+
+			"<div class=\"panel-body\"><span class=\"option_text\">"+question.question+
+			"</span><input name=\"question\" type=\"hidden\"  value=\""+question.question_value+"\"/>"+
+			"</div></div>");
+			
+			for(i=0;i<count;i++)
+			{
+				var ind = numRand();
+				var isChecked="";
+				if(question.options[i].right_answer)
+				{
+					isChecked = "checked";
+				}
+				$('.all_options').append("<div class=\"col-sm-12 col_exam_option\"><div class=\"panel panel-default exam_option \" index='"+ind+"'>"+
+				"<div class=\"panel-body\"><input type=\""+boxType+"\" class=\"exam_no_\" name=\"right_answer\" "+isChecked+"/><span style=\"font-size:15pt;color:#ccc;\">"
+				+"&nbsp;&nbsp;|&nbsp;&nbsp;</span><span class=\"option_text\">"+question.options[i].text
+				+"</span><input name=\"refs\" type=\"hidden\" class=\"hiddenText\"  value=\""+question.options[i].value+"\"/>"+
+				"<button type=\"button\" class=\"close delete_option\" aria-hidden=\"true\" index='"+ind
+				+"'>&times;</button></div>"+
+				"</div></div>");
+			}
+		}
+		attach_event();
+		rewrite_no();
+	}
+	catch(err)
+	{
+		alert(err);	
+	}
+	// if(this.hasOwnProperty('question'))
+	// {
+		// alert(2);
+	// }
 }
 function read_editor()
 {
