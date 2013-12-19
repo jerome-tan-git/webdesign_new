@@ -170,7 +170,7 @@ function load_question()
 		{
 			//alert(question.type);
 			$('input[name="e_type"][type="radio"][value="'+question.type+'"]').attr("checked", "checked");
-			$('input[name="e_c"][type="radio"][value="'+question.category+'"]').attr("checked", "checked");
+			$('option[class="e_c"][value="'+question.category+'"]').attr("selected", "selected");
 			var count = question.options.length;
 			var boxType = "checkbox";
 			 

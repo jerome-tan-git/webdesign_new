@@ -36,7 +36,7 @@
 		} );
 		var question = {
 				"type":"multi_selection",
-				"category":"option1",
+				"category":"2",
 				"question":"question_text",
 				"question_value":"question_value",
 				"options": [
@@ -145,10 +145,10 @@
 								</div>
 							</div>						    
 						  </div>
+						  <div class="col-sm-6">
 						  <div class="form-group">
-						  	<label  class="col-sm-12">类型</label>
+						  	<label>类型</label>
 						    <div class="col-sm-12">
-								
 								<label class="radio-inline">
 								  <input type="radio" id="inlineCheckbox1" class="exam_type" value="single_selection" name="e_type" checked> 单选题
 								</label>
@@ -160,19 +160,20 @@
 								</label>
 								</div>
 						  </div>
+						  </div>
+						  <div class="col-sm-6" >
 						  <div class="form-group">
-						  	<label  class="col-sm-12">类别</label>
-						    <div class="col-sm-12">
-								<label class="radio-inline">
-								  <input type="radio" id="inlineCheckbox1" value="option1" name="e_c"> 类别1
-								</label>
-								<label class="radio-inline">
-								  <input type="radio" id="inlineCheckbox2" value="option2" name="e_c"> 类别2
-								</label>
-								<label class="radio-inline">
-								  <input type="radio" id="inlineCheckbox3" value="option3" name="e_c"> 类别3
-								  </label>
+						  	<div><label>类别</label></div>
+						    <div class="col-sm-8">
+								<select name="examid" class="form-control">
+								  <option class="e_c" value="1">1</option>
+								  <option class="e_c" value="2">2</option>
+								  <option class="e_c" value="3">3</option>
+								  <option class="e_c" value="4">4</option>
+								  <option class="e_c" value="5">5</option>
+								</select>
 							</div>
+						  </div>
 						  </div>
 						  <div class="form-group exam_title_input">
 						  	
