@@ -1,9 +1,47 @@
 var selectIndex = -1;
 var indexseq = 0;
+var nowChecked="";
 $( document ).ready( function() {
 	attach_event();
 	rewrite_no();
-	
+	$("#examform").submit(function(){
+		    var isFormValid = true;
+		    var error_msg = "";
+			if($('input[name="right_answer"]:checked').size()==0)
+			{
+				error_msg +="请选择一个正确答案\n";
+				isFormValid = false;
+			}
+			if($('input[name="question"]').length == 0)
+			{
+					error_msg +="请输入题目\n";
+					isFormValid = false;
+			}
+			else
+			
+			if ($('input[name="question"]').val()=="")
+			{
+					error_msg +="请输入题目\n";
+					isFormValid = false;
+			}
+			if(!isFormValid)
+			{
+				alert(error_msg);
+			}
+		    // $(".required input").each(function(){
+		        // if ($.trim($(this).val()).length == 0){
+		            // $(this).addClass("highlight");
+		            // isFormValid = false;
+		        // }
+		        // else{
+		            // $(this).removeClass("highlight");
+		        // }
+		    // });
+// 		
+		    // if (!isFormValid) alert("Please fill in all the required fields (indicated by *)");
+		
+		    return isFormValid;
+		});
 	$('.expandOption').click(function() {
 		var targetHeight = $(this).parent().parent().find('.option_list').outerHeight();
 		var originalHeight = $(this).parent().parent().find('.options').outerHeight();
@@ -37,11 +75,43 @@ $( document ).ready( function() {
 			"<div class=\"panel-body\"><input type=\"radio\" class=\"exam_no_\" name=\"right_answer\" value=\"0\"/><span style=\"font-size:15pt;color:#ccc;\">&nbsp;&nbsp;|&nbsp;&nbsp;</span><span class=\"option_text\">否</span><input name=\"refs\" type=\"hidden\"  value=\"0\"/>"+
 			"</div></div></div>");
 			$('#addOptionbt').attr('disabled','disabled');
+			nowChecked='是非题';
 		}
 		else
 		{
-			$('.all_options').html("<label  class=\"col-sm-12\">选项</label>");
-			$('#addOptionbt').removeAttr('disabled');
+			
+			if(nowChecked=='是非题')
+			{
+				//change all option
+				$('.all_options').html("<label  class=\"col-sm-12\">选项</label>");
+				$('#addOptionbt').removeAttr('disabled');
+			}
+			else
+			{
+				//no change on options
+				if($(".exam_type:checked").parent().html().indexOf('复选题')!=-1)
+				{
+					$('input[name="right_answer"]').each(function()
+					{
+						$(this).attr("type","checkbox");
+					});
+				}
+				else
+				{
+					$('input[name="right_answer"]').each(function()
+					{
+						$(this).attr("type","radio");
+					});
+				}
+			}
+			if($(".exam_type:checked").parent().html().indexOf('复选题')!=-1)
+				{
+					nowChecked='复选题';
+				}
+				else
+				{
+					nowChecked='单选题';
+				}
 		}
 		rewrite_no();
 		attach_event();
