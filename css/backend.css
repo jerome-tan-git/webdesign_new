@@ -13,6 +13,16 @@ font-weight: 500;
 line-height: 1.1;
 color: inherit;
 }
+.exam_list_button{
+	position: absolute;
+	top: 0px;
+	right: 13px;
+	top: 11px;
+}
+.exam_block
+{
+	position:relative;
+}
 .bt_group
 {
 	margin-right: 17px;
@@ -62,7 +72,7 @@ label
 	font-size:13pt;
 	color:#333;
 	padding:10px 10px 10px 10px;
-	
+	margin-top: 8px;
 }
 .option_list ol
 {
