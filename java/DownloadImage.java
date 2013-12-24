@@ -21,7 +21,7 @@ public class DownloadImage {
 		System.out.println(filterString(html, "./images"));
 	}
 
-	public static String filterString(String _str, String _folderName) {
+	public static String filterString(String _str, String _folderName, String _urlPath) {
 		String returnStr = _str;
 		Document doc = Jsoup.parse(_str);
 		Elements imgs = doc.select("img");
