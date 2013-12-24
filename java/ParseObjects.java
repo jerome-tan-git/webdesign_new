@@ -19,37 +19,32 @@ public class ParseObjects {
 
 	public void addField(FieldObject _obj) {
 		tmpContainer.add(_obj);
+
 	}
 
 	public String getJSON() {
 		this.content.put("type", this.type);
 		Collections.sort(this.tmpContainer, new SortObj());
 		System.out.println(this.tmpContainer);
-		
-		for(FieldObject o : this.tmpContainer)
-		{
-			if(o.getFieldGroup()!=null && !o.getFieldGroup().trim().equals(""))
-			{
+
+		for (FieldObject o : this.tmpContainer) {
+			if (o.getFieldGroup() != null
+					&& !o.getFieldGroup().trim().equals("")) {
 				List<HashMap<String, String>> l = new ArrayList<HashMap<String, String>>();
 				String group = o.getFieldGroup().trim().toLowerCase();
-				if(this.content.containsKey(group))
-				{
+				if (this.content.containsKey(group)) {
 					l = (List<HashMap<String, String>>) this.content.get(group);
-					HashMap<String,String> map = new HashMap<String,String>();
+					HashMap<String, String> map = new HashMap<String, String>();
 					map.put(o.getFieldName(), o.getFieldValue());
 					l.add(map);
-				}
-				else
-				{
-					HashMap<String,String> map = new HashMap<String,String>();
+				} else {
+					HashMap<String, String> map = new HashMap<String, String>();
 					map.put(o.getFieldName(), o.getFieldValue());
 					l.add(map);
 				}
 				this.content.put(group, l);
-				 
-			}
-			else
-			{
+
+			} else {
 				this.content.put(o.getFieldName(), o.getFieldValue());
 			}
 		}
@@ -117,20 +112,12 @@ public class ParseObjects {
 	class SortObj implements Comparator {
 		public int compare(Object obj1, Object obj2) {
 			if (obj1 instanceof FieldObject && obj2 instanceof FieldObject) {
-				if (((FieldObject) obj1).getFieldGroup() != null
-						&& ((FieldObject) obj2).getFieldGroup() != null) {
-					String group1 = ((FieldObject) obj1).getFieldGroup().trim()
-							.toLowerCase();
-					String group2 = ((FieldObject) obj2).getFieldGroup().trim()
-							.toLowerCase();
-					int index1 = ((FieldObject) obj1).getFieldIndex();
-					int index2 = ((FieldObject) obj2).getFieldIndex();
-					if (!group1.equals(group2)) {
-						return group1.compareTo(group2);
-					} else {
-						return index1 - index2;
-					}
-				}
+
+				int index1 = ((FieldObject) obj1).getFieldIndex();
+				int index2 = ((FieldObject) obj2).getFieldIndex();
+
+				return index1 - index2;
+
 			}
 			return -1;
 
