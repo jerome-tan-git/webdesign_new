@@ -43,17 +43,18 @@ $( document ).ready( function() {
 		    return isFormValid;
 		});
 	$('.expandOption').click(function() {
-		var targetHeight = $(this).parent().parent().find('.option_list').outerHeight();
-		var originalHeight = $(this).parent().parent().find('.options').outerHeight();
+		var raw_div = $(this).parent().parent().parent();
+		var targetHeight = raw_div.find('.option_list').outerHeight();
+		var originalHeight = raw_div.find('.options').outerHeight();
 
 		if (originalHeight == 0) {
-			$(this).parent().parent().find('.options').stop(true, true).animate({
+			raw_div.find('.options').stop(true, true).animate({
 				height : targetHeight + "px"
 			}, 500, "easeOutExpo");
 			$(this).removeClass('glyphicon-chevron-down');
 			$(this).addClass('glyphicon-chevron-up');
 		} else {
-			$(this).parent().parent().find('.options').stop(true, true).animate({
+			raw_div.find('.options').stop(true, true).animate({
 				height : "0px"
 			}, 500, "easeOutExpo");
 			$(this).addClass('glyphicon-chevron-down');
