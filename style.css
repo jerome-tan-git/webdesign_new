@@ -1364,3 +1364,50 @@ margin-left: 77px;
 	border: 1px solid #ccc;
 	padding: 7px;
 }
+
+.article_body
+{
+	padding: 25px;
+	position: relative;
+}
+.article_detail_title
+{
+	font-size: 17pt;
+	text-align: center;
+	color: #333;
+	margin-bottom: 8px;
+	padding-bottom: 13px;
+	border-bottom: 1px solid #ccc;
+}
+.article_detail_info
+{
+width: 102px;
+position: absolute;
+right: 0px;
+top: 35px;
+}
+.article_detail_body
+{
+margin-left: 40px;
+margin-right: 40px;
+font-size: 13pt;
+line-height: 32px;
+color: #666;
+margin-top: 30px;
+}
+.article_detail_attach_title
+{
+	margin-left: 40px;
+margin-top: 20px;
+font-size: 15pt;
+border-bottom: 1px solid #ccc;
+padding-bottom: 10px;
+padding-left: 19px;
+}
+.article_detail_attach_block
+{
+	margin-left: 60px;
+height: 25px;
+padding-top: 10px;
+color: #333;
+}

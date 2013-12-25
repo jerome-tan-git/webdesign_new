@@ -24,7 +24,13 @@
 				config.height = 500;
 			};
 			$(document).ready(function() {
-				$('#editor').ckeditor();
+				$('#editor').ckeditor( {
+    					filebrowserBrowseUrl: 'http://www.baidu.com',
+    					filebrowserUploadUrl: 'http://www.baidu.com',
+    					filebrowserWindowWidth: '640',
+    					filebrowserWindowHeight: '480'
+				}
+				);
 				// Use CKEDITOR.replace() if element is <textarea>.
 				//$( '#editor1' ).ckeditor(); // Use CKEDITOR.replace() if element is <textarea>.
 				var nowTemp = new Date();
