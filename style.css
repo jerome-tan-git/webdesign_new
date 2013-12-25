@@ -928,7 +928,7 @@ padding-left:20px;
 }
 .exam_wrong
 {
-	background: url('./images/round_back_wrong.png') no-repeat 2px 0px;
+	background: url('./images/round_back_wrong.png') no-repeat 3px 0px;
 	color:#FFFFFF;
 	cursor:pointer;
 }
@@ -941,7 +941,7 @@ padding-left:20px;
 }
 .exam_select
 {
-	color:#122CE9;
+	color:#000;
 	font-weight:bold;
 }
 .right_title
@@ -1410,4 +1410,23 @@ padding-left: 19px;
 height: 25px;
 padding-top: 10px;
 color: #333;
+}
+.exam_submit_btn
+{
+	width: 100px;
+	float: left;
+}
+.exam_btn_container
+{
+	width: 300px;
+	margin-left: auto;
+	margin-right: auto;
+
+}
+
+.exam_pagenation
+{
+	text-align: center;
+margin-bottom: 10px;
+font-size: 14pt;
 }
