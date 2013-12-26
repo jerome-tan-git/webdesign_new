@@ -35,7 +35,7 @@
 				//$( '#editor1' ).ckeditor(); // Use CKEDITOR.replace() if element is <textarea>.
 				var nowTemp = new Date();
 				var now = new Date(nowTemp.getFullYear(), nowTemp.getMonth(), nowTemp.getDate(), 0, 0, 0, 0);
-				alert(now);
+
 				$('.date').datepicker('setValue', now)
 				  .on('changeDate', function(ev){
 					$('.date').datepicker('hide');

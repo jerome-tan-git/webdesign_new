@@ -96,10 +96,11 @@ var CKBUILDER_CONFIG = {
 		'listblock' : 1,
 		'indent' : 1,
 		'menubutton' : 1,
-		'eqneditor' : 1
+		'lineutils' : 1,
+		'widget' : 1,
+		'image2' : 1
 	},
 	languages : {
-		'zh-cn' : 1,
 		'en' : 1
 	}
 };
