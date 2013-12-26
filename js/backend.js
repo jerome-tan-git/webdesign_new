@@ -4,6 +4,10 @@ var nowChecked="";
 $( document ).ready( function() {
 	attach_event();
 	rewrite_no();
+	if($('.exam_type:checked').size()==0)
+	{
+		$('.exam_type:first').attr("checked","checked");
+	}
 	$("#examform").submit(function(){
 		    var isFormValid = true;
 		    var error_msg = "";
