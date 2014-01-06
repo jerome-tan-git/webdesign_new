@@ -1427,6 +1427,68 @@ color: #333;
 .exam_pagenation
 {
 	text-align: center;
-margin-bottom: 10px;
-font-size: 14pt;
+	margin-bottom: 10px;
+	font-size: 14pt;
 }
+
+.member_block
+{
+	width: 238px;
+	border: 1px solid #ccc;
+	float: left;
+	height: 215px;
+	margin: 10px;
+	overflow: hidden;
+	position: relative;
+}
+
+.member_block_icon
+{
+	width: 129px;
+	height: 128px;
+	position: absolute;
+	top: 14px;
+	left: 14px;
+}
+.member_block_icon.gkbs
+{
+	background: url('./images/iconmonstr-direction-8-icon-64.png') no-repeat;
+}
+.member_block_icon.jgdt
+{
+	background: url('./images/iconmonstr-eye-6-icon-64.png') no-repeat;
+}
+
+.member_block.blue
+{
+	background: url('./images/blue_member_block.png') repeat-x;
+}
+.member_block.jgdt
+{
+	background: url('./images/jgdt.png') repeat-x;
+}
+.member_block_title
+{
+	position: absolute;
+	bottom: 20px;
+	right: 23px;
+	font-size: 20pt;
+	color: #fff;
+}
+.member_block_icon_bg
+{
+	width: 256px;
+	height: 256px;
+	position: absolute;
+	top: -57px;
+	left: -56px;
+}
+.member_block_icon_bg.gkbs_bg
+{
+	background: url('./images/gkbs-256.png') no-repeat;
+}
+.member_block_icon_bg.jgdt_bg
+{
+	background: url('./images/eye_bg.png') no-repeat;
+}
+

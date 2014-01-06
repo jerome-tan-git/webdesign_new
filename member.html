@@ -17,9 +17,6 @@ transitional.dtd">
 		<link rel="stylesheet" type="text/css" href="./css/portfolio.css" />
 		<link rel="stylesheet" type="text/css" href="./css/quicksand.css" />
 		<link rel="stylesheet" type="text/css" href="./css/skin.css" />
-		<link rel="stylesheet" type="text/css" href="./css/960_24_col.css" />
-		<link rel="stylesheet" type="text/css" href="./css/jquery-ui-1.10.3.custom.css" />
-		<link rel="stylesheet" type="text/css" href="./css/select2.css" />
 
 
 		<script type="text/javascript" src="./js/jquery.min.js"></script>
@@ -34,11 +31,7 @@ transitional.dtd">
 		<script type="text/javascript" src="js/jquery-ui-1.10.3.custom.min.js"></script>
 
 		<script type="text/javascript" src="js/jquery.easing.1.3.js"></script>
-		<script type="text/javascript" src="js/form.js"></script>
-		<script src="./js/ckeditor/ckeditor.js"></script>
-		<script src="./js/ckeditor/adapters/jquery.js"></script>
-		<script src="./js/select2.js"></script>
-		<script src="./js/select2_locale_zh-CN.js"></script>
+
 		<style type="text/css">
 			html, body, p {
 				margin: 0;
@@ -175,63 +168,6 @@ transitional.dtd">
 				}
 			}
 		</script>
-		
-		<script>
-			form_data= {"options":"options_",
-						"title":"title_",
-						"type":"edit",
-						"data_1":
-						[
-							{
-								"field_1":"text_field1",
-								"field_2":"text_field2",
-								"field_3":"text_field3"
-							},
-							{
-								"field_1":"text_field3",
-								"field_2":"text_field4",
-								"field_3":"text_field3"
-							}
-						],
-						"data_2":
-						[
-							{
-								"field_1":"text_field1",
-								"field_2":"text_field2",
-								"field_3":"text_field3",
-								"field_4":"text_field4",
-								"field_5":"text_field5"
-							},
-							{
-								"field_1":"text_field2",
-								"field_2":"text_field2",
-								"field_3":"text_field3",
-								"field_4":"text_field4",
-								"field_5":"text_field5"
-							},
-							{
-								"field_1":"text_field1",
-								"field_2":"text_field2",
-								"field_3":"text_field3",
-								"field_4":"text_field4",
-								"field_5":"text_field5"
-							},
-							{
-								"field_1":"text_field2",
-								"field_2":"text_field2",
-								"field_3":"text_field3",
-								"field_4":"text_field4",
-								"field_5":"text_field5"
-							}
-							
-						]
-						};
-		</script>
-		<style>
-			table{border-collapse:collapse;border-spacing:0;border-left:1px solid #888;border-top:1px solid #888;background:#fff;}
-			th,td{border-right:1px solid #888;border-bottom:1px solid #888;padding:5px 15px;}
-			th{font-weight:bold;background:#ccc;}
-		</style>
 	</head>
 	<body>
 		<div id="page_wrap">
@@ -468,38 +404,41 @@ transitional.dtd">
 
 			<!-- Teaser Start -->
 			<div class="section" id="content" class="tag_line" style="padding-top: 30px">
-	 
-				<table style="width:100%">
-					<tr>
-						<td colspan="4"><div class="display" form_data="title">333</div>
-							<input class="editor" form_data="title"/></td>
-						<td><div class="display" form_data="options">333</div></td>
-						
-						
-					</tr>
-					<tbody id='data_2_container'>
-					<tr form_data="_loop" target_data = "data_2">
-						<td><div class="display" form_data="field_1">&nbsp;</div><input type="checkbox" class="editor" form_data="field_1" value="text_field1" />aaaa<input type="checkbox" class="editor" form_data="field_1" value="text_field2" />bbb</td>
-						<td><div class="display" form_data="field_2">&nbsp;</div><input class="editor" form_data="field_2" value="" /></td>
-						<td><div class="display" form_data="field_3">&nbsp;</div><select name="aaaaaaa" fieldtype="select" multiple><option value="AL">Alabama</option><option value="WY" selected>Wyoming</option></select></td>
-						<td><div class="display" form_data="field_4">&nbsp;</div><input class="editor" form_data="field_4" value="" fieldtype="date" readonly/></td>
-						<td><div class="display" form_data="field_5">&nbsp;</div><textarea class="editor" form_data="field_5">&nbsp;</textarea></td>
-					</tr>
-					</tbody>
-					
-					<tbody id='data_1_container'>
-					<tr form_data="_loop" target_data = "data_1">
-						<td><div class="display" form_data="field_1">&nbsp;</div><input class="editor" form_data="field_1" value="" /></td>
-						<td><div class="display" form_data="field_2">&nbsp;</div><input class="editor" form_data="field_2" value="" /></td>
-						<td colspan="3"><div class="display" form_data="field_3">&nbsp;</div><input class="editor" form_data="field_3" value="" /></td>
-						
-						
-						
-					</tr>
-					</tbody>
-					
-				</table>
-				<input type="button" value="      a      " onclick="addNewLine('data_2','edit')"/><input type="button" value="      b      " onclick="addNewLine('data_1','edit')"/>
+				<div class="member_block blue">
+					<div class="member_block_icon gkbs">&nbsp;</div>
+					<div class="member_block_icon_bg gkbs_bg">&nbsp;</div>
+					<div class="member_block_title">公开办事</div>
+				</div>
+				<div class="member_block jgdt">
+					<div class="member_block_icon jgdt">&nbsp;</div>
+					<div class="member_block_icon_bg jgdt_bg">&nbsp;</div>
+					<div class="member_block_title">监管动态</div>
+				</div>
+				<div class="member_block blue">
+					<div class="member_block_icon gkbs">&nbsp;</div>
+					<div class="member_block_icon_bg gkbs_bg">&nbsp;</div>
+					<div class="member_block_title">公开办事</div>
+				</div>
+				<div class="member_block blue">
+					<div class="member_block_icon gkbs">&nbsp;</div>
+					<div class="member_block_icon_bg gkbs_bg">&nbsp;</div>
+					<div class="member_block_title">公开办事</div>
+				</div>
+				<div class="member_block blue">
+					<div class="member_block_icon gkbs">&nbsp;</div>
+					<div class="member_block_icon_bg gkbs_bg">&nbsp;</div>
+					<div class="member_block_title">公开办事</div>
+				</div>
+				<div class="member_block blue">
+					<div class="member_block_icon gkbs">&nbsp;</div>
+					<div class="member_block_icon_bg gkbs_bg">&nbsp;</div>
+					<div class="member_block_title">公开办事</div>
+				</div>
+				<div class="member_block blue">
+					<div class="member_block_icon gkbs">&nbsp;</div>
+					<div class="member_block_icon_bg gkbs_bg">&nbsp;</div>
+					<div class="member_block_title">公开办事</div>
+				</div>
 			</div>
 			<!-- Teaser End -->
 
