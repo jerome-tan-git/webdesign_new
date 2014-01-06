@@ -1458,14 +1458,40 @@ color: #333;
 {
 	background: url('./images/iconmonstr-eye-6-icon-64.png') no-repeat;
 }
+.member_block_icon.qygl
+{
+	background: url('./images/iconmonstr-network-6-icon-64.png') no-repeat;
+}
+.member_block_icon.tz
+{
+	background: url('./images/iconmonstr-warning-4-icon-64.png') no-repeat;
+}
+
+.member_block_icon.xz
+{
+	background: url('./images/iconmonstr-download-9-icon-64.png') no-repeat;
+}
+
 
 .member_block.blue
 {
-	background: url('./images/blue_member_block.png') repeat-x;
+	background: url('./images/gkbs_bg_.png') repeat-x;
 }
 .member_block.jgdt
 {
 	background: url('./images/jgdt.png') repeat-x;
+}
+.member_block.qygl
+{
+	background: url('./images/qygl_bg_.png') repeat-x;
+}
+.member_block.tz
+{
+	background: url('./images/tz_bg_.png') repeat-x;
+}
+.member_block.xz
+{
+	background: url('./images/xz_bg_.png') repeat-x;
 }
 .member_block_title
 {
@@ -1487,8 +1513,89 @@ color: #333;
 {
 	background: url('./images/gkbs-256.png') no-repeat;
 }
+.member_block_icon_bg.qygl_bg
+{
+	background: url('./images/qygl_bg.png') no-repeat;
+}
 .member_block_icon_bg.jgdt_bg
 {
 	background: url('./images/eye_bg.png') no-repeat;
 }
-
+.member_block_icon_bg.tz_bg
+{
+	background: url('./images/tz_bg.png') no-repeat;
+}
+.member_block_icon_bg.xz_bg
+{
+	background: url('./images/xz_bg.png') no-repeat;
+}
+.member_block_download
+{
+	width: 324px;
+	border: 1px solid #ccc;
+	float: left;
+	height: 60px;
+	margin: 10px;
+	overflow: hidden;
+	position: relative;
+}
+.member_block_download.blue
+{
+	background: url('./images/download_bg.png') repeat-x;
+}
+.member_block_download_title
+{
+	position: absolute;
+	font-size: 17pt;
+	color: #fff;
+	top: 10px;
+	left: 63px;
+}
+.member_download_icon
+{
+	width: 129px;
+	height: 128px;
+	position: absolute;
+	top: 14px;
+	left: 14px;
+	background: url('./images/iconmonstr-download-2-icon-32.png') no-repeat;
+}
+.member_upload_icon
+{
+	width: 129px;
+	height: 128px;
+	position: absolute;
+	top: 14px;
+	left: 14px;
+	background: url('./images/iconmonstr-upload-9-icon-32.png') no-repeat;
+}
+.member_block_upload
+{
+	width: 324px;
+	border: 1px solid #ccc;
+	float: left;
+	height: 60px;
+	margin: 10px;
+	overflow: hidden;
+	position: relative;
+}
+.member_block_upload.blue
+{
+	background: url('./images/upload_bg.png') repeat-x;
+}
+.member_block_upload_title
+{
+	position: absolute;
+	font-size: 17pt;
+	color: #fff;
+	top: 10px;
+	left: 63px;
+}
+.member_block_upload_desc
+{
+	position: absolute;
+	font-size: 9pt;
+	color: #C9C6C6;
+	right: 10px;
+	bottom: 7px;
+}
