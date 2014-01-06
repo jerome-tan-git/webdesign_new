@@ -1599,3 +1599,20 @@ color: #333;
 	right: 10px;
 	bottom: 7px;
 }
+.user_info_left
+{
+	width:200px;
+	float:left;
+}
+.user_info_right
+{
+	width:800px;
+	border-left:1px solid #ccc;
+	float:left;
+}
+.avator_container
+{
+	border: 1px solid #ccc;
+	width: 130px;
+	padding: 10px;
+}
