@@ -1397,7 +1397,6 @@ margin-top: 30px;
 }
 .article_detail_attach_title
 {
-	margin-left: 40px;
 margin-top: 20px;
 font-size: 15pt;
 border-bottom: 1px solid #ccc;
@@ -1406,10 +1405,15 @@ padding-left: 19px;
 }
 .article_detail_attach_block
 {
-	margin-left: 60px;
-height: 25px;
-padding-top: 10px;
-color: #333;
+		margin-left: 60px;
+	height: 25px;
+	padding-top: 5px;
+	margin-top: 8px;
+	padding-left: 34px;
+	color: #333;
+	background: url('./images/iconmonstr-note-30-icon-24.png') no-repeat 0px 1px;
+	width: 200px;
+	float: left
 }
 .exam_submit_btn
 {
@@ -1427,8 +1431,8 @@ color: #333;
 .exam_pagenation
 {
 	text-align: center;
-	margin-bottom: 10px;
-	font-size: 14pt;
+margin-bottom: 10px;
+font-size: 14pt;
 }
 
 .member_block
