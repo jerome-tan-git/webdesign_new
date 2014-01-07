@@ -1639,3 +1639,13 @@ input.userinfo
 {
 	font-family: "微软雅黑",Arial,"宋体" !important;
 }
+.del_upload a
+{
+	background: url('./images/uploadify-cancel_white.png') 0 0 no-repeat;
+	float: right;
+	height: 16px;
+	text-indent: -9999px;
+	width: 16px;
+	margin-top: 4px;
+	margin-right: 4px;
+}
