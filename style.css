@@ -1613,10 +1613,25 @@ font-size: 14pt;
 	width:800px;
 	border-left:1px solid #ccc;
 	float:left;
+	padding-left: 36px;
 }
 .avator_container
 {
 	border: 1px solid #ccc;
-	width: 130px;
+	width: 100px;
 	padding: 10px;
+	margin: auto;
+}
+input.userinfo
+{
+	height: 20px;
+	padding: 5px;
+	font-size: 15pt;
+	color: #666;
+	margin-top: 10px;
+}
+.userinfo_title
+{
+	font-size: 15pt;
+	margin-bottom: 30px;
 }
