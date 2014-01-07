@@ -17,6 +17,7 @@ transitional.dtd">
 		<link rel="stylesheet" type="text/css" href="./css/portfolio.css" />
 		<link rel="stylesheet" type="text/css" href="./css/quicksand.css" />
 		<link rel="stylesheet" type="text/css" href="./css/skin.css" />
+		<link rel="stylesheet" type="text/css" href="./css/uploadify.css" />
 
 
 		<script type="text/javascript" src="./js/jquery.min.js"></script>
@@ -31,7 +32,7 @@ transitional.dtd">
 		<script type="text/javascript" src="js/jquery-ui-1.10.3.custom.min.js"></script>
 
 		<script type="text/javascript" src="js/jquery.easing.1.3.js"></script>
-
+		<script src="./js/jquery.uploadify.js"></script>
 		<style type="text/css">
 			html, body, p {
 				margin: 0;
@@ -54,7 +55,47 @@ transitional.dtd">
 
 		</style>
 		<script type="text/javascript">
+		function deleteItem(instanceID, fileID) {
+			//#DF6F6F
+			$('#' + fileID).animate({
+				borderColor : "#cc0000",
+				color : "#cc0000"
+			}, 200);
+			$('#' + instanceID).uploadify('cancel', fileID);
+		}
 			$(document).ready(function() {
+				
+				
+				
+				
+				
+				$("#file_upload_1")
+				.uploadify(
+						{
+							removeCompleted : false,
+							buttonImage : './img/bt.png',
+							height : 36,
+							swf : './css/uploadify.swf',
+							uploader : './upload.servlet',
+							width : 106,
+							itemTemplate : '<div id="${fileID}" class="uploadify-queue-item" style="border: 1px solid #ccc; margin: 10px;width: 303px;float: left;margin-left: 3px;"><div class="cancel"><a href="javascript:deleteItem(\'${instanceID}\', \'${fileID}\')">X</a></div><span class="fileName">${fileName} (${fileSize})</span><span class="data"></span><input type="hidden" class="realpath"></input></div>',
+							'onUploadSuccess' : function(file,
+									data, response) {
+								//alert(file.id);
+								var obj = jQuery
+										.parseJSON(data);
+								if (obj.type == 'success') {
+									$('#' + file.id).find(
+											'.realpath').val(
+											obj.path);
+								}
+
+								//alert('The file was saved to: ' + obj.plugin);
+							},
+							'onUploadComplete' : function(file) {
+								//alert('The file ' + file.name + ' finished processing.');
+							}
+						});
 
 				// bancy bo=x
 				// jQuery("a#example6").fancybox({
@@ -167,6 +208,15 @@ transitional.dtd">
 					}
 				}
 			}
+			
+			
+			
+			
+			
+			
+			
+			
+			
 		</script>
 	</head>
 	<body>
@@ -456,7 +506,10 @@ transitional.dtd">
 					<div class="member_block_upload_desc">2014/10/10</div>
 				</div>		
 				<div class="clearfix"></div>		
-				<div>上传表单</div>	
+				<div style="margin-left:9px;position:relative;"><input type="file" id="file_upload_1" />
+				<div style="position:absolute;top: 2px;left: 113px;">
+				<button class="button_chinese_font" type="button" style="width: 100px;height: 34px;font-size: 11pt;">保存</button></div></div>	
+				
 			</div>
 			<!-- Teaser End -->
 

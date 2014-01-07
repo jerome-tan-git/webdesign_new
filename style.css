@@ -1635,3 +1635,7 @@ input.userinfo
 	font-size: 15pt;
 	margin-bottom: 30px;
 }
+.button_chinese_font
+{
+	font-family: "微软雅黑",Arial,"宋体" !important;
+}
