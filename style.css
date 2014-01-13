@@ -1649,3 +1649,101 @@ input.userinfo
 	margin-top: 4px;
 	margin-right: 4px;
 }
+
+/**===========================bbs**/
+.bbs_list_header
+{
+	background-color: #233D91;
+	padding: 10px 10px 10px 10px;
+	color: #fff;
+}
+
+.bbs_list_title
+{
+	width: 600px;
+	float: left;
+	text-align: center;
+	border-right: 1px dotted #fff
+}
+.bbs_list_body_title
+{
+	width: 590px;
+	float: left;
+	text-align: left;
+	border-right: 1px dotted #ccc;
+	padding-right:10px;
+}
+
+.bbs_list_reply
+{
+	width: 100px;
+	float: left;
+	text-align: center;
+	border-right: 1px dotted #fff;
+}
+
+.bbs_list_body_reply
+{
+	width: 100px;
+	float: left;
+	text-align: center;
+	border-right: 1px dotted #ccc;
+}
+
+.bbs_list_author
+{
+	width: 155px;
+	float: left;
+	text-align: center;
+	border-right: 1px dotted #fff;
+}
+
+.bbs_list_body_author
+{
+	width: 155px;
+	float: left;
+	text-align: center;
+	border-right: 1px dotted #ccc;
+}
+
+.bbs_list_update
+{
+	text-align: center;
+	width: 150px;
+	float: left;
+	padding-left: 10px;
+}
+.bbs_list_body_update
+{
+	text-align: center;
+	width: 150px;
+	float: left;
+	padding-left: 10px;
+}
+.bbs_list_body
+{
+	background-color: #fff;
+	padding: 10px 10px 10px 10px;
+	color: #333;
+	border-bottom: 1px solid #ccc;
+}
+.bbs_button
+{
+	margin-bottom: 10px;
+}
+.bbs_button_group
+{
+	float: right;
+	color: #000;
+}
+.bbs_pagnation
+{
+	margin-top: 10px;
+	float: right;
+	margin-right: 10px;
+}
+.pagnation_number
+{
+	width:100px;
+	float:left;
+}
