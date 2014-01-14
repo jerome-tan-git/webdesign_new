@@ -1747,3 +1747,55 @@ input.userinfo
 	width:100px;
 	float:left;
 }
+.bbs_thread_title{
+	background-color: rgb(124, 146, 238);
+color: black;
+padding: 10px 10px 10px 10px;
+font-size: 13pt;
+border: 1px solid #8B8B8B;
+}
+.bbs_thread_body{
+	border-left: 1px solid #8B8B8B;
+border-bottom: 1px solid #8B8B8B;
+border-right: 1px solid #8B8B8B;
+position: relative;
+}
+.bbs_thread_use
+{
+	width: 187px;
+float: left;
+border-right: 1px solid #8B8B8B;
+padding: 10px 10px 10px 10px;
+}
+.bbs_thread_content{
+	padding: 10px 10px 10px 224px;
+	
+}
+.bbs_thread_avatar
+{
+	margin: 0 auto;
+width: 124px;
+padding: 5px 5px 5px 5px;
+border: 1px solid #ccc;
+margin-top: 10px;
+}
+.bbs_thread_name
+{
+	text-align: center;
+	padding-top: 10px;
+	color: black;
+	padding-bottom: 10px;
+}
+.bbs_thread_bottom_line
+{
+	position: absolute;
+	border-top: 1px solid #8B8B8B;
+	left: 207px;
+	width: 831px;
+}
+.bbs_thread_bottom_button
+{
+	float: right;
+	padding-right: 12px;
+	padding-top: 4px;	
+}
